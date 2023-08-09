@@ -1,1 +1,155 @@
 /*메인 페이지 섹션 CSS*/
+#container {
+  width: 1440px;
+  height: 1024px;
+  margin: 0 auto;
+}
+/*전체페이지를 감싸고 있는 container에 대한 CSS*/
+
+header {
+  text-align: center;
+  border: 1px solid black;
+}
+/*header 섹션에 대한 CSS*/
+
+#main_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 15px;
+}
+/*쇼핑몰이름과 로그인&회원가입&검색에 대한 CSS*/
+
+#main_title h1 {
+  padding: 10px;
+  margin-left: 10px;
+  border: 1px solid black;
+}
+
+/*쇼핑몰 이름*/
+
+#main_header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+/*로그인&회원가입&검색 섹션*/
+
+#main_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+/*메인화면 카테고리 섹션*/
+
+.main_header_item {
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+/*메인 화면 개별 카테고리*/
+
+.main_nav_item {
+  width: 100px;
+  height: 20px;
+  margin: auto;
+  padding: 10px;
+  font-weight: 600;
+  border: 1px solid black;
+}
+
+main {
+  border: 1px solid black;
+  text-align: center;
+}
+
+#main_body {
+  margin: 30px auto;
+}
+
+#main_body img {
+  width: 1320px;
+  height: 500px;
+}
+
+.main_list {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+  border: 1px solid red;
+}
+
+.main_list_introduction {
+  width: 100%;
+  text-align: left;
+  border: 1px solid black;
+}
+
+.main_list_introduction h3 {
+  margin-left: 50px;
+}
+
+.main_list_introduction p {
+  margin-left: 50px;
+}
+
+.main_product {
+  width: 15%;
+  height: 100%;
+  margin: 20px auto;
+  border: 1px solid black;
+}
+
+.main_product img {
+  width: 172px;
+  height: 172px;
+}
+
+.main_products {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border: 1px solid black;
+}
+
+.main_products a {
+  text-decoration: none;
+  color: black;
+}
+
+.main_product h5 {
+  height: 10%;
+  border: 1px solid red;
+}
+
+.main_product p {
+  height: 10%;
+  border: 1px solid blue;
+}
+
+.main_product_btn {
+  width: 80px;
+  height: 200px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid darkgray;
+}
+
+.footer_detail {
+  text-align: center;
+  border: 1px solid black;
+  font-size: 10px;
+}
