@@ -71,6 +71,7 @@ header {
 /*검색,로그인,회원가입 각각*/
 
 .header_menu_item:hover {
+  text-decoration: underline;
   font-weight: bold;
   cursor: pointer;
 }
