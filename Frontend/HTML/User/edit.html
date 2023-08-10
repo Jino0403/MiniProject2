@@ -3,7 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/Frontend/CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="/Frontend/CSS/user.css" />
+    <script src="/Frontend/Javascript/includeHTML.js"></script>
+    <title>회원정보수정</title>
   </head>
-  <body></body>
+  <body>
+    <div id="container">
+      <header include-html="/Frontend/HTML/Main/header.html"></header>
+      <main>
+        <div id="mypage_center">
+          <div class="mypage_list">
+            <a href="./basket.html">장바구니목록</a>
+            <a href="./edit.html">회원정보수정</a>
+            <a href="./withdraw.html">회원탈퇴</a>
+          </div>
+          <div class="mypage_introduction">
+            <h3>안녕하세요 반갑습니다.</h3>
+            <p>ㅎㅇㅎㅇ</p>
+          </div>
+        </div>
+      </main>
+      <footer include-html="/Frontend/HTML/Main/footer.html"></footer>
+    </div>
+  </body>
+  <script>
+    includeHTML();
+  </script>
 </html>
