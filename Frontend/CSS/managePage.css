@@ -1,0 +1,148 @@
+/*관리자 페이지 CSS*/
+
+#manage_wrapper {
+  width: 1680px;
+  height: 930px;
+  text-align: center;
+  /* margin: 0 auto; */
+  border: 1px solid black;
+}
+
+/*관리자 페이지*/
+
+header {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*관리자 페이지 header부분*/
+
+/*관리자 페이지 header 이미지부분*/
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*관리자 페이지 메인부분*/
+
+.manage_menu {
+  height: 930px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
+}
+
+/*관리자 메뉴섹션*/
+
+.manage_menu img {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
+
+/*관리자 메뉴 이미지*/
+
+#nav_bar2 {
+  width: 150px;
+  padding: 0px;
+  text-align: center;
+  position: relative;
+  list-style: none;
+}
+
+/*menu bar를 감싸는 div*/
+
+.menu_bar2 {
+  line-height: 5;
+}
+
+/*각각의 menu bar*/
+
+.menu_bar2 a {
+  text-decoration: none;
+  color: black;
+}
+
+/*menu bar 안의 페이지 이동 관련*/
+
+.menu_bar2 .submenu {
+  position: absolute;
+  width: 150px;
+  height: 320px;
+  left: 150px;
+  box-shadow: 1px 1px 3px black;
+  background-color: white;
+  color: black;
+  top: -5px;
+  display: none;
+}
+
+/*menubar가 펼쳐지면 나오는 부분 CSS*/
+
+.menu_bar2:hover {
+  font-weight: bold;
+  color: white;
+}
+
+/*메뉴바에 가져다 대었을때 hover*/
+
+.submenu li {
+  width: 110px;
+  padding: 0;
+  list-style: none;
+}
+
+/*menu bar에 하위 메뉴*/
+
+.menu_bar2 .submenu > li:hover {
+  background-color: white;
+  color: white;
+}
+
+/*menu bar에 서브메뉴에 있는 li에 hover할때*/
+
+.manage_section {
+  width: 1580px;
+  height: 930px;
+  border: 1px solid black;
+}
+
+/*관리자 페이지 내용이 들어갈 div*/
+
+.manage_logout {
+  margin-bottom: 30px;
+}
+
+/*관리자 메뉴 로그아웃*/
+
+.manage_logout a {
+  text-decoration: none;
+  color: black;
+  user-select: none;
+}
+
+.manage_logout:hover {
+  font-weight: bold;
+}
+
+/*관리자 메뉴 로그아웃 hover*/
+
+/*여기서 부터 관리자 고객관리 섹션 CSS*/
+
+.add_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  /* margin: 0 auto; */
+  /* padding: 0; */
+}
