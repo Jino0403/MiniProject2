@@ -1,1 +1,122 @@
-/*로그인 회원가입 섹션 CSS*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    width: 50rem;
+}
+
+.login-picture {
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.login-picture img {
+    width: 100%;
+    max-width: 19rem;
+    height: auto;
+}
+
+
+.form-text h2 {
+    margin-bottom: 1.5rem;
+    margin-top: 0; 
+}
+
+.form-text {
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 1rem;
+    
+}
+
+.form-logo {
+    max-width: 4rem;
+    height: 4rem;
+    margin: 0;
+}
+
+.form-text h2 {
+    margin: auto 0;
+    margin-left: 0.3rem;
+    font-size: 1.5rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    margin: 0.8rem;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.reg {
+    margin-top: 1rem;
+}
+
+.reg a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.9rem;
+}
+
+/* Media Query for viewport width less than 768px */
+@media (max-width: 767px) {
+    .login-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .login-picture,
+    .form-text {
+        width: 100%;
+        padding: 1rem;
+    }
+}
