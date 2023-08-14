@@ -4,7 +4,6 @@
   width: 1680px;
   height: 930px;
   text-align: center;
-  /* margin: 0 auto; */
   border: 1px solid black;
 }
 
@@ -37,7 +36,7 @@ main {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid red;
+  border: 1px solid black;
 }
 
 /*관리자 메뉴섹션*/
@@ -77,42 +76,6 @@ main {
 
 /*menu bar 안의 페이지 이동 관련*/
 
-/* .menu_bar2 .submenu {
-  position: absolute;
-  width: 150px;
-  height: 320px;
-  left: 150px;
-  box-shadow: 1px 1px 3px black;
-  background-color: white;
-  color: black;
-  top: -5px;
-  display: none;
-} */
-
-/*menubar가 펼쳐지면 나오는 부분 CSS*/
-
-/* .menu_bar2:hover {
-  font-weight: bold;
-  color: white;
-} */
-
-/*메뉴바에 가져다 대었을때 hover*/
-
-/* .submenu li {
-  width: 110px;
-  padding: 0;
-  list-style: none;
-} */
-
-/*menu bar에 하위 메뉴*/
-
-/* .menu_bar2 .submenu > li:hover {
-  background-color: white;
-  color: white;
-} */
-
-/*menu bar에 서브메뉴에 있는 li에 hover할때*/
-
 #manage_main {
   width: 1580px;
   height: 930px;
@@ -128,7 +91,7 @@ main {
   height: 930px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  /* justify-content: flex-start; */
   align-items: center;
   border: 1px solid black;
 }
@@ -167,7 +130,7 @@ main {
 
 .manage_title {
   font-size: 40px;
-  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 /*고객추가 title*/
@@ -177,13 +140,12 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid darkgray;
 }
 
 /*고객추가 폼*/
 
 .add_form label {
-  padding: 10px;
+  padding: 5px;
   margin-right: auto;
 }
 
@@ -192,14 +154,13 @@ main {
 .add_form input {
   width: 400px;
   height: 30px;
-  margin-bottom: 20px;
-  border: 1px solid black;
 }
 
 /*고객추가 폼 안 항목별 input*/
 
 .userinfo_btns {
   margin-top: 30px;
+  margin: 30px auto 0 auto;
 }
 
 /*고객추가섹션에서 버튼들을 감싸는 div*/
@@ -207,7 +168,6 @@ main {
 .user_btn {
   width: 202px;
   height: 50px;
-  background-color: black;
   border-radius: 8px;
   color: white;
   font-size: 20px;
@@ -239,7 +199,6 @@ main {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
-  border: 1px solid black;
 }
 
 /*고객정보 관련 버튼들*/
@@ -261,7 +220,12 @@ main {
 
 .user_table {
   width: 1340px;
-  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.user_table th {
+  background-color: black;
+  color: white;
 }
 
 /*고객정보 테이블*/
@@ -280,7 +244,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
 }
 
 .manage_protitle {
@@ -293,11 +256,10 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid darkgray;
 }
 
 .proadd_form label {
-  padding: 10px;
+  padding: 8px;
   margin-right: auto;
   font-weight: bold;
 }
@@ -307,8 +269,14 @@ main {
 .proadd_form input {
   width: 400px;
   height: 30px;
+  padding-left: 10px;
   border: 1px solid black;
   border-radius: 4px;
+}
+
+.proadd_form select {
+  width: 405px;
+  height: 30px;
 }
 
 /*상품추가폼 input 부분*/
@@ -344,13 +312,17 @@ main {
 
 .pro_table {
   width: 1500px;
-  /* border: 1px solid black; */
+  border-collapse: collapse;
 }
 
-.pro_table th,
-td {
+.pro_table th {
   border: 1px solid black;
-  border-collapse: collapse;
+  background-color: black;
+  color: white;
+}
+
+.pro_table td {
+  border: 1px solid black;
 }
 
 /*상품 테이블 div*/
@@ -393,6 +365,10 @@ td {
   height: 60px;
 }
 
+.t_tr td {
+  height: 60px;
+}
+
 /*테이블 데이터 (td)높이*/
 
 .pro_img {
@@ -411,6 +387,13 @@ td {
 /*여기서 부터는 주문관리에 대한 CSS*/
 .order_table {
   width: 1500px;
+  /* height: 650px; */
+  border-collapse: collapse;
+}
+
+.order_table th {
+  background-color: black;
+  color: white;
 }
 
 .order_th {
@@ -427,6 +410,7 @@ td {
 
 .order_memo {
   width: 290px;
+  word-break: break-all;
 }
 
 .order_address {

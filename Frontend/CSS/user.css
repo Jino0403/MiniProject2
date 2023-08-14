@@ -1,39 +1,48 @@
 /*마이페이지 및 장바구니 섹션 CSS*/
 
 #mypage_center {
-  /* width: 1440px; */
-  /* height: 792px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 /*mypage의 main 부분을 담당하는 CSS*/
 
 .mypage_list {
-  width: 360px;
+  width: 300px;
   height: 819.2px;
-  margin-right: 100px;
+  margin: 30px 0;
+  margin-right: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0px 0px 1.2px black;
 }
 
 /*mypage main부분의 선택가능한 목록 CSS*/
 
 .mypage_list a {
   margin: 32px auto;
+
+  text-decoration: none;
+  color: black;
   line-height: 2;
 }
 
 /*mypage main부분 목록 각각링크의 CSS*/
 
+.mypage_list ul {
+  padding-left: 0;
+}
+
 .mypage_list li {
   list-style: none;
   font-size: 30px;
+  padding-left: 0;
 }
 
 .mypage_list li:hover {
@@ -44,31 +53,57 @@
 /*mypage 부분 리스트 관련 CSS*/
 
 .mypage_introduction {
-  width: 792px;
+  width: 900px;
   height: 819.2px;
+  margin: 30px 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: 0 0 1.2px black;
 }
 
 /*mypage에서 목록 중 한개 선택할 때 나오는 CSS*/
 
-.basket_title {
-  margin-top: 25px;
+.basket_list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   border: 1px solid black;
+}
+
+.basket_title {
+  /* margin-top: 25px; */
   font-size: 30px;
 }
 
 .basket_tables {
   margin-top: 30px;
+  border-collapse: collapse;
 }
+
+/*내 장바구니에서 테이블과 title을 감싸고 있는 div*/
+
+.basket_table {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+/*장바구니 테이블*/
 
 .basket_table td {
   text-align: center;
-  /* width:120px; */
+  border: 1px solid black;
 }
 
+.basket_table th {
+  height: 40px;
+  border: 1px solid black;
+}
 .basket_num {
   width: 70px;
 }
@@ -84,16 +119,18 @@
 /*장바구니 테이블을 감싸는*/
 
 .basket_result {
-  margin-top: 520px;
-  border: 1px solid black;
+  margin-top: auto;
   font-size: 30px;
 }
 
+/*장바구니에 담긴 값들에 대한 CSS*/
+
 .basket_btns {
-  margin-top: auto;
+  margin-top: 10px;
   margin-bottom: 30px;
-  border: 1px solid black;
 }
+
+/*장바구니 탭의 버튼을 감싸고 있는 div*/
 
 .basket_btn {
   width: 150px;
@@ -104,4 +141,70 @@
   background-color: black;
   color: white;
   font-size: 20px;
+}
+
+/*장바구니 탭의 버튼*/
+
+.mypage_edit {
+  width: 300px;
+  padding: 50px;
+  /* margin-top: auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  border: 1px solid black;
+}
+
+/*고객정보 수정에 관한 폼 */
+
+.mypage_edit label {
+  margin: 10px 0;
+}
+/*고객정보 수정에 대한 label*/
+
+.edit_btns {
+  margin: 30px auto;
+  text-align: center;
+}
+
+/*고객정보 수정버튼을 감싸는 div*/
+
+.edit_btn {
+  width: 300px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}
+
+/*고객정보 수정버튼*/
+
+.withdraw_form {
+  border: 1px solid black;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.withdraw_form label {
+  width: 70px;
+  margin: 10px 0;
+}
+
+.withdraw_btns {
+  /* width: 100px; */
+  margin-top: 30px;
+  border: 1px solid black;
+}
+
+.withdraw_btn {
+  width: 100px;
+  height: 30px;
+  background-color: black;
+  border-radius: 4px;
+  color: white;
 }
