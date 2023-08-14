@@ -1,8 +1,8 @@
 /*마이페이지 및 장바구니 섹션 CSS*/
 
 #mypage_center {
-  width: 1440px;
-  height: 792px;
+  /* width: 1440px; */
+  /* height: 792px; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -26,16 +26,82 @@
 
 .mypage_list a {
   margin: 32px auto;
+  line-height: 2;
 }
 
 /*mypage main부분 목록 각각링크의 CSS*/
 
+.mypage_list li {
+  list-style: none;
+  font-size: 30px;
+}
+
+.mypage_list li:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*mypage 부분 리스트 관련 CSS*/
+
 .mypage_introduction {
   width: 792px;
-  height: 80%;
+  height: 819.2px;
   display: flex;
-
+  flex-direction: column;
+  align-items: center;
   border: 1px solid black;
 }
 
 /*mypage에서 목록 중 한개 선택할 때 나오는 CSS*/
+
+.basket_title {
+  margin-top: 25px;
+  border: 1px solid black;
+  font-size: 30px;
+}
+
+.basket_tables {
+  margin-top: 30px;
+}
+
+.basket_table td {
+  text-align: center;
+  /* width:120px; */
+}
+
+.basket_num {
+  width: 70px;
+}
+
+.basket_proName {
+  width: 250px;
+}
+
+.basket_pro {
+  width: 120px;
+}
+
+/*장바구니 테이블을 감싸는*/
+
+.basket_result {
+  margin-top: 520px;
+  border: 1px solid black;
+  font-size: 30px;
+}
+
+.basket_btns {
+  margin-top: auto;
+  margin-bottom: 30px;
+  border: 1px solid black;
+}
+
+.basket_btn {
+  width: 150px;
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid black;
+  border-radius: 6px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+}

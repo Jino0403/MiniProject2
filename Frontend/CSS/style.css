@@ -1,24 +1,24 @@
 /*메인페이지 CSS*/
 
 @font-face {
-  font-family: "Lobster-Regular";
-  src: url("/Frontend/fonts/Lobster-Regular.ttf");
+  font-family: 'Lobster-Regular';
+  src: url('/Frontend/fonts/Lobster-Regular.ttf');
 }
 
 @font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff')
+    format('woff');
   font-weight: 400;
   font-style: normal;
 }
 
 * {
-  font-family: "Pretendard-Regular";
+  font-family: 'Pretendard-Regular';
 }
 
 h1 {
-  font-family: "Lobster-Regular";
+  font-family: 'Lobster-Regular';
   font-size: 50px;
 }
 
@@ -248,7 +248,8 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 30px;
+  font-size: 22px;
+  font-weight: bold;
   user-select: none;
 }
 
