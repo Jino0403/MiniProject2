@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.32, for Win64 (x86_64)
 --
 -- Host: localhost    Database: store
 -- ------------------------------------------------------
--- Server version	8.0.34
+-- Server version	8.0.32
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -28,6 +28,7 @@ CREATE TABLE `border` (
   `btiltle` varchar(45) DEFAULT NULL,
   `btext` varchar(200) DEFAULT NULL,
   `btime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `burl` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`bno`),
   KEY `mid` (`mid`),
   CONSTRAINT `border_ibfk_1` FOREIGN KEY (`mid`) REFERENCES `member` (`mid`) ON DELETE SET NULL ON UPDATE CASCADE
@@ -96,7 +97,7 @@ CREATE TABLE `order` (
   `mname` varchar(20) DEFAULT NULL,
   `madress` varchar(45) DEFAULT NULL,
   `mphone` varchar(20) DEFAULT NULL,
-  `otext` varchar(200) DEFAULT NULL,
+  `otext` varchar(50) DEFAULT NULL,
   `opay` int DEFAULT NULL,
   `ctotalprice` int DEFAULT NULL,
   `otime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -107,7 +108,7 @@ CREATE TABLE `order` (
   CONSTRAINT `order_ibfk_1` FOREIGN KEY (`pno`) REFERENCES `product` (`pno`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `order_ibfk_2` FOREIGN KEY (`mid`) REFERENCES `member` (`mid`) ON DELETE SET NULL ON UPDATE CASCADE,
   CONSTRAINT `order_ibfk_3` FOREIGN KEY (`cno`) REFERENCES `cart` (`cno`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='50';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,9 +130,9 @@ CREATE TABLE `product` (
   `ptext` varchar(200) DEFAULT NULL,
   `purl` varchar(200) DEFAULT NULL,
   `mid` varchar(20) DEFAULT NULL,
+  `pdiv` int DEFAULT NULL,
   PRIMARY KEY (`pno`),
-  KEY `mid` (`mid`),
-  CONSTRAINT `product_ibfk_1` FOREIGN KEY (`mid`) REFERENCES `member` (`mid`) ON DELETE SET NULL ON UPDATE CASCADE
+  KEY `mid` (`mid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -165,4 +166,4 @@ CREATE TABLE `reply` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-08-13 14:13:12
+-- Dump completed on 2023-08-14 10:20:10
