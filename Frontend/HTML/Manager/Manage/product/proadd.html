@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="/Frontend/Javascript/jquery-3.7.0.js"
-      type="text/javascript"></script>
-    <script
-      src="/Frontend/Javascript/manage.js"
       type="text/javascript"
-      defer="defer"></script>
+    ></script>
+
     <link
       rel="stylesheet"
       type="text/css"
-      href="/Frontend/CSS/managePage.css" />
+      href="/Frontend/CSS/managePage.css"
+    />
     <title>관리자 페이지</title>
   </head>
   <body>
@@ -50,11 +49,11 @@
         <div id="manage_section">
           <div class="manage_pro">
             <div class="manage_protitle">신규 상품 추가</div>
-            <form class="proadd_form">
-              <label>상품명</label>
-              <input type="text" />
-              <label>카테고리</label>
-              <select name="category" class="select_category">
+            <form class="proadd_form" method="post">
+              <label name="proname">상품명</label>
+              <input type="text" id="proname" name="proname" required />
+              <label name="category">카테고리</label>
+              <select id="category" name="category" class="select_category">
                 <option value="whiskey">위스키</option>
                 <option value="wine">와인</option>
                 <option value="sake">사케</option>
@@ -64,24 +63,50 @@
                 <option value="makgeolli">막걸리</option>
                 <option value="snack">안주류</option>
               </select>
-              <label>상품가격</label>
-              <input type="text" placeholder="10000" />
-              <label>재고량</label>
-              <input type="text" />
-              <label>용량</label>
-              <input type="text" />
-              <label>도수</label>
-              <input type="text" />
-              <label>국가</label>
-              <input type="text" />
-              <label>상품설명</label>
-              <input type="text" maxlength="200" />
+              <label name="proprice">상품가격</label>
+              <input
+                type="text"
+                id="proprice"
+                name="proprice"
+                placeholder="10000"
+                required
+              />
+              <label name="proquantity">재고량</label>
+              <input
+                id="proquantity"
+                id="proquantity"
+                name="proquantity"
+                type="text"
+                required
+              />
+              <label name="proml">용량</label>
+              <input
+                type="text"
+                id="proml"
+                name="pml"
+                placeholder=" 예시 (1500ml)"
+                required
+              />
+              <label name="proalcohol">도수</label>
+              <input type="text" id="proalcohol" name="proalcohol" />
+              <label name="procountry">국가</label>
+              <input type="text" id="procountry" name="procountry" />
+              <label name="protext">상품설명</label>
+              <input type="text" id="protext" name="protext" maxlength="200" />
+              <label for="proimage" name="proimage">상품사진</label>
+              <input
+                type="file"
+                id="proimage"
+                name="proimage"
+                accept="image/png"
+                required
+              />
             </form>
-            <div class="userinfo_btns">
-              <button class="user_btn">추가하기</button>
-              <a href="../product/proload.html"
-                ><button class="user_btn">뒤로가기</button></a
-              >
+            <div class="proinfo_btns">
+              <button type="submit" class="pro_btn">추가하기</button>
+              <button class="pro_btn">
+                <a href="../product/proload.html">뒤로가기</a>
+              </button>
             </div>
           </div>
         </div>
