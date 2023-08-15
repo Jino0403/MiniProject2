@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>카테고리 > 맥주</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/Frontend/CSS/product-detail.css"
+    />
+    <link rel="stylesheet" type="text/css" href="/Frontend/CSS/style.css" />
+    <script src="/Frontend/Javascript/includeHTML.js"></script>
+    <script src="/Frontend/Javascript/product-detail.js" defer></script>
+  </head>
+  <body>
+    <div id="wrapper">
+      <header include-html="/Frontend/HTML/Main/header.html"></header>
+      <nav include-html="/Frontend/HTML/Main/nav.html"></nav>
+      <main>
+        <div class="product-first">
+          <img
+            class="main-img"
+            src="/Frontend/images/술 사진/맥주/기네스.png"
+          />
+          <div class="product-buy">
+            <h1 class="product-main-title">기네스</h1>
+            <hr class="first-hr" />
+
+            <h2>2,300원</h2>
+
+            <div class="product-select">
+              <div class="count-button">
+                <h3>수량</h3>
+                <button id="decrement">-</button>
+                <span id="quantity">0</span>
+                <button id="increment">+</button>
+              </div>
+              <div class="product-buy-button">
+                <button
+                  class="basket-button"
+                  type="button"
+                  onclick="location.href='.jsp'"
+                >
+                  장바구니에 담기
+                </button>
+                <button
+                  class="purchase-button"
+                  type="button"
+                  onclick="location.href='.jsp'"
+                >
+                  구매하기
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+        <h2 class="recommend-comment">곁들이면 찰떡궁합인 안주 추천</h2>
+        <div class="product-second">
+          <div class="second-line">
+            <div class="product-recommend-image">
+              <img
+                class="recommed-with-product"
+                src="/Frontend/images/안주사진/맥주안주_버팔로윙봉.png"
+              />
+            </div>
+            <h5>버팔로 윙봉</h5>
+            <p>16,200원</p>
+          </div>
+          <div class="second-line">
+            <div class="product-recommend-image">
+              <img
+                class="recommed-with-product"
+                src="/Frontend/images/안주사진/위스키안주_감바스.png"
+              />
+            </div>
+            <h5>감바스</h5>
+            <p>13,200원</p>
+          </div>
+          <div class="second-line">
+            <div class="product-recommend-image">
+              <img
+                class="recommed-with-product"
+                src="/Frontend/images/안주사진/와인안주_찹 스테이크.png"
+              />
+            </div>
+            <h5>찹 스테이크</h5>
+            <p>16,200원</p>
+          </div>
+          <div class="second-line">
+            <div class="product-recommend-image">
+              <img
+                class="recommed-with-product"
+                src="/Frontend/images/안주사진/사케안주_연어구이.png"
+              />
+            </div>
+            <h5>연어구이</h5>
+            <p>3,300원</p>
+          </div>
+          <div class="second-line">
+            <div class="product-recommend-image">
+              <img
+                class="recommed-with-product"
+                src="/Frontend/images/안주사진/와인안주_홍합스튜.png"
+              />
+            </div>
+            <h5>홍합스튜</h5>
+            <p>10,700원</p>
+          </div>
+        </div>
+        <hr />
+        <div class="product-third"></div>
+        <table>
+          <caption>
+            주류 정보
+          </caption>
+          <thead>
+            <tr>
+              <th class="table-top">술 종류</th>
+              <th class="table-top">알코올 도수</th>
+              <th class="table-top">원산지</th>
+              <th class="table-top">용량</th>
+            </tr>
+            <tr>
+              <th class="table-bottom">맥주</th>
+              <th class="table-bottom">4.2%</th>
+              <th class="table-bottom">아일랜드</th>
+              <th class="table-bottom">330ml</th>
+            </tr>
+          </thead>
+        </table>
+        <ul>
+          <li>
+            기네스는 볶은 보리 , 홉 , 효모 및 물로 만든 전통적 아일랜드 풍
+            맥주입니다.
+          </li>
+          <li>
+            기네스 특유의 진한 색과 캐러멜 색된 향은 로스팅되었지만 맥아가 아닌
+            보리에서 나옵니다.
+          </li>
+          <li>
+            기네스에는 과일과 채소에서 발견되는 것과 유사한 놀라운 건강 기능
+            항산화 제가 포함되어 있습니다.
+          </li>
+          <li>
+            이 산화 방지제는 동맥벽에 나쁜 콜레스테롤이 축적되는 것을 늦추는 데
+            도움이되는 것으로 나타났습니다.
+          </li>
+          <li>
+            기네스가 잘 알려져있는 두껍고 크림 같은 머리는 맥주를 질소와 섞으면
+            더 작은 거품과 더 두꺼운 머리를 만듭니다.
+          </li>
+        </ul>
+        <img
+          class="product-information-img"
+          src="/Frontend/images/술 사진/술 상세사진/기네스-상세페이지.png"
+        />
+        <img
+          class="seviece-information"
+          src="/Frontend/images/서비스사진.png"
+        />
+      </main>
+      <footer include-html="/Frontend/HTML/Main/footer.html"></footer>
+    </div>
+    <script></script>
+  </body>
+  <script>
+    includeHTML();
+  </script>
+</html>
