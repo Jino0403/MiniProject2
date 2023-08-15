@@ -9,7 +9,7 @@
 <%--DB 연결 파일 --%>
     <%@ page import="java.sql.*"%>
     <%
-    String driverName = "com.mysql.jdbc.Driver";
+    String driverName = "com.mysql.cj.jdbc.Driver";
     String url = "jdbc:mysql://localhost:3306/store";
     String username = "root"; // DB 연결 ID
     String password = "root"; // DB 연결 PW
