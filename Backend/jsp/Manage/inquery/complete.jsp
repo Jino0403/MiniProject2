@@ -14,7 +14,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="../../../../Styles/CSS/managePage.css" />
+      href="../../../../Styles/CSS/managePage.css"/>
     <title>관리자 페이지</title>
   </head>
   <body>
@@ -25,7 +25,6 @@
             <a href="../manageMain.html"
               ><img src="../../../../Styles/images/logo 1.png"
             /></a>
-
             <h3>관리자페이지</h3>
             <ul id="nav_bar2">
               <li class="menu_bar2">
@@ -42,12 +41,10 @@
               </li>
             </ul>
           </div>
-
           <div class="manage_logout">
-            <a href="">로그아웃</a>
+            <a href="../../logout.jsp">로그아웃</a>
           </div>
         </div>
-
         <div class="manage_section">dd</div>
       </main>
     </div>

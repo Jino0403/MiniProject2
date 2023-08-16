@@ -20,11 +20,11 @@
   <body>
     <div id="manage_wrapper">
       <main>
-        <div class="manage_menu">
-          <div>
-            <a href="../manageMain.jsp"
-              ><img src="../../../../Styles/images/logo 1.png"
-            /></a>
+        <div id="manage_menu">
+          <div class="manage_menu_section">
+            <div class="manage_menu_title">
+              <a href="../manageMain.jsp">Alcohol</a>
+            </div>
 
             <h3>관리자페이지</h3>
             <ul id="nav_bar2">
@@ -44,7 +44,7 @@
           </div>
 
           <div class="manage_logout">
-            <a href="">로그아웃</a>
+            <a href="../../logout.jsp">로그아웃</a>
           </div>
         </div>
 
@@ -78,7 +78,7 @@
                 placeholder="하이픈('-')을 사용하여 작성해주세요. ex (010-1234-5678)" />
 
               <label>생년월일</label>
-              <input type="date" name="birthday" />
+              <input type="date" name="birthday"/>
 
               <div class="userinfo_btns">
                 <button class="user_btn" type="submit">추가하기</button>

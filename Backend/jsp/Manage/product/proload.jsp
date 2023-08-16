@@ -1,4 +1,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.sql.*"%>
+<%@ include file="../../conn.jsp"%>
+<%
+  try {
+    String selectQuery = "SELECT * FROM product";
+    PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
+    ResultSet resultSet = preparedStatement.executeQuery();
+%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,9 +16,13 @@
       src="../../../../Styles/Javascript/jquery-3.7.0.js"
       type="text/javascript"></script>
     <script
-      src="../../../../Styles/Javascript/manage.js"
+      src="../../../../Styles/Javascript/pagePro.js"
       type="text/javascript"
       defer="defer"></script>
+    <script
+            src="../../../../Styles/Javascript/profun.js"
+            type="text/javascript"
+            defer="defer"></script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -20,11 +32,11 @@
   <body>
     <div id="manage_wrapper">
       <main>
-        <div class="manage_menu">
-          <div>
-            <a href="../manageMain.jsp"
-              ><img src="../../../../Styles/images/logo 1.png"
-            /></a>
+        <div id="manage_menu">
+          <div class="manage_menu_section">
+            <div class="manage_menu_title">
+              <a href="../manageMain.jsp">Alcohol</a>
+            </div>
 
             <h3>관리자페이지</h3>
             <ul id="nav_bar2">
@@ -44,21 +56,22 @@
           </div>
 
           <div class="manage_logout">
-            <a href="">로그아웃</a>
+            <a href="../../logout.jsp">로그아웃</a>
           </div>
         </div>
 
         <div id="manage_section">
           <div id="manage_detail">
             <div class="manage_btns">
-              <a href="proadd.jsp"
-                ><button class="manage_btn">상품 추가</button></a
-              >
-
-              <button class="manage_btn">상품 삭제</button>
-              <a href="proedit.jsp"
-                ><button class="manage_btn">상품 수정</button></a
-              >
+              <a href="proadd.jsp"><button class="manage_btn">상품 추가</button></a>
+              <form action="prodel.jsp" method="post">
+                <button class="manage_btn" type="submit" name="manage_del_btn">상품 삭제</button>
+                <input type="hidden" name="delselectedProduct" value="" id="delselectedProduct" />
+              </form>
+              <form action="proedit.jsp" method="post">
+                <button class="manage_btn" type="submit" name="manage_update_btn">상품 수정</button></a>
+                <input type="hidden" name="updateselectedProduct" value="" id="updateselectedProduct" />
+              </form>
             </div>
             <table class="pro_table">
               <thead>
@@ -74,62 +87,55 @@
                   <th class="pro_th2">도수</th>
                   <th class="pro_th">국가</th>
                   <th class="pro_info">상품설명</th>
+                  <th class="pro_name">관리자</th>
                 </tr>
               </thead>
               <tbody>
+              <%
+                while (resultSet.next()) {
+                  int productNumber = resultSet.getInt("pno");
+                  String productName = resultSet.getString("pname");
+                  String productCategory = resultSet.getString("pcategory");
+                  int productPrice = resultSet.getInt("pprice");
+                  int productQuantity = resultSet.getInt("pquantity");
+                  int productMl = resultSet.getInt("pml");
+                  double productAlcohol= resultSet.getDouble("palcohol");
+                  String productCountry = resultSet.getString("pcountry");
+                  String productText = resultSet.getString("ptext");
+                  String productUrl = resultSet.getString("purl");
+                  String productCharge = resultSet.getString("mid");
+              %>
                 <tr class="t_tr">
-                  <td><input type="checkbox" /></td>
-                  <td>1500</td>
+                  <td><input type="checkbox" name="productCheck" value="<%=productNumber%>" class="productCheckbox"/></td>
+                  <td><%=productNumber%></td>
                   <td>
                     <img
                       class="pro_img"
-                      src="../../../../Styles/images/술 사진/사케/아마부키 하쿠토우슈.png" />
+                      src="<%=productUrl%>" alt="picture"/>
                   </td>
-                  <td>칸티나 자키니니 달 트랄체토 체라수올로</td>
-                  <td>사케</td>
-                  <td>10,300,800원</td>
-                  <td>10000</td>
-                  <td>1900mL</td>
-                  <td>7.0%</td>
-                  <td>도미니크공화국</td>
-                  <td>
-                    이즈오시마의 맑은 바닷물로 만든 천연소금이 들어간
-                    소금유자사케로 좋은 향기와 감칠맛이 가득이즈오시마의 맑은
-                    바닷물로 만든 천연소금이 들어간 소금유자사케로 좋은 향기와
-                    감칠맛이 가득이즈오시마의 맑은 바닷물로 만든 천연소금이
-                    들어간 소금유자사케로 좋은 향기와 감칠맛이 가득이즈오시마의
-                    맑은 바닷물로 만든 천연소금이 들어간 소금유자사케로 좋은
-                    향기와 감칠맛이 가득
-                  </td>
+                  <td><%=productName%></td></td>
+                  <td><%=productCategory%></td></td>
+                  <td><%=productPrice%> 원</td>
+                  <td><%=productQuantity%></td></td>
+                  <td><%=productMl%> mL</td>
+                  <td><%=productAlcohol%> %</td>
+                  <td><%=productCountry%></td></td>
+                  <td><%=productText%></td></td>
+                  <td><%=productCharge%></td></td>
                 </tr>
-                <tr class="t_tr">
-                  <td><input type="checkbox" /></td>
-                  <td>1500</td>
-                  <td>
-                    <img
-                      class="pro_img"
-                      src="../../../../Styles/images/술 사진/사케/아마부키 하쿠토우슈.png" />
-                  </td>
-                  <td>칸티나 자키니니 달 트랄체토 체라수올로</td>
-                  <td>사케</td>
-                  <td>10,300,800원</td>
-                  <td>10000</td>
-                  <td>1900mL</td>
-                  <td>7.0%</td>
-                  <td>도미니크공화국</td>
-                  <td>
-                    이즈오시마의 맑은 바닷물로 만든 천연소금이 들어간
-                    소금유자사케로 좋은 향기와 감칠맛이 가득이즈오시마의 맑은
-                    바닷물로 만든 천연소금이 들어간 소금유자사케로 좋은 향기와
-                    감칠맛이 가득이즈오시마의 맑은 바닷물로 만든 천연소금이
-                    들어간 소금유자사케로 좋은 향기와 감칠맛이 가득이즈오시마의
-                    맑은 바닷물로 만든 천연소금이 들어간 소금유자사케로 좋은
-                    향기와 감칠맛이 가득
-                  </td>
-                </tr>
+                <%
+                  }
+                  resultSet.close();
+                  preparedStatement.close();
+                  conn.close();
+                  } catch (Exception e) {
+                  e.printStackTrace();
+                  }
+                %>
               </tbody>
             </table>
           </div>
+          <div id="pagination-container"></div>
         </div>
       </main>
     </div>
