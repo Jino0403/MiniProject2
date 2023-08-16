@@ -1,0 +1,69 @@
+-기네스 
+가격 : 2300
+용량 :330
+도수 :4.2
+국가 :아일랜드
+purl : /Styles/images/alcohol_image/beer/guinness.png
+
+-버드와이저
+가격 :1500 
+용량 :330
+도수 :5
+국가 :미국
+purl : /Styles/images/alcohol_image/beer/budweiser.png
+
+-산미구엘
+가격 : 2800
+용량 :320
+도수 :5
+국가 :필리핀
+purl : /Styles/images/alcohol_image/beer/sanmiguel.png
+
+-서머스비
+가격 : 1700
+용량 :330
+도수 :4.5
+국가 :덴마크
+purl : /Styles/images/alcohol_image/beer/somersby.png
+
+-스텔라 아르투아
+가격 : 3300
+용량 :330
+도수 :5
+국가 :벨기에
+purl : /Styles/images/alcohol_image/beer/stellaartois.png
+
+-칭따오
+가격 : 5500
+용량 :640
+도수 :4.7
+국가 :중국
+purl : 
+/Styles/images/alcohol_image/beer/qingdao.png
+-크로넨버그
+가격 : 2500
+용량 :650
+도수 :5
+국가 :프랑스
+purl : 
+/Styles/images/alcohol_image/beer/kronenbourg.png
+-하이네켄
+가격 : 4000
+용량 :650
+도수 :5
+국가 :네덜란드
+purl : 
+/Styles/images/alcohol_image/beer/heineken.png
+-카스
+가격 : 2100
+용량 : 640
+도수 : 4.5
+국가 : 대한민국
+purl :
+/Styles/images/alcohol_image/beer/cass.png
+-켈리
+가격 :1550
+용량 :640
+도수 : 4.5
+purl :
+/Styles/images/alcohol_image/beer/kelly.png

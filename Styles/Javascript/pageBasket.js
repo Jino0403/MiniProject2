@@ -1,35 +1,39 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   const itemsPerPage = 10
-  const tableBody = document.querySelector('.basket_table tbody')
-  const paginationContainer = document.querySelector('#pagination-container')
+  const tableBody = document.querySelector(".basket_table tbody")
+  const paginationContainer = document.querySelector("#pagination-container")
 
-  const totalItems = tableBody.querySelectorAll('tr').length
-
+  const totalItems = tableBody.querySelectorAll("tr").length
   const totalPages = Math.ceil(totalItems / itemsPerPage)
 
+  paginationContainer.style.display = "flex"
+  paginationContainer.style.justifyContent = "center"
+  paginationContainer.style.alignItems = "center"
+  paginationContainer.style.margin = "30px auto 10px auto"
+
   for (let i = 1; i <= totalPages; i++) {
-    const basketButton = document.createElement('button')
+    const basketButton = document.createElement("button")
     basketButton.textContent = i
+    basketButton.style.padding = "8px"
+    basketButton.style.margin = "5px"
+    basketButton.style.border = "1px solid gray"
+    basketButton.style.borderRadius = "6px"
+    basketButton.style.backgroundColor = "white"
+    basketButton.style.boxShadow = "0 0 1px"
+    basketButton.style.fontSize = "18px"
+    basketButton.style.color = "black"
+    basketButton.style.userSelect = "none"
 
-    const buttonContainer = document.createElement('div')
-    buttonContainer.appendChild(basketButton)
-    paginationContainer.style.border = '1px solid black'
-    paginationContainer.style.display = 'flex'
-    paginationContainer.style.justifyContent = 'center'
-    paginationContainer.style.alignItems = 'center'
-    paginationContainer.style.margin = '15px auto 0 auto'
+    basketButton.addEventListener(
+      "click",
+      (function (pageNumber) {
+        return function () {
+          showPage(pageNumber)
+        }
+      })(i)
+    )
 
-    basketButton.style.padding = '8px'
-    basketButton.style.margin = '5px'
-    basketButton.style.backgroundColor = 'black'
-    basketButton.style.borderRadius = '6px'
-    basketButton.style.fontSize = '18px'
-    basketButton.style.color = 'white'
-
-    basketButton.addEventListener('click', function () {
-      showPage(i)
-    })
-    paginationContainer.append(buttonContainer)
+    paginationContainer.appendChild(basketButton)
   }
 
   showPage(1)
@@ -38,13 +42,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const startIndex = (pageNumber - 1) * itemsPerPage
     const endIndex = startIndex + itemsPerPage
 
-    const rows = tableBody.querySelector('tr')
-    for (let i = 0; i < rows.length; i++) {
+    const rows = tableBody.querySelectorAll("tr.t_tr")
+    rows.forEach((row, i) => {
       if (i >= startIndex && i < endIndex) {
-        rows[i].style.display = 'table-row'
+        row.style.display = "table-row"
       } else {
-        rows[i].style.display = 'none'
+        row.style.display = "none"
       }
-    }
+    })
   }
 })

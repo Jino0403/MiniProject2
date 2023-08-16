@@ -16,12 +16,19 @@ try{
 
         if (resultSet.next()) {
             // 로그인 성공
-//            HttpSession session1 = request.getSession();
-//            session1.setAttribute("username", enteredUsername);
-//            session.setMaxInactiveInterval(360 * 60);
-            response.sendRedirect("sign.jsp"); // 대시보드 페이지로 이동
-        } else {
-            // 로그인 실패
+            int memberMdiv = resultSet.getInt("mdiv");
+            if(memberMdiv == 2) {
+                HttpSession session1 = request.getSession();
+                session1.setAttribute("username", enteredUsername);
+                session1.setMaxInactiveInterval(360 * 60);
+                response.sendRedirect("manageMain.jsp");
+            } else {
+                HttpSession session1 = request.getSession();
+                session1.setAttribute("username", enteredUsername);
+                session1.setMaxInactiveInterval(360 * 60);
+                response.sendRedirect("sign.jsp"); // 대시보드 페이지로 이동
+            }
+        } else{
             out.println("로그인 실패");
         }
 

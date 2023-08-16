@@ -1,0 +1,70 @@
+-안동소주
+가격 : 10500
+용량 :375
+도수 :42
+국가 :대한민국
+purl : 
+/Styles/images/alcohol_image/soju/andongsoju.png
+-금빛소주
+가격 : 33250
+용량 :375
+도수 :35
+국가 :대한민국
+purl : 
+/Styles/images/alcohol_image/soju/geumbitsoju.png
+-도원결의
+가격 : 6930
+용량 :360
+도수 :25
+국가 :대한민국
+purl : 
+/Styles/images/alcohol_image/soju/dowongyuleu.png
+-동해소주
+가격 : 2220
+용량 :360
+도수 :17.5
+국가 :대한민국
+purl : 
+/Styles/images/alcohol_image/soju/donghaesoju.png
+-미상 감귤소주
+가격 : 11700
+용량 :350
+도수 :25
+국가 :대한민국
+purl : 
+/Styles/images/alcohol_image/soju/misanggamkuylsoju.png
+-서울의 밤
+가격 : 7900
+용량 :375
+도수 :17
+국가 :대한민국
+purl : 
+/Styles/images/alcohol_image/soju/seoul'snight.png
+-일품
+가격 : 5100
+용량 :350
+도수 :21
+국가 :대한민국
+purl : 
+/Styles/images/alcohol_image/soju/ilpum.png
+-전주이강주
+가격 : 12350
+용량 :375
+도수 :25
+국가 :대한민국
+purl : 
+/Styles/images/alcohol_image/soju/jeonjuyigangju.png
+-추사백 사과 소주
+가격 : 32000
+용량 :500
+도수 :40
+국가 :대한민국
+purl : 
+/Styles/images/alcohol_image/soju/choosabaekapplesoju.png
+-황금보리
+가격 : 9630
+용량 :375
+도수 :25
+국가 :대한민국
+purl : 
+/Styles/images/alcohol_image/soju/hwanggeumbori.png

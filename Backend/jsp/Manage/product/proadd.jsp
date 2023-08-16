@@ -20,11 +20,11 @@
   <body>
     <div id="manage_wrapper">
       <main>
-        <div class="manage_menu">
-          <div>
-            <a href="../manageMain.jsp"
-              ><img src="../../../../Styles/images/logo 1.png"
-            /></a>
+        <div id="manage_menu">
+          <div class="manage_menu_section">
+            <div class="manage_menu_title">
+              <a href="../manageMain.jsp">Alcohol</a>
+            </div>
 
             <h3>관리자페이지</h3>
             <ul id="nav_bar2">
@@ -44,46 +44,44 @@
           </div>
 
           <div class="manage_logout">
-            <a href="">로그아웃</a>
+            <a href="../../logout.jsp">로그아웃</a>
           </div>
         </div>
 
         <div id="manage_section">
           <div class="manage_pro">
             <div class="manage_protitle">신규 상품 추가</div>
-            <form class="proadd_form">
+            <form class="proadd_form" action="proaddpro.jsp">
               <label>상품명</label>
-              <input type="text" />
+              <input type="text" name="productName"/>
               <label>카테고리</label>
-              <select name="category" class="select_category">
-                <option value="whiskey">위스키</option>
-                <option value="wine">와인</option>
-                <option value="sake">사케</option>
-                <option value="vodka">보드카</option>
-                <option value="soju">소주</option>
-                <option value="beer">맥주</option>
-                <option value="makgeolli">막걸리</option>
-                <option value="snack">안주류</option>
+              <select name="productCategory" class="select_category">
+                <option value="위스키">위스키</option>
+                <option value="와인">와인</option>
+                <option value="사케">사케</option>
+                <option value="보드카">보드카</option>
+                <option value="소주">소주</option>
+                <option value="맥주">맥주</option>
+                <option value="막걸리">막걸리</option>
+                <option value="안주류">안주류</option>
               </select>
               <label>상품가격</label>
-              <input type="text" placeholder="10000" />
+              <input type="text" name="productPrice" />
               <label>재고량</label>
-              <input type="text" />
+              <input type="text" name="productQuantity"/>
               <label>용량</label>
-              <input type="text" />
+              <input type="text" name="productMl"/>
               <label>도수</label>
-              <input type="text" />
+              <input type="text" name="productAlcohol"/>
               <label>국가</label>
-              <input type="text" />
+              <input type="text" name="productCountry"/>
               <label>상품설명</label>
-              <input type="text" maxlength="200" />
+              <input type="text" maxlength="200" name="productText"/>
+              <div class="userinfo_btns">
+                <button class="user_btn">추가하기</button>
+                <button class="user_btn" type="button"><a href="proload.jsp">뒤로가기</a></button>
+              </div>
             </form>
-            <div class="userinfo_btns">
-              <button class="user_btn">추가하기</button>
-              <a href="proload.jsp"
-                ><button class="user_btn">뒤로가기</button></a
-              >
-            </div>
           </div>
         </div>
       </main>
