@@ -28,6 +28,7 @@ CREATE TABLE `border` (
   `btiltle` varchar(45) DEFAULT NULL,
   `btext` varchar(200) DEFAULT NULL,
   `btime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `burl` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`bno`),
   KEY `mid` (`mid`),
   CONSTRAINT `border_ibfk_1` FOREIGN KEY (`mid`) REFERENCES `member` (`mid`) ON DELETE SET NULL ON UPDATE CASCADE
@@ -79,13 +80,13 @@ CREATE TABLE `member` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Table structure for table `order_info`
+-- Table structure for table `order`
 --
 
-DROP TABLE IF EXISTS `order_info`;
+DROP TABLE IF EXISTS `order`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `order_info` (
+CREATE TABLE `order` (
   `ono` int NOT NULL AUTO_INCREMENT,
   `pno` int DEFAULT NULL,
   `mid` varchar(20) DEFAULT NULL,
@@ -96,7 +97,7 @@ CREATE TABLE `order_info` (
   `mname` varchar(20) DEFAULT NULL,
   `madress` varchar(45) DEFAULT NULL,
   `mphone` varchar(20) DEFAULT NULL,
-  `otext` varchar(200) DEFAULT NULL,
+  `otext` varchar(50) DEFAULT NULL,
   `opay` int DEFAULT NULL,
   `ctotalprice` int DEFAULT NULL,
   `otime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
@@ -104,10 +105,10 @@ CREATE TABLE `order_info` (
   KEY `pno` (`pno`),
   KEY `mid` (`mid`),
   KEY `cno` (`cno`),
-  CONSTRAINT `order_info_ibfk_1` FOREIGN KEY (`pno`) REFERENCES `product` (`pno`) ON DELETE SET NULL ON UPDATE CASCADE,
-  CONSTRAINT `order_info_ibfk_2` FOREIGN KEY (`mid`) REFERENCES `member` (`mid`) ON DELETE SET NULL ON UPDATE CASCADE,
-  CONSTRAINT `order_info_ibfk_3` FOREIGN KEY (`cno`) REFERENCES `cart` (`cno`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `order_ibfk_1` FOREIGN KEY (`pno`) REFERENCES `product` (`pno`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `order_ibfk_2` FOREIGN KEY (`mid`) REFERENCES `member` (`mid`) ON DELETE SET NULL ON UPDATE CASCADE,
+  CONSTRAINT `order_ibfk_3` FOREIGN KEY (`cno`) REFERENCES `cart` (`cno`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='50';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -119,19 +120,20 @@ DROP TABLE IF EXISTS `product`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `product` (
   `pno` int NOT NULL AUTO_INCREMENT,
-  `pname` varchar(20) DEFAULT NULL,
+  `pname` varchar(45) DEFAULT NULL,
   `pcategory` varchar(20) DEFAULT NULL,
   `pprice` int DEFAULT NULL,
   `pquantity` int DEFAULT NULL,
   `pml` int DEFAULT NULL,
-  `palcohol` int DEFAULT NULL,
+  `palcohol` decimal(3,1) DEFAULT NULL,
   `pcountry` varchar(20) DEFAULT NULL,
   `ptext` varchar(200) DEFAULT NULL,
+  `purl` varchar(200) DEFAULT NULL,
   `mid` varchar(20) DEFAULT NULL,
+  `pdiv` int DEFAULT NULL,
   PRIMARY KEY (`pno`),
-  KEY `mid` (`mid`),
-  CONSTRAINT `product_ibfk_1` FOREIGN KEY (`mid`) REFERENCES `member` (`mid`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  KEY `mid` (`mid`)
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -164,4 +166,4 @@ CREATE TABLE `reply` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-08-09 15:42:07
+-- Dump completed on 2023-08-14 10:20:10
