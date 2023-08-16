@@ -1,8 +1,8 @@
 /*관리자 페이지 CSS*/
 
 @font-face {
-  font-family: 'Lobster-Regular';
-  src: url('/Frontend/fonts/Lobster-Regular.ttf');
+  font-family: "Lobster-Regular";
+  src: url("/Frontend/fonts/Lobster-Regular.ttf");
 }
 
 body {
@@ -57,10 +57,11 @@ main {
 /*관리자메뉴 타이틀 감싸는 div*/
 
 .manage_menu_title a {
-  font-family: 'Lobster-Regular', sans-serif;
+  font-family: "Lobster-Regular", sans-serif;
   font-size: 40px;
   color: white;
   text-decoration: none;
+  user-select: none;
 }
 
 /*관리자 메뉴 타이틀 및 링크*/
@@ -70,6 +71,7 @@ main {
   font-size: 25px;
   word-wrap: break-word;
   color: white;
+  user-select: none;
 }
 
 /*관리자 메뉴섹션*/
@@ -91,6 +93,7 @@ main {
 
 .menu_bar2 {
   line-height: 5;
+  user-select: none;
 }
 
 /*각각의 menu bar*/
@@ -215,6 +218,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 0 10px lightgray;
   background-color: white;
+  user-select: none;
 }
 
 /*고객정보 테이블과 버튼들을 감싸는 div*/
@@ -282,7 +286,8 @@ main {
 /*여기서 부터는 상품 관련 CSS*/
 
 .manage_pro {
-  height: 100%;
+  width: 80%;
+  height: 50%;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -293,14 +298,19 @@ main {
   box-shadow: 0 0 10px lightgray;
 }
 
+/*상품섹션을 감싸는 div*/
+
 .manage_protitle {
-  font-size: 40px;
   margin-bottom: 30px;
+  font-size: 40px;
+  user-select: none;
 }
+
+/*상품 섹션 타이틀*/
 
 .proadd_form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -309,77 +319,146 @@ main {
   padding: 3px;
   margin: 10px auto 10px 0;
   font-weight: bold;
+  user-select: none;
 }
 
-/*상품추가폼 라벨 부분*/
+/*상품 추가 폼과 라벨 부분*/
 
-.proadd_form input {
+.proadd_section1 {
+  margin: 0 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 8px lightgray;
+}
+
+.proadd_section1 select {
+  width: 100%;
+  height: 39px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.proadd_section1 input {
   width: 400px;
-  height: 30px;
+  height: 35px;
   padding-left: 10px;
   border: 1px solid lightgray;
   border-radius: 4px;
+  user-select: none;
 }
 
-/*상품추가폼 input 부문*/
+/*상품 추가 폼의 section1 부분*/
 
-.proadd_form_file {
-  padding: 10px;
+.proadd_section2 {
+  margin: 0 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 8px lightgray;
 }
 
-/*상품 추가폼 file input부분*/
+.proadd_section2 input[type="file"] {
+  height: 30px;
+  margin-bottom: 2px;
+  padding: 4px;
+  user-select: none;
+}
 
-.proadd_form select {
-  width: 100%;
+.proadd_section2 input {
+  width: 400px;
+  height: 35px;
+  padding-left: 10px;
   border: 1px solid lightgray;
   border-radius: 4px;
+  user-select: none;
 }
-
-/*상품추가폼에서 카테고리 선택 부분*/
+/*상품추가폼 라벨 부분*/
 
 .proedit_form {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  user-select: none;
 }
-
-/*상품수정 폼*/
 
 .proedit_form label {
-  padding: 3px;
+  padding: 10px;
   margin: 10px auto 10px 0;
-  /* margin-right: auto; */
   font-weight: bold;
+  user-select: none;
 }
 
-/*상품수정폼 라벨 부분*/
+/*상품수정폼 및 라벨 부분*/
 
-.proedit_form input {
+.proedit_section1 {
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  padding: 30px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 8px lightgray;
+}
+
+.proedit_section1 select {
+  width: 100%;
+  height: 37px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.proedit_section1 input {
   width: 400px;
-  height: 30px;
+  height: 35px;
   padding-left: 10px;
   border: 1px solid lightgray;
   border-radius: 4px;
+  user-select: none;
 }
 
-/*상품 수정폼 input 부분*/
+/*상품 수정 폼의 카테고리 section1 부분*/
 
-.proedit_form_file {
-  /* width: 100%; */
-  /* height: 100%; */
-  padding: 10px;
+.proedit_section2 {
+  margin: 0 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 8px lightgray;
 }
 
-/*상품 수정폼 file추가 input 부분*/
+.proedit_section2 input[type="file"] {
+  height: 30px;
+  margin-bottom: 4px;
+  padding: 4px;
+  user-select: none;
+}
 
-.proedit_form select {
-  width: 100%;
+.proedit_section2 input {
+  width: 400px;
+  height: 35px;
+  padding-left: 10px;
   border: 1px solid lightgray;
   border-radius: 4px;
+  user-select: none;
 }
+/*상품 수정폼 section2 부분*/
 
-/*상품 수정폼 select 부문*/
+/*상품 수정폼 select 부분*/
 
 .proinfo_btns {
   margin-top: 30px;
@@ -395,6 +474,7 @@ main {
   color: white;
   font-size: 20px;
   cursor: pointer;
+  user-select: none;
 }
 /*고객추가섹션 버튼*/
 

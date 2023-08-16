@@ -8,20 +8,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&family=Orbit&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
     <script src="./Javascript/includeHTML.js"></script>
 
     <title>메인 페이지</title>
   </head>
   <body>
     <div id="wrapper">
+      <!-- 헤더를 include-html로 불러옵니다 -->
       <header include-html="./HTML/Main/header.html"></header>
       <nav include-html="./HTML/Main/nav.html"></nav>
       <main include-html="./HTML/Main/main.html"></main>
       <footer include-html="./HTML/Main/footer.html"></footer>
     </div>
+
+    <!-- JavaScript 파일 포함 -->
+    <script>
+      includeHTML()
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.getElementById("header")
+        if (header) {
+          const searchButton = header.querySelector("#search_button")
+          const searchInput = header.querySelector("#search_input")
+
+          searchButton.addEventListener("click", function () {
+            const searchTerm = searchInput.value.trim()
+
+            if (searchTerm !== "") {
+              window.location.href = `./HTML/Search/search.html?term=${encodeURIComponent(
+                searchTerm
+              )}`
+            }
+          })
+        }
+      })
+    </script>
   </body>
-  <script>
-    includeHTML();
-  </script>
 </html>

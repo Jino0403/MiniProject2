@@ -5,15 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
       src="/Frontend/Javascript/jquery-3.7.0.js"
-      type="text/javascript"></script>
+      type="text/javascript"
+    ></script>
     <script
       src="/Frontend/Javascript/manage.js"
       type="text/javascript"
-      defer="defer"></script>
+      defer="defer"
+    ></script>
     <link
       rel="stylesheet"
       type="text/css"
-      href="/Frontend/CSS/managePage.css" />
+      href="/Frontend/CSS/managePage.css"
+    />
     <title>관리자 페이지</title>
   </head>
   <body>
@@ -49,76 +52,98 @@
 
         <div id="manage_section">
           <div class="manage_pro">
-            <div class="manage_protitle">상품 정보 수정</div>
+            <div class="manage_protitle">🎁 상품 정보 수정</div>
             <form class="proedit_form" method="post">
-              <label name="proname">상품명</label>
-              <input
-                type="text"
-                id="proname"
-                name="proname"
-                placeholder=" 예시 : 맛있는 초콜릿" />
-              <label name="category">카테고리</label>
-              <select id="category" name="category" class="select_category">
-                <option value="whiskey">위스키</option>
-                <option value="wine">와인</option>
-                <option value="sake">사케</option>
-                <option value="vodka">보드카</option>
-                <option value="soju">소주</option>
-                <option value="beer">맥주</option>
-                <option value="makgeolli">막걸리</option>
-                <option value="snack">안주류</option>
-              </select>
-              <label name="proprice">상품가격</label>
-              <input
-                type="text"
-                id="proprice"
-                name="proprice"
-                placeholder=" 예시 : 10000원"
-                required />
-              <label name="proquantity">재고량</label>
-              <input
-                id="proquantity"
-                id="proquantity"
-                name="proquantity"
-                type="text"
-                placeholder=" 예시 : 1000개"
-                required />
-              <label name="proml">용량</label>
-              <input
-                type="text"
-                id="proml"
-                name="pml"
-                placeholder=" 예시 : 1500ml"
-                required />
-              <label name="proalcohol">도수</label>
-              <input
-                type="text"
-                id="proalcohol"
-                name="proalcohol"
-                placeholder=" 예시 : 7도" />
-              <label name="procountry">국가</label>
-              <input
-                type="text"
-                id="procountry"
-                name="procountry"
-                placeholder=" 예시 : 남아프리카 공화국" />
-              <label name="protext">상품설명</label>
-              <input
-                type="text"
-                id="protext"
-                name="protext"
-                maxlength="200"
-                placeholder=" 예시 : 부드럽고 달콤하다가 끝에 쌉사름한 초콜릿" />
-              <label for="proimage" name="proimage"
-                >상품사진 (png 파일만 가능)</label
-              >
-              <input
-                class="proadd_form_file"
-                type="file"
-                id="proimage"
-                name="proimage"
-                accept="image/png"
-                required />
+              <div class="proedit_section1">
+                <label name="proname">상품명</label>
+                <input
+                  type="text"
+                  id="proname"
+                  name="proname"
+                  placeholder=" 예시 : 맛있는 초콜릿"
+                />
+                <label name="category">🍹 카테고리</label>
+                <select id="category" name="category" class="select_category">
+                  <option value="위스키">위스키</option>
+                  <option value="와인">와인</option>
+                  <option value="사케">사케</option>
+                  <option value="보드카">보드카</option>
+                  <option value="소주">소주</option>
+                  <option value="맥주">맥주</option>
+                  <option value="막걸리">막걸리</option>
+                  <option value="안주">안주</option>
+                </select>
+                <label name="category_snack">🥩 세부 카테고리</label>
+                <select
+                  id="category_snack"
+                  name="category_snack"
+                  class="select_category"
+                >
+                  <option>고기류</option>
+                  <option>해산물류</option>
+                  <option>탕류</option>
+                </select>
+                <label name="proprice">상품가격</label>
+                <input
+                  type="text"
+                  id="proprice"
+                  name="proprice"
+                  placeholder=" 예시 : 10000원"
+                  required
+                />
+                <label name="proquantity">재고량</label>
+                <input
+                  id="proquantity"
+                  id="proquantity"
+                  name="proquantity"
+                  type="text"
+                  placeholder=" 예시 : 1000개"
+                  required
+                />
+              </div>
+              <div class="proedit_section2">
+                <label name="proml">용량</label>
+                <input
+                  type="text"
+                  id="proml"
+                  name="pml"
+                  placeholder=" 예시 : 1500ml"
+                  required
+                />
+                <label name="proalcohol">도수</label>
+                <input
+                  type="text"
+                  id="proalcohol"
+                  name="proalcohol"
+                  placeholder=" 예시 : 7도"
+                />
+                <label name="procountry">국가</label>
+                <input
+                  type="text"
+                  id="procountry"
+                  name="procountry"
+                  placeholder=" 예시 : 남아프리카 공화국"
+                />
+                <label name="protext">상품설명</label>
+                <input
+                  type="text"
+                  id="protext"
+                  name="protext"
+                  maxlength="200"
+                  placeholder=" 예시 : 부드럽고 달콤하다가 끝에 쌉사름한 초콜릿"
+                />
+                <label for="proimage" name="proimage"
+                  >상품사진 (png 파일만 가능)</label
+                >
+                <input
+                  class="proadd_form_file"
+                  type="file"
+                  id="proimage"
+                  name="proimage"
+                  accept="image/png"
+                  required
+                />
+              </div>
             </form>
             <div class="proinfo_btns">
               <button type="submit" class="pro_btn">수정하기</button>
