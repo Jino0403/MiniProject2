@@ -14,6 +14,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+            rel="stylesheet"
+            type="text/css"
+            href="../../../../Styles/CSS/managePage.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../../Styles/CSS/signup.css" />
     <script
       src="../../../../Styles/Javascript/jquery-3.7.0.js"
       type="text/javascript"></script>
@@ -21,20 +26,17 @@
       src="../../../../Styles/Javascript/manage.js"
       type="text/javascript"
       defer="defer"></script>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="../../../../Styles/CSS/managePage.css"/>
+    <script type="text/javascript" href="../../../../Styles/Javascript/signup.js" defer="defer"></script>
     <title>관리자 페이지</title>
   </head>
   <body>
-    <div id="manage_wrapper">
-      <main>
-        <div class="manage_menu">
-          <div>
-            <a href="../manageMain.jsp"
-              ><img src="../../../../Styles/images/logo 1.png"
-            /></a>
+  <div id="manage_wrapper">
+    <main>
+      <div id="manage_menu">
+        <div class="manage_menu_section">
+          <div class="manage_menu_title">
+            <a href="../manageMain.jsp">Alcohol</a>
+          </div>
 
             <h3>관리자페이지</h3>
             <ul id="nav_bar2">
@@ -54,7 +56,7 @@
           </div>
 
           <div class="manage_logout">
-            <a href="">로그아웃</a>
+            <a href="../../logout.jsp">로그아웃</a>
           </div>
         </div>
 
@@ -65,6 +67,7 @@
               <%
                 while (resultSet.next()) {
                   String memberId = resultSet.getString("mid");
+                  String memberPassword = resultSet.getString("mpw");
                   String memberName = resultSet.getString("mname");
                   String memberPhone = resultSet.getString("mphone");
                   String memberAdress = resultSet.getString("madress");
@@ -79,28 +82,29 @@
               <input
                       type="password"
                       name="password"
-                      placeholder="특수문자,숫자,문자를 조합하여 6~20자 내로 작성해주세요." />
+                      placeholder="특수문자,숫자,문자를 조합하여 6~20자 내로 작성해주세요."
+              />
               <label>비밀번호 확인</label>
               <input
                       type="password"
                       placeholder="특수문자,숫자,문자를 조합하여 8~20자 내로 작성해주세요." />
               <label>이름</label>
-              <input type="text" name="name" placeholder="<%=memberName%>" />
+              <input type="text" name="name" placeholder="<%=memberName%>" value="<%=memberName%>"/>
 
               <label>주소</label>
-              <input type="text" name="address" placeholder="<%=memberAdress%>" />
+              <input type="text" name="address" placeholder="<%=memberAdress%>" value="<%=memberAdress%>"/>
 
               <label>전화번호</label>
               <input
-                      type="phone"
-                      placeholder="<%=memberPhone%>" />
+                      type="phone" name="phone"
+                      placeholder="<%=memberPhone%>" value="<%=memberPhone%>"/>
 
               <label>생년월일</label>
               <input type="date" name="birthday" value="<%=memberbirth%>" readonly />
 
               <div class="userinfo_btns">
-                <button class="user_btn" type="submit">추가하기</button>
-                <button class="user_btn"><a href="userload.jsp">뒤로가기</a></button>
+                <button class="user_btn" type="submit">수정하기</button>
+                <button class="user_btn" type="button"><a href="userload.jsp">뒤로가기</a></button>
               </div>
               <%
                   }
@@ -112,7 +116,6 @@
                 }
               %>
             </form>
-
           </div>
         </div>
       </main>

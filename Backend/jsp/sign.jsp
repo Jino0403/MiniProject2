@@ -20,7 +20,7 @@
                 <img src="images/mainLogo.png" alt="Logo Picture" class="form-logo">
                 <h2>ALCOHOL</h2>
             </div>
-            <form action="signpro.jsp">
+            <form action="signpro.jsp" method="post">
                 <input type="text" name="l-username" id="l-userrname" placeholder="아이디를 입력하세요.." required>
                 <input type="password" name="l-userpassword" id="l-userpassword" placeholder="비밀번호를 입력하세요.." required>
                 <button type="submit">로그인</button>
