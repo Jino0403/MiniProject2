@@ -1,0 +1,95 @@
+h1 {
+  margin: 50px;
+  text-align: center;
+}
+.step {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 50px;
+  color: darkgray;
+}
+.step-order {
+  color: rgb(7, 171, 247);
+  margin-right: 5px;
+}
+.first-hr {
+  height: 2px;
+  width: 95%;
+  background-color: darkgray;
+}
+caption {
+  font-size: 25px;
+  margin: 30px;
+  text-align: start;
+  margin-left: 50px;
+}
+table {
+  width: 95%;
+  margin: auto;
+  border-top: 4px solid rgb(202, 202, 202);
+  height: 200px;
+  border-spacing: 0px;
+}
+.table-left {
+  border-right: 1px solid rgb(56, 56, 56);
+  border-bottom: 1px solid rgb(56, 56, 56);
+  width: 20%;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(240, 240, 240);
+}
+.table-right {
+  border-bottom: 1px solid rgb(56, 56, 56);
+  text-align: left;
+  padding-left: 30px;
+}
+input {
+  width: 30%;
+  height: 20px;
+}
+.check {
+  border-bottom: 1px solid rgb(56, 56, 56);
+  text-align: left;
+  margin-left: -30px;
+}
+.last-hr {
+  margin: 50px auto;
+  height: 2px;
+  width: 95%;
+  background-color: darkgray;
+}
+h2 {
+  text-align: center;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+.purchase-button {
+  width: 130px;
+  height: 40px;
+  margin-right: 50px;
+  background-color: rgb(165, 229, 255);
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.goback-button {
+  width: 130px;
+  height: 40px;
+  margin-left: 50px;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
