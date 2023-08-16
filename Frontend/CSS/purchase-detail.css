@@ -31,6 +31,14 @@ table {
   height: 200px;
   border-spacing: 0px;
 }
+#selectmethod {
+  width: 95%;
+  margin: auto;
+  border-top: 4px solid rgb(202, 202, 202);
+  height: 200px;
+  border-spacing: 0px;
+  display: none;
+}
 .table-left {
   border-right: 1px solid rgb(56, 56, 56);
   border-bottom: 1px solid rgb(56, 56, 56);
@@ -48,10 +56,10 @@ input {
   width: 30%;
   height: 20px;
 }
-.check {
-  border-bottom: 1px solid rgb(56, 56, 56);
-  text-align: left;
-  margin-left: -30px;
+#expiration_date {
+  width: 10%;
+  height: 20px;
+  text-align: center;
 }
 .last-hr {
   margin: 50px auto;
@@ -70,6 +78,7 @@ h2 {
   margin-top: 50px;
   margin-bottom: 80px;
 }
+/* 구매하기 버튼 */
 .purchase-button {
   width: 130px;
   height: 40px;
@@ -79,11 +88,14 @@ h2 {
   border-radius: 5px;
   font-size: large;
   font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 4px darkgray;
 }
 a {
   text-decoration: none;
   color: black;
 }
+/* 돌아가기 버튼 */
 .goback-button {
   width: 130px;
   height: 40px;
@@ -92,4 +104,6 @@ a {
   font-weight: bold;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 4px darkgray;
 }

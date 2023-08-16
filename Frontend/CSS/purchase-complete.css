@@ -2,8 +2,13 @@ h1 {
   margin: 50px;
   text-align: center;
 }
+.step-order {
+  margin-left: 5px;
+  color: rgb(7, 171, 247);
+  margin-right: 50px;
+}
 p {
-  margin-left: 50px;
+  text-align: end;
 }
 .first-hr {
   height: 2px;
