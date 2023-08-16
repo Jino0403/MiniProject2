@@ -1,8 +1,8 @@
 /*관리자 페이지 CSS*/
 
 @font-face {
-  font-family: 'Lobster-Regular';
-  src: url('/Frontend/fonts/Lobster-Regular.ttf');
+  font-family: "Lobster-Regular";
+  src: url("/Frontend/fonts/Lobster-Regular.ttf");
 }
 
 body {
@@ -57,10 +57,11 @@ main {
 /*관리자메뉴 타이틀 감싸는 div*/
 
 .manage_menu_title a {
-  font-family: 'Lobster-Regular', sans-serif;
+  font-family: "Lobster-Regular", sans-serif;
   font-size: 40px;
   color: white;
   text-decoration: none;
+  user-select: none;
 }
 
 /*관리자 메뉴 타이틀 및 링크*/
@@ -70,6 +71,7 @@ main {
   font-size: 25px;
   word-wrap: break-word;
   color: white;
+  user-select: none;
 }
 
 /*관리자 메뉴섹션*/
@@ -91,6 +93,7 @@ main {
 
 .menu_bar2 {
   line-height: 5;
+  user-select: none;
 }
 
 /*각각의 menu bar*/
@@ -215,6 +218,7 @@ main {
   border-radius: 10px;
   box-shadow: 0 0 10px lightgray;
   background-color: white;
+  user-select: none;
 }
 
 /*고객정보 테이블과 버튼들을 감싸는 div*/
@@ -282,7 +286,8 @@ main {
 /*여기서 부터는 상품 관련 CSS*/
 
 .manage_pro {
-  height: 100%;
+  width: 80%;
+  height: 50%;
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -339,17 +344,17 @@ main {
 
 .proedit_form {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
 }
 
 /*상품수정 폼*/
 
 .proedit_form label {
-  padding: 3px;
+  padding: 10px;
   margin: 10px auto 10px 0;
-  /* margin-right: auto; */
+  /* border: 1px solid black; */
   font-weight: bold;
 }
 
@@ -358,16 +363,18 @@ main {
 .proedit_form input {
   width: 400px;
   height: 30px;
-  padding-left: 10px;
+  /* padding: 10px; */
   border: 1px solid lightgray;
   border-radius: 4px;
+}
+
+.proedit_section input {
+  padding: 10px;
 }
 
 /*상품 수정폼 input 부분*/
 
 .proedit_form_file {
-  /* width: 100%; */
-  /* height: 100%; */
   padding: 10px;
 }
 
@@ -375,8 +382,20 @@ main {
 
 .proedit_form select {
   width: 100%;
+  height: 60px;
+  /* padding: 18px; */
   border: 1px solid lightgray;
   border-radius: 4px;
+}
+
+.proedit_section {
+  height: 500px;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  border: 1px solid black;
 }
 
 /*상품 수정폼 select 부문*/
