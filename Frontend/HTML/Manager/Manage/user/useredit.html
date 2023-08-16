@@ -14,30 +14,32 @@
       rel="stylesheet"
       type="text/css"
       href="/Frontend/CSS/managePage.css" />
+    <link rel="stylesheet" type="text/css" href="/Frontend/CSS/signup.css" />
+    <script type="text/javascript" href="/Frontend/CSS/signup.js"></script>
     <title>관리자 페이지</title>
   </head>
   <body>
     <div id="manage_wrapper">
       <main>
-        <div class="manage_menu">
-          <div>
-            <a href="/Frontend/HTML/Manager/manageMain.html"
-              ><img src="/Frontend/images/logo 1.png"
-            /></a>
+        <div id="manage_menu">
+          <div class="manage_menu_section">
+            <div class="manage_menu_title">
+              <a href="../../manageMain.html">Alcohol</a>
+            </div>
 
             <h3>관리자페이지</h3>
             <ul id="nav_bar2">
               <li class="menu_bar2">
-                <a href="./userload.html">고객 관리</a>
+                <a href="./userload.html">고객관리 ▸</a>
               </li>
               <li class="menu_bar2">
-                <a href="../product/proload.html">상품 관리</a>
+                <a href="../product/proload.html">상품관리 ▸</a>
               </li>
               <li class="menu_bar2">
-                <a href="../order/orderload.html">주문 관리</a>
+                <a href="../order/orderload.html">주문관리 ▸</a>
               </li>
               <li class="menu_bar2">
-                <a href="../inquery/receipt.html">1:1 문의</a>
+                <a href="../inquery/receipt.html">1:1문의 ▸</a>
               </li>
             </ul>
           </div>
@@ -51,34 +53,61 @@
           <div class="manage_user">
             <div class="manage_title">고객 정보 수정하기</div>
             <form class="add_form">
-              <label>아이디</label>
+              <label name="username">아이디</label>
               <input
                 type="text"
-                placeholder="문자, 숫자를 조합하여 10자리내로 작성해주세요." />
-              <label>비밀번호</label>
+                id="username"
+                name="username"
+                placeholder="아이디 입력 (6-20)"
+                required />
+              <label name="password">비밀번호</label>
               <input
                 type="password"
-                placeholder="특수문자,숫자,문자를 조합하여 6~20자 내로 작성해주세요." />
-              <label>비밀번호 확인</label>
+                id="password"
+                name="password"
+                placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 6-20자리)"
+                required />
+              <label name="confirm-password">비밀번호 확인</label>
               <input
                 type="password"
-                placeholder="특수문자,숫자,문자를 조합하여 8~20자 내로 작성해주세요." />
-              <label>이름</label>
-              <input type="text" placeholder="이름을 입력해주세요." />
-              <label>생년월일</label>
-              <input type="date" />
-              <label>전화번호</label>
+                id="confirm-password"
+                name="confirm-password"
+                placeholder="비밀번호 재입력"
+                required />
+              <label name="name">이름</label>
               <input
                 type="text"
-                placeholder="하이픈('-')을 사용하여 작성해주세요. ex (010-1234-5678)" />
-              <label>주소</label>
-              <input type="text" />
+                id="name"
+                name="name"
+                placeholder="이름을 입력해주세요"
+                required />
+              <label name="address">주소</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="상세 주소"
+                required />
+              <label name="phone">전화번호</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="휴대폰 번호 입력 (010-1111-1111)"
+                required />
+              <label name="birthday">생년월일</label>
+              <input
+                type="date"
+                id="birthday"
+                name="birthday"
+                min="1930-01-01"
+                required />
             </form>
             <div class="userinfo_btns">
-              <button class="user_btn">수정하기</button>
-              <a href="../user/userload.html"
-                ><button class="user_btn">뒤로가기</button></a
-              >
+              <button type="submit" class="user_btn">수정하기</button>
+              <button class="user_btn">
+                <a href="../user/userload.html">뒤로가기</a>
+              </button>
             </div>
           </div>
         </div>

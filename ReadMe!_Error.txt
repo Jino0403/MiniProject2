@@ -8,3 +8,6 @@ https://job-developer.tistory.com/7
 
 3. Mysql AUTO_INCREMEN 초기화 방법
 ALTER TABLE 테이블명 AUTO_INCREMENT = 1
+
+4. 프론트 개발시 만약 JS코드가 정확한것같은데 안먹히면 다른 브라우저로 실행해보거나 
+쿠키 값 초기화 해보기
