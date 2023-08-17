@@ -227,7 +227,7 @@ main {
   justify-content: center;
   align-items: center;
   user-select: none;
-  cursor: pointer;
+  
 }
 
 /*카테고리별 각 상품*/
@@ -237,7 +237,7 @@ main {
   height: 190px;
   border: 1px solid transparent;
   border-radius: 10px;
-
+  cursor:pointer;
 }
 
 .main_product span {
