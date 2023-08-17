@@ -1,0 +1,616 @@
+
+/*관리자 페이지 CSS*/
+
+@font-face {
+  font-family: "Lobster-Regular";
+  src: url("/Frontend/fonts/Lobster-Regular.ttf");
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#manage_wrapper {
+  width: 100%;
+  text-align: center;
+  /* border: 1px solid black; */
+  background-color: #f5f5f5;
+}
+
+/*관리자 페이지*/
+
+header {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*관리자 페이지 header부분*/
+
+/*관리자 페이지 header 이미지부분*/
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/*관리자 페이지 메인부분*/
+
+#manage_menu {
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #353535;
+}
+
+.manage_menu_title {
+  padding: 30px;
+  border-bottom: 1px solid gray;
+}
+
+/*관리자메뉴 타이틀 감싸는 div*/
+
+.manage_menu_title a {
+  font-family: "Lobster-Regular", sans-serif;
+  font-size: 40px;
+  color: white;
+  text-decoration: none;
+  user-select: none;
+}
+
+/*관리자 메뉴 타이틀 및 링크*/
+
+.manage_menu_section h3 {
+  margin-top: 40px;
+  font-size: 25px;
+  word-wrap: break-word;
+  color: white;
+  user-select: none;
+}
+
+/*관리자 메뉴섹션*/
+
+/*관리자 메뉴 이미지*/
+
+#nav_bar2 {
+  padding-left: 10px;
+  text-align: center;
+  position: relative;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*menu bar를 감싸는 div*/
+
+.menu_bar2 {
+  line-height: 5;
+  user-select: none;
+}
+
+/*각각의 menu bar*/
+
+.menu_bar2 a {
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 4px;
+}
+
+.menu_bar2 a:hover {
+  font-weight: bold;
+}
+
+/*menu bar 안의 페이지 이동 관련*/
+
+#manage_section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid #353535; */
+}
+
+/*관리자 페이지 내용이 들어갈 div*/
+
+.manage_logout {
+  margin-bottom: 30px;
+}
+
+/*관리자 메뉴 로그아웃*/
+
+.manage_logout a {
+  text-decoration: none;
+  color: white;
+  user-select: none;
+}
+
+.manage_logout:hover {
+  font-weight: bold;
+}
+
+/*관리자 메뉴 로그아웃 hover*/
+
+/*여기서 부터 관리자 고객관리 섹션 CSS*/
+
+.manage_user {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px lightgray;
+}
+
+/* 고객추가 섹션*/
+
+.manage_title {
+  font-size: 40px;
+  font-family: sans-serif;
+  margin-bottom: 10px;
+}
+
+/*고객추가 title*/
+
+.add_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*고객추가 폼*/
+
+.add_form label {
+  padding: 5px;
+  margin-right: auto;
+}
+
+/*고객추가 폼 안 항목별 라벨*/
+
+.add_form input {
+  width: 400px;
+  height: 30px;
+}
+
+/*고객추가 폼 안 항목별 input*/
+
+.userinfo_btns {
+  margin: 30px auto 0 auto;
+}
+
+/*고객추가섹션에서 버튼들을 감싸는 div*/
+
+.user_btn {
+  width: 202px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+/*고객추가섹션 버튼*/
+
+.user_btn a {
+  color: white;
+  text-decoration: none;
+}
+
+/*고객 정보  조회 섹션 */
+
+#manage_detail {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  border-radius: 10px;
+  box-shadow: 0 0 10px lightgray;
+  background-color: white;
+  user-select: none;
+}
+
+/*고객정보 테이블과 버튼들을 감싸는 div*/
+
+.manage_btns {
+  width: 320px;
+  margin: 20px 20px 30px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*고객정보 관련 버튼들*/
+
+.manage_btn {
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.manage_btn:hover {
+  font-weight: bold;
+}
+
+.manage_btn a {
+  color: black;
+  text-decoration: none;
+}
+
+.user_table {
+  width: 1300px;
+  border-collapse: collapse;
+  border-bottom: 1px solid lightgray;
+}
+
+.user_table th {
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  height: 50px;
+  color: black;
+}
+
+/*고객정보 테이블*/
+
+.user_table td {
+  height: 63px;
+  padding: 6px;
+  border-top: 1px solid lightgray;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+.user_intro {
+  word-break: break-all;
+}
+
+/*고객정보 관련 */
+
+/*여기서 부터는 상품 관련 CSS*/
+
+.manage_pro {
+  width: 80%;
+  height: 50%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px lightgray;
+}
+
+.manage_protitle {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.proadd_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.proadd_form label {
+  padding: 3px;
+  margin: 10px auto 10px 0;
+  font-weight: bold;
+}
+
+/*상품추가폼 라벨 부분*/
+
+.proadd_form input {
+  width: 400px;
+  height: 30px;
+  padding-left: 10px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+/*상품추가폼 input 부문*/
+
+.proadd_form_file {
+  padding: 10px;
+}
+
+/*상품 추가폼 file input부분*/
+
+.proadd_form select {
+  width: 100%;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+/*상품추가폼에서 카테고리 선택 부분*/
+
+.proedit_form {
+  display: flex;
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+}
+
+/*상품수정 폼*/
+
+.proedit_form label {
+  padding: 10px;
+  margin: 10px auto 10px 0;
+  /* border: 1px solid black; */
+  font-weight: bold;
+}
+
+/*상품수정폼 라벨 부분*/
+
+.proedit_form input {
+  width: 400px;
+  height: 30px;
+  /* padding: 10px; */
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.proedit_section input {
+  padding: 10px;
+}
+
+/*상품 수정폼 input 부분*/
+
+.proedit_form_file {
+  padding: 10px;
+}
+
+/*상품 수정폼 file추가 input 부분*/
+
+.proedit_form select {
+  width: 100%;
+  height: 60px;
+  /* padding: 18px; */
+  border: 1px solid lightgray;
+  border-radius: 4px;
+}
+
+.proedit_section {
+  height: 500px;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  border: 1px solid black;
+}
+
+/*상품 수정폼 select 부문*/
+
+.proinfo_btns {
+  margin-top: 30px;
+}
+
+/*고객추가섹션에서 버튼들을 감싸는 div*/
+
+.pro_btn {
+  width: 202px;
+  height: 50px;
+  background-color: black;
+  border-radius: 8px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+/*고객추가섹션 버튼*/
+
+.pro_btn a {
+  color: white;
+  text-decoration: none;
+}
+
+.select_category {
+  width: 400px;
+  height: 30px;
+}
+
+/*상품추가폼 카테고리 선택*/
+
+.pro_table {
+  width: 1300px;
+  border-collapse: collapse;
+  border-bottom: 1px solid lightgray;
+}
+
+.pro_table th {
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  height: 40px;
+  color: black;
+}
+
+/*상품테이블 제목 부분*/
+
+.pro_table td {
+  border-top: 1px solid lightgray;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+/*상품 테이블 내용 부분*/
+
+.pro_th {
+  width: 80px;
+}
+
+/*테이블 헤더(th) 너비*/
+
+.pro_th2 {
+  width: 60px;
+}
+
+/*테이블 헤더(th) 2번째 크기*/
+
+.pro_price {
+  width: 100px;
+}
+
+.pro_count {
+  width: 70px;
+}
+
+/*상품 재고량*/
+
+.pro_name {
+  width: 150px;
+}
+
+/*상품 테이블헤더 너비*/
+
+.pro_th_info {
+  height: 45px;
+}
+
+.pro_info {
+  margin: auto;
+}
+
+/*상품 설명*/
+
+.t_tr {
+  /* height: 60px; */
+}
+
+.t_tr td {
+  /* height: 60px; */
+}
+
+/*테이블 데이터 (td)높이*/
+
+.pro_img {
+  width: 130px;
+  height: 130px;
+}
+
+/*상품 이미지 크기*/
+
+.pro_num {
+  width: 40px;
+}
+
+/*상품 너비*/
+
+/*여기서 부터는 주문관리에 대한 CSS*/
+.order_table {
+  width: 1300px;
+  border-collapse: collapse;
+  border-bottom: 1px solid lightgray;
+}
+
+.order_table th {
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  height: 50px;
+  color: black;
+}
+
+/*상품테이블 제목 부분*/
+
+.order_table td {
+  border-top: 1px solid lightgray;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  height: 60px;
+}
+
+.order_th {
+  width: 70px;
+}
+
+.order_num {
+  width: 40px;
+}
+
+.order_proname {
+  width: 230px;
+}
+
+.order_memo {
+  width: 290px;
+  word-break: break-all;
+}
+
+.order_address {
+  width: 270px;
+}
+
+.order_phone {
+  width: 120px;
+}
+
+.order_price {
+  width: 100px;
+}
+
+/*주문 테이블의 각 th에 대한 너비값 조정 */
+
+.order_btns {
+  width: 310px;
+  margin: 20px 20px 30px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*주문확인 페이지 버튼을 감싸는 div */
+
+.order_combtns {
+  width: 205px;
+  margin: 20px 20px 30px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*주문확인 완료된 버튼을 감싸는 div*/
+
+.order_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid darkgray;
+}
+
+.order_form label {
+  padding: 10px;
+  margin-right: auto;
+  font-weight: bold;
+}
+
+/*상품추가폼 라벨 부분*/
+
+.order_form input {
+  width: 400px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 4px;
+}

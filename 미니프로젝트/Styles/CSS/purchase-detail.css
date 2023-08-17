@@ -1,0 +1,112 @@
+/* 제목 */
+h1 {
+  margin: 50px;
+  text-align: center;
+}
+/* 결제 단계 알림 */
+.step {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  margin-right: 50px;
+  color: darkgray;
+}
+/* 현재 주문 결제 부분 강조 */
+.step-order {
+  color: rgb(7, 171, 247);
+  margin-right: 5px;
+}
+/* 첫번째 밑줄 */
+.first-hr {
+  height: 2px;
+  width: 95%;
+  background-color: darkgray;
+}
+/* 테이블 별 제목 */
+caption {
+  font-size: 25px;
+  margin: 30px;
+  text-align: start;
+  margin-left: 50px;
+}
+/* 표 CSS */
+table {
+  width: 95%;
+  margin: auto;
+  border-top: 4px solid rgb(202, 202, 202);
+  height: 200px;
+  border-spacing: 0px;
+}
+/* 테이블 1열 CSS */
+.table-left {
+  border-right: 1px solid rgb(56, 56, 56);
+  border-bottom: 1px solid rgb(56, 56, 56);
+  width: 20%;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(240, 240, 240);
+}
+/* 테이블 2열 CSS */
+.table-right {
+  border-bottom: 1px solid rgb(56, 56, 56);
+  text-align: left;
+  padding-left: 30px;
+}
+/* 입력창 */
+input {
+  width: 30%;
+  height: 20px;
+}
+/* 카드 유효기간 입력창 */
+#expiration_date {
+  width: 10%;
+  height: 20px;
+  text-align: center;
+}
+
+/* 표 속성 마침 줄 */
+.last-hr {
+  margin: 50px auto;
+  height: 2px;
+  width: 95%;
+  background-color: darkgray;
+}
+/* 구매 확인 문장 */
+h2 {
+  text-align: center;
+}
+/* 구매버튼 되돌리기 버튼 div */
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+/* 구매버튼 */
+.purchase-button {
+  width: 130px;
+  height: 40px;
+  margin-right: 50px;
+  background-color: rgb(165, 229, 255);
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  font-weight: bold;
+}
+/* 구매완료 창 링크 */
+a {
+  text-decoration: none;
+  color: black;
+}
+/* 돌아가기 버튼 */
+.goback-button {
+  width: 130px;
+  height: 40px;
+  margin-left: 50px;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}

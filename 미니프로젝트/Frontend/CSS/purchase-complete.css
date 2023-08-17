@@ -1,0 +1,55 @@
+h1 {
+  margin: 50px;
+  text-align: center;
+}
+p {
+  margin-left: 50px;
+}
+.first-hr {
+  height: 2px;
+  width: 95%;
+  background-color: darkgray;
+}
+caption {
+  font-size: 25px;
+  margin: 30px;
+  text-align: start;
+}
+table {
+  width: 95%;
+  margin: auto;
+  border-top: 4px solid rgb(202, 202, 202);
+  height: 200px;
+  border-spacing: 0px;
+}
+.table-left {
+  border-right: 1px solid rgb(56, 56, 56);
+  border-bottom: 1px solid rgb(56, 56, 56);
+  width: 20%;
+  text-align: center;
+  font-weight: bold;
+  background-color: rgb(240, 240, 240);
+  height: 50px;
+}
+.table-right {
+  border-bottom: 1px solid rgb(56, 56, 56);
+  text-align: left;
+  padding-left: 30px;
+}
+.last-hr {
+  margin: 50px auto;
+  height: 2px;
+  width: 95%;
+  background-color: darkgray;
+}
+.go-index {
+  text-align: center;
+  border-width: 10000;
+}
+a {
+  color: darkgrey;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-decoration: none;
+}

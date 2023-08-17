@@ -1,0 +1,83 @@
+/*관리자모드에 관한 CSS 섹션*/
+
+#login_wrapper {
+  width: 900px;
+  height: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*로그인 전체 페이지*/
+
+#login {
+  width: 1100px;
+  height: 500px;
+  margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  user-select: none;
+}
+
+/*로그인과 로고 파트 감싸는 div*/
+
+.login_logo img {
+  width: 400px;
+  height: 396px;
+  margin-left: 30px;
+}
+
+/*로고사진 CSS*/
+
+.form_wrapper {
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_wrapper h2 {
+  margin-bottom: 30px;
+}
+
+/*로그인폼을 감싸는 div*/
+
+.login_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+/*로그인 폼*/
+
+.login_form label {
+  margin: 10px 0;
+  user-select: none;
+}
+
+/*로그인폼 label*/
+
+.login_form input {
+  width: 300px;
+  height: 40px;
+}
+/*로그인 폼 감싸는 div*/
+
+.login_btn {
+  width: 310px;
+  height: 40px;
+  margin-top: 30px;
+  background-color: black;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+/*로그인 버튼*/
