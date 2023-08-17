@@ -76,6 +76,10 @@ p {
 
 .snack-category {
   margin: 10px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid darkgray;
+  border-radius: 3px;
 }
 
 .snack-item-list {

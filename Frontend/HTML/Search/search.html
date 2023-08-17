@@ -8,15 +8,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&family=Orbit&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
+    <script src="../../Javascript/search.js"></script>
     <link rel="stylesheet" type="text/css" href="../../CSS/search.css" />
     <script src="../../Javascript/includeHTML.js"></script>
     <title>메인 페이지</title>
   </head>
   <body>
     <div id="wrapper">
-      <header>
-        <div>
+      <header include-html="../Main/header.html">
+        <!-- <div>
           <a id="header_title" href="/Frontend/index.html">
             <img src="/Frontend/images/logo 1.png" />
             <h1>Alcohol</h1>
@@ -33,7 +35,7 @@
         <div id="header_menu">
           <a class="header_menu_item">로그인</a>
           <a class="header_menu_item">회원가입</a>
-        </div>
+        </div> -->
       </header>
       <nav include-html="../../HTML/Main/nav.html"></nav>
       <main>
@@ -45,25 +47,26 @@
     </div>
   </body>
   <script>
-    includeHTML();
+    document.addEventListener("DOMContentLoaded", function () {
+      includeHTML()
 
-    const searchInput = document.getElementById('search_input');
-    const searchButton = document.getElementById('search_button');
-    const searchResults = document.getElementById('search_results');
+      const header = document.getElementById("header")
 
-    searchButton.addEventListener('click', function () {
-      const searchTerm = searchInput.value.trim();
+      if (header) {
+        header.addEventListener("click", function (event) {
+          const target = event.target
+          if (target && target.id === "search_button") {
+            const searchInput = document.getElementById("search_input")
+            const searchTerm = searchInput.value.trim()
 
-      // Clear previous search results
-      searchResults.innerHTML = '';
-
-      if (searchTerm !== '') {
-        // Simulate search results display
-        const resultCount = 0; // Replace this with your actual result count logic
-        const resultElement = document.createElement('p');
-        resultElement.textContent = `${searchTerm}과 일치하는 결과는 ${resultCount}개 입니다.`;
-        searchResults.appendChild(resultElement);
+            if (searchTerm !== "") {
+              window.location.href = `./HTML/Search/search.html?term=${encodeURIComponent(
+                searchTerm
+              )}`
+            }
+          }
+        })
       }
-    });
+    })
   </script>
 </html>
