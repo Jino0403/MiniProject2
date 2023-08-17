@@ -27,17 +27,14 @@
   }
 
   if (userExists) {
-    out.println("이미 해당 사용자가 존재합니다.");
-  } else {
     try {
-      String insertQuery = "INSERT INTO member (mid,mpw,mname,mbirth,mphone,madress) VALUES (?,?,?,?,?,?)";
-      PreparedStatement preparedStatement = conn.prepareStatement(insertQuery);
-      preparedStatement.setString(1, enteredUsername);
-      preparedStatement.setString(2, enteredPassword);
-      preparedStatement.setString(3, enteredName);
-      preparedStatement.setString(4, enteredbirthday);
-      preparedStatement.setString(5, enteredPhone);
-      preparedStatement.setString(6, enteredAddress);
+      String updateQuery = "UPDATE member SET mpw = ?, mname = ?, mphone = ?, madress = ? where mid = ?";
+      PreparedStatement preparedStatement = conn.prepareStatement(updateQuery);
+      preparedStatement.setString(1, enteredPassword);
+      preparedStatement.setString(2, enteredName);
+      preparedStatement.setString(3, enteredPhone);
+      preparedStatement.setString(4, enteredAddress);
+      preparedStatement.setString(5, enteredUsername);
       preparedStatement.executeUpdate();
       out.println("데이터가 성공적으로 저장되었습니다.");
       response.sendRedirect("userload.jsp"); // 대시보드 페이지로 이동
