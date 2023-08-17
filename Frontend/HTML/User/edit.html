@@ -16,14 +16,19 @@
         <div id="mypage_center">
           <div class="mypage_list">
             <ul>
-              <li><a href="./basket.html">내 장바구니</a></li>
-              <li><a href="./edit.html">회원정보수정</a></li>
+              <li>
+                <a href="./basket.html">내 장바구니</strong></a>
+              </li>
+              <li><a href="./edit.html"><strong>회원정보수정</strong></a></li>
               <li><a href="./withdraw.html">회원탈퇴</a></li>
-              <li><a>1:1 문의내역</a></li>
             </ul>
           </div>
           <div class="mypage_introduction">
             <div class="mypage_form">
+              <div class="mypage_form_title">
+                <span>내 정보 수정</span>
+                <p>아이디와 이름을 제외한 수정하실 사항을 입력해주세요.</p>
+              </div>
               <form class="mypage_edit" method="post">
                 <label name="username">아이디</label>
                 <input
@@ -32,6 +37,7 @@
                   name="username"
                   placeholder="아이디 입력 (6-20)"
                   required
+                  readonly
                 />
                 <label name="password">비밀번호</label>
                 <input
@@ -56,6 +62,7 @@
                   name="name"
                   placeholder="이름을 입력해주세요"
                   required
+                  readonly
                 />
                 <label name="address">주소</label>
                 <input
