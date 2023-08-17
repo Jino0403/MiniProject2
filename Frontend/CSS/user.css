@@ -78,7 +78,7 @@ body {
 }
 
 .basket_title {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .basket_tables {
@@ -120,9 +120,7 @@ body {
 
 .basket_quantity {
   user-select: none;
-}
-
-.basket_proName {
+  text-align: right;
 }
 
 .basket_name {
@@ -140,6 +138,7 @@ body {
 
 .basket_result {
   margin-top: auto;
+  margin-bottom: 10px;
   font-size: 30px;
 }
 
@@ -156,7 +155,7 @@ body {
   width: 150px;
   padding: 10px;
   margin: 0 10px;
-  border: 1px solid black;
+  border: 1px solid transparent;
   border-radius: 6px;
   background-color: black;
   color: white;
@@ -167,12 +166,13 @@ body {
 
 .basket_edit_btn {
   width: 150px;
-  padding: 8px;
+  padding: 8.5px;
   margin: 0 10px;
+  border: 1px solid transparent;
   border-radius: 6px;
   background-color: black;
   color: white;
-  font-size: 20px;
+  font-size: 21px;
 }
 
 /*장바구니 탭의 수정하기 버튼*/
@@ -184,21 +184,26 @@ body {
   align-items: center;
 }
 
+.mypage_form_title {
+  text-align: center;
+}
+
+.mypage_form_title span {
+  font-size: 40px;
+}
+
 .mypage_edit {
   width: 350px;
-  padding: 50px;
-  /* margin-top: auto; */
+  padding: 6px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: left; */
-  /* border: 1px solid red; */
 }
 
 /*고객정보 수정에 관한 폼 */
 
 .mypage_edit label {
   margin: 10px 0;
+  padding: 3px;
 }
 /*고객정보 수정에 대한 label*/
 
@@ -216,6 +221,7 @@ body {
 
 .edit_btn {
   height: 40px;
+  margin-top: 10px;
   margin-left: 20px;
   border-radius: 6px;
   background-color: black;
