@@ -31,13 +31,6 @@ function goBack() {
   window.history.back();
 }
 
-// document
-//   .getElementById("purchaseForm")
-//   .addEventListener("submit", function (event) {
-//     event.preventDefault();
-//     confirmPayment();
-//   });
-
 function confirmPayment() {
   const selectedPaymentMethod = document.getElementById("payment_method").value;
   const resultDiv = document.getElementById("paymentResult");
