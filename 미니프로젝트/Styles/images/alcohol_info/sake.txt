@@ -1,0 +1,70 @@
+-아마부키 하쿠토우슈
+가격 :45700
+용량 :720
+도수 :8
+국가 :일본
+purl : 
+/Styles/images/alcohol_image/sake/amabukihakutousyu.png
+-우미유즈
+가격 :52800
+용량 :720
+도수 :7
+국가 : 일본
+purl : 
+/Styles/images/alcohol_image/sake/umiuse.png
+-코타카라 자두
+가격 :48400
+용량 :720
+도수 :8
+국가 :일본
+purl : 
+/Styles/images/alcohol_image/sake/kotakarajadu.png
+-코이시소우
+가격 :45000
+용량 :750
+도수 :7
+국가 :일본
+purl : 
+/Styles/images/alcohol_image/sake/koisauwu.png
+-이소노사와 준마이
+가격 :15500
+용량 :720
+도수 :14.5
+국가 :일본
+purl : 
+/Styles/images/alcohol_image/sake/isonosawajunmai.png
+-하나기자쿠라 준마이긴죠
+가격 :17100
+용량 :720
+도수 :12
+국가 :일본
+purl : 
+/Styles/images/alcohol_image/sake/hanagijakurajunmaiginjyo.png
+-킨미야 소츄
+가격 :28500
+용량 :720
+도수 :25
+국가 :일본
+purl : 
+/Styles/images/alcohol_image/sake/kinmiyasochu.png
+-사카리 No.21 유즈슈
+가격 :55600
+용량 :710
+도수 :8
+국가 :일본
+purl : 
+/Styles/images/alcohol_image/sake/sakariNo.21usesyu.png
+-고래 사케
+가격 :10000
+용량 :720
+도수 :15
+국가 :중국
+purl : /Styles/images/alcohol_image/sake/whalesake.png
+
+-닷사이 준마이 다이긴죠
+가격 :186400
+용량 :720
+도수 :16
+국가 :일본
+purl : 
+/Styles/images/alcohol_image/sake/datsaijunmaidaiginjyosake.png

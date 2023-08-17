@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/Frontend/CSS/style.css" />
+    <link rel="stylesheet" type="text/css" href="/Frontend/CSS/user.css" />
+    <script src="/Frontend/Javascript/pageBasket.js"></script>
+    <script src="/Frontend/Javascript/includeHTML.js"></script>
+    <title>장바구니 목록</title>
+  </head>
+  <body>
+    <div id="container">
+      <header include-html="/Frontend/HTML/Main/header.html"></header>
+      <nav include-html="/Frontend/HTML/Main/nav.html"></nav>
+      <main>
+        <div id="mypage_center">
+          <div class="mypage_list">
+            <ul>
+              <li><a href="./basket.html">내 장바구니</a></li>
+              <li><a href="./edit.html">회원정보수정</a></li>
+              <li><a href="./withdraw.html">회원탈퇴</a></li>
+              <li><a>1:1 문의내역</a></li>
+            </ul>
+          </div>
+          <div class="mypage_introduction">
+            <div class="basket_list">
+              <div class="basket_title">내 장바구니</div>
+              <div class="basket_tables">
+                <table class="basket_table">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th class="basket_num">주문번호</th>
+                      <th class="basket_proName">상품명</th>
+                      <th class="basket_pro">가격</th>
+                      <th class="basket_pro">수량</th>
+                      <th class="basket_pro">총가격</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="t_tr">
+                      <th><input type="checkbox" /></th>
+                      <td>1</td>
+                      <td>맛있는 초콜릿</td>
+                      <td>13,000원</td>
+                      <td>10개</td>
+                      <td>130,000원</td>
+                    </tr>
+                    <tr class="t_tr">
+                      <th><input type="checkbox" /></th>
+                      <td>1</td>
+                      <td>맛있는 초콜릿</td>
+                      <td>13,000원</td>
+                      <td>10개</td>
+                      <td>130,000원</td>
+                    </tr>
+                    <tr class="t_tr">
+                      <th><input type="checkbox" /></th>
+                      <td>1</td>
+                      <td>맛있는 초콜릿</td>
+                      <td>13,000원</td>
+                      <td>10개</td>
+                      <td>130,000원</td>
+                    </tr>
+                    <tr class="t_tr">
+                      <th><input type="checkbox" /></th>
+                      <td>1</td>
+                      <td>맛있는 초콜릿</td>
+                      <td>13,000원</td>
+                      <td>10개</td>
+                      <td>130,000원</td>
+                    </tr>
+                    <tr class="t_tr">
+                      <th><input type="checkbox" /></th>
+                      <td>1</td>
+                      <td>맛있는 초콜릿</td>
+                      <td>13,000원</td>
+                      <td>10개</td>
+                      <td>130,000원</td>
+                    </tr>
+                    <tr class="t_tr">
+                      <th><input type="checkbox" /></th>
+                      <td>1</td>
+                      <td>맛있는 초콜릿</td>
+                      <td>13,000원</td>
+                      <td>10개</td>
+                      <td>130,000원</td>
+                    </tr>
+                    <tr class="t_tr">
+                      <th><input type="checkbox" /></th>
+                      <td>1</td>
+                      <td>맛있는 초콜릿</td>
+                      <td>13,000원</td>
+                      <td>10개</td>
+                      <td>130,000원</td>
+                    </tr>
+                    <tr class="t_tr">
+                      <th><input type="checkbox" /></th>
+                      <td>1</td>
+                      <td>맛있는 초콜릿</td>
+                      <td>13,000원</td>
+                      <td>10개</td>
+                      <td>130,000원</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div id="pagination-container"></div>
+            </div>
+            <div class="basket_result">
+              <div class="result">총 주문금액 : 13,000원</div>
+            </div>
+            <div class="basket_btns">
+              <button class="basket_btn" type="submit">주문하기</button>
+              <button class="basket_btn">상품삭제</button>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer include-html="/Frontend/HTML/Main/footer.html"></footer>
+    </div>
+  </body>
+  <script>
+    includeHTML();
+  </script>
+</html>
