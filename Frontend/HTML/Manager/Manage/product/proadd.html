@@ -35,9 +35,6 @@
               <li class="menu_bar2">
                 <a href="../order/orderload.html">주문관리 ▸</a>
               </li>
-              <li class="menu_bar2">
-                <a href="../inquery/receipt.html">1:1문의 ▸</a>
-              </li>
             </ul>
           </div>
 
@@ -48,17 +45,18 @@
 
         <div id="manage_section">
           <div class="manage_pro">
-            <div class="manage_protitle">🎁 신규 상품 추가</div>
+            <div class="manage_protitle">📦 신규 상품 추가</div>
             <form class="proadd_form" method="post">
               <div class="proadd_section1">
-                <label name="proname">상품명</label>
+                <label name="proname">📛상품명</label>
                 <input
+                  :
                   type="text"
                   id="proname"
                   name="proname"
                   placeholder=" 예시 : 맛있는 초콜릿"
                 />
-                <label name="category">카테고리</label>
+                <label name="category">🍹카테고리</label>
                 <select id="category" name="category" class="select_category">
                   <option value="위스키">위스키</option>
                   <option value="와인">와인</option>
@@ -69,7 +67,7 @@
                   <option value="막걸리">막걸리</option>
                   <option value="안주">안주</option>
                 </select>
-                <label name="category_snack">세부 카테고리</label>
+                <label name="category_snack">🥩세부 카테고리</label>
                 <select
                   id="category_snack"
                   name="category_snack"
@@ -80,7 +78,7 @@
                   <option>해산물류</option>
                   <option>탕류</option>
                 </select>
-                <label name="proprice">상품가격</label>
+                <label name="proprice">💰상품가격</label>
                 <input
                   ty
                   pe="text"
@@ -89,7 +87,7 @@
                   placeholder=" 예시 : 10000원"
                   required
                 />
-                <label name="proquantity">재고량</label>
+                <label name="proquantity">🧺재고량</label>
                 <input
                   id="proquantity"
                   id="proquantity"
@@ -100,7 +98,7 @@
                 />
               </div>
               <div class="proadd_section2">
-                <label name="proml">용량</label>
+                <label name="proml">🥤용량</label>
                 <input
                   type="text"
                   id="proml"
@@ -108,21 +106,21 @@
                   placeholder=" 예시 : 1500ml"
                   required
                 />
-                <label name="proalcohol">도수</label>
+                <label name="proalcohol">🥛도수</label>
                 <input
                   type="text"
                   id="proalcohol"
                   name="proalcohol"
                   placeholder=" 예시 : 7도"
                 />
-                <label name="procountry">국가</label>
+                <label name="procountry">🇰🇷국가</label>
                 <input
                   type="text"
                   id="procountry"
                   name="procountry"
                   placeholder=" 예시 : 남아프리카 공화국"
                 />
-                <label name="protext">상품설명</label>
+                <label name="protext">📄상품설명</label>
                 <input
                   type="text"
                   id="protext"
@@ -131,7 +129,7 @@
                   placeholder=" 예시 : 부드럽고 달콤하다가 끝에 쌉사름한 초콜릿"
                 />
                 <label for="proimage" name="proimage"
-                  >상품사진 (png 파일만 가능)</label
+                  >📷상품사진 (png 파일만 가능)</label
                 >
                 <input
                   class="proadd_form_file"

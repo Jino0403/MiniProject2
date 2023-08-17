@@ -41,7 +41,7 @@ main {
 /*관리자 페이지 메인부분*/
 
 #manage_menu {
-  height: 1000px;
+  height: 948px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -123,6 +123,7 @@ main {
 
 .manage_logout {
   margin-bottom: 30px;
+  border: 1px solid trans;
 }
 
 /*관리자 메뉴 로그아웃*/
@@ -270,8 +271,7 @@ main {
 /*고객정보 테이블*/
 
 .user_table td {
-  height: 63px;
-  padding: 6px;
+  height: 59px;
   border-top: 1px solid lightgray;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
@@ -563,8 +563,8 @@ main {
 /*테이블 데이터 (td)높이*/
 
 .pro_img {
-  width: 130px;
-  height: 130px;
+  width: 100px;
+  height: 100px;
 }
 
 /*상품 이미지 크기*/
