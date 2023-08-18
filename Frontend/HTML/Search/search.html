@@ -17,56 +17,23 @@
   </head>
   <body>
     <div id="wrapper">
-      <header include-html="../Main/header.html">
-        <!-- <div>
-          <a id="header_title" href="/Frontend/index.html">
-            <img src="/Frontend/images/logo 1.png" />
-            <h1>Alcohol</h1>
-          </a>
-        </div>
+      <header include-html="../Main/header.html"></header>
+      <nav include-html="../../HTML/Main/nav.html"></nav>
+      <main>
         <div id="header_search">
-          <input id="search_input" type="text" maxlength="20" />
+          <input id="searchInput" type="text" maxlength="30" />
           <a class="header_menu_item">
-            <button id="search_button" type="button">
+            <button id="searchButton" type="button">
               <img src="/Frontend/images/search 1.png" />
             </button>
           </a>
         </div>
-        <div id="header_menu">
-          <a class="header_menu_item">로그인</a>
-          <a class="header_menu_item">회원가입</a>
-        </div> -->
-      </header>
-      <nav include-html="../../HTML/Main/nav.html"></nav>
-      <main>
-        <div id="search_wrapper">
-          <div id="search_input"></div>
-        </div>
+        <div id=""></div>
       </main>
       <footer include-html="../../HTML/Main/footer.html"></footer>
     </div>
   </body>
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      includeHTML()
-
-      const header = document.getElementById("header")
-
-      if (header) {
-        header.addEventListener("click", function (event) {
-          const target = event.target
-          if (target && target.id === "search_button") {
-            const searchInput = document.getElementById("search_input")
-            const searchTerm = searchInput.value.trim()
-
-            if (searchTerm !== "") {
-              window.location.href = `./HTML/Search/search.html?term=${encodeURIComponent(
-                searchTerm
-              )}`
-            }
-          }
-        })
-      }
-    })
+    includeHTML()
   </script>
 </html>
