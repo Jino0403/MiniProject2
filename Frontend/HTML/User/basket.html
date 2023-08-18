@@ -5,103 +5,235 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="/Frontend/CSS/style.css" />
     <link rel="stylesheet" type="text/css" href="/Frontend/CSS/user.css" />
-    <script src="/Frontend/Javascript/pageBasket.js"></script>
-    <script src="/Frontend/Javascript/includeHTML.js"></script>
+    <script src="../../Javascript/pageBasket.js"></script>
+    <script src="../../Javascript/includeHTML.js"></script>
+    <script src="../../Javascript/basket.js"></script>
+    <script src="../../Javascript/basket_price.js"></script>
+
     <title>장바구니 목록</title>
   </head>
   <body>
-    <div id="container">
+    <div id="wrapper">
       <header include-html="/Frontend/HTML/Main/header.html"></header>
       <nav include-html="/Frontend/HTML/Main/nav.html"></nav>
       <main>
         <div id="mypage_center">
           <div class="mypage_list">
             <ul>
-              <li><a href="./basket.html">내 장바구니</a></li>
+              <li>
+                <a href="./basket.html"><strong>내 장바구니</strong></a>
+              </li>
               <li><a href="./edit.html">회원정보수정</a></li>
               <li><a href="./withdraw.html">회원탈퇴</a></li>
-              <li><a>1:1 문의내역</a></li>
             </ul>
           </div>
           <div class="mypage_introduction">
             <div class="basket_list">
               <div class="basket_title">내 장바구니</div>
+              <p>장바구니에 담긴 상품 목록입니다.</p>
               <div class="basket_tables">
                 <table class="basket_table">
                   <thead>
                     <tr>
                       <th></th>
                       <th class="basket_num">주문번호</th>
-                      <th class="basket_proName">상품명</th>
-                      <th class="basket_pro">가격</th>
-                      <th class="basket_pro">수량</th>
-                      <th class="basket_pro">총가격</th>
+                      <th class="basket_name">상품명</th>
+                      <th>가격</th>
+                      <th>수량</th>
+                      <th>총가격</th>
                     </tr>
                   </thead>
+                  <!-- HTML 코드 일부분 -->
                   <tbody>
                     <tr class="t_tr">
                       <th><input type="checkbox" /></th>
                       <td>1</td>
-                      <td>맛있는 초콜릿</td>
-                      <td>13,000원</td>
-                      <td>10개</td>
-                      <td>130,000원</td>
+                      <td class="basket_proName">맛있는 초콜릿맛</td>
+                      <td class="basket_proPrice">13,000원</td>
+                      <td>
+                        <input
+                          type="number"
+                          class="basket_quantity"
+                          id="cquantity"
+                          name="cquantity"
+                          value="1"
+                          min="1"
+                          max="1000"
+                          readonly
+                        />
+                      </td>
+                      <td class="basket_total">13,000원</td>
                     </tr>
                     <tr class="t_tr">
                       <th><input type="checkbox" /></th>
                       <td>1</td>
-                      <td>맛있는 초콜릿</td>
-                      <td>13,000원</td>
-                      <td>10개</td>
-                      <td>130,000원</td>
+                      <td class="basket_proName">맛있는 초콜릿맛</td>
+                      <td class="basket_proPrice">13,000원</td>
+                      <td>
+                        <input
+                          type="number"
+                          class="basket_quantity"
+                          id="cquantity"
+                          name="cquantity"
+                          value="1"
+                          min="1"
+                          max="1000"
+                          readonly
+                        />
+                      </td>
+                      <td class="basket_total">13,000원</td>
                     </tr>
                     <tr class="t_tr">
                       <th><input type="checkbox" /></th>
                       <td>1</td>
-                      <td>맛있는 초콜릿</td>
-                      <td>13,000원</td>
-                      <td>10개</td>
-                      <td>130,000원</td>
+                      <td class="basket_proName">맛있는 초콜릿맛</td>
+                      <td class="basket_proPrice">13,000원</td>
+                      <td>
+                        <input
+                          type="number"
+                          class="basket_quantity"
+                          id="cquantity"
+                          name="cquantity"
+                          value="1"
+                          min="1"
+                          max="1000"
+                          readonly
+                        />
+                      </td>
+                      <td class="basket_total">13,000원</td>
                     </tr>
                     <tr class="t_tr">
                       <th><input type="checkbox" /></th>
                       <td>1</td>
-                      <td>맛있는 초콜릿</td>
-                      <td>13,000원</td>
-                      <td>10개</td>
-                      <td>130,000원</td>
+                      <td class="basket_proName">맛있는 초콜릿맛</td>
+                      <td class="basket_proPrice">13,000원</td>
+                      <td>
+                        <input
+                          type="number"
+                          class="basket_quantity"
+                          id="cquantity"
+                          name="cquantity"
+                          value="1"
+                          min="1"
+                          max="1000"
+                          readonly
+                        />
+                      </td>
+                      <td class="basket_total">13,000원</td>
                     </tr>
                     <tr class="t_tr">
                       <th><input type="checkbox" /></th>
                       <td>1</td>
-                      <td>맛있는 초콜릿</td>
-                      <td>13,000원</td>
-                      <td>10개</td>
-                      <td>130,000원</td>
+                      <td class="basket_proName">맛있는 초콜릿맛</td>
+                      <td class="basket_proPrice">13,000원</td>
+                      <td>
+                        <input
+                          type="number"
+                          class="basket_quantity"
+                          id="cquantity"
+                          name="cquantity"
+                          value="1"
+                          min="1"
+                          max="1000"
+                          readonly
+                        />
+                      </td>
+                      <td class="basket_total">13,000원</td>
                     </tr>
                     <tr class="t_tr">
                       <th><input type="checkbox" /></th>
                       <td>1</td>
-                      <td>맛있는 초콜릿</td>
-                      <td>13,000원</td>
-                      <td>10개</td>
-                      <td>130,000원</td>
+                      <td class="basket_proName">맛있는 초콜릿맛</td>
+                      <td class="basket_proPrice">13,000원</td>
+                      <td>
+                        <input
+                          type="number"
+                          class="basket_quantity"
+                          id="cquantity"
+                          name="cquantity"
+                          value="1"
+                          min="1"
+                          max="1000"
+                          readonly
+                        />
+                      </td>
+                      <td class="basket_total">13,000원</td>
                     </tr>
                     <tr class="t_tr">
                       <th><input type="checkbox" /></th>
                       <td>1</td>
-                      <td>맛있는 초콜릿</td>
-                      <td>13,000원</td>
-                      <td>10개</td>
-                      <td>130,000원</td>
+                      <td class="basket_proName">맛있는 초콜릿맛</td>
+                      <td class="basket_proPrice">13,000원</td>
+                      <td>
+                        <input
+                          type="number"
+                          class="basket_quantity"
+                          id="cquantity"
+                          name="cquantity"
+                          value="1"
+                          min="1"
+                          max="1000"
+                          readonly
+                        />
+                      </td>
+                      <td class="basket_total">13,000원</td>
                     </tr>
                     <tr class="t_tr">
                       <th><input type="checkbox" /></th>
                       <td>1</td>
-                      <td>맛있는 초콜릿</td>
-                      <td>13,000원</td>
-                      <td>10개</td>
-                      <td>130,000원</td>
+                      <td class="basket_proName">맛있는 초콜릿맛</td>
+                      <td class="basket_proPrice">13,000원</td>
+                      <td>
+                        <input
+                          type="number"
+                          class="basket_quantity"
+                          id="cquantity"
+                          name="cquantity"
+                          value="1"
+                          min="1"
+                          max="1000"
+                          readonly
+                        />
+                      </td>
+                      <td class="basket_total">13,000원</td>
+                    </tr>
+                    <tr class="t_tr">
+                      <th><input type="checkbox" /></th>
+                      <td>1</td>
+                      <td class="basket_proName">맛있는 초콜릿맛</td>
+                      <td class="basket_proPrice">13,000원</td>
+                      <td>
+                        <input
+                          type="number"
+                          class="basket_quantity"
+                          id="cquantity"
+                          name="cquantity"
+                          value="1"
+                          min="1"
+                          max="1000"
+                          readonly
+                        />
+                      </td>
+                      <td class="basket_total">13,000원</td>
+                    </tr>
+                    <tr class="t_tr">
+                      <th><input type="checkbox" /></th>
+                      <td>1</td>
+                      <td class="basket_proName">맛있는 초콜릿맛</td>
+                      <td class="basket_proPrice">13,000원</td>
+                      <td>
+                        <input
+                          type="number"
+                          class="basket_quantity"
+                          id="cquantity"
+                          name="cquantity"
+                          value="1"
+                          min="1"
+                          max="1000"
+                          readonly
+                        />
+                      </td>
+                      <td class="basket_total">13,000원</td>
                     </tr>
                   </tbody>
                 </table>
@@ -109,11 +241,12 @@
               <div id="pagination-container"></div>
             </div>
             <div class="basket_result">
-              <div class="result">총 주문금액 : 13,000원</div>
+              <div class="result" id="totalPrice">총 주문금액 :</div>
             </div>
             <div class="basket_btns">
-              <button class="basket_btn" type="submit">주문하기</button>
+              <button class="basket_btn" type="submit">상품주문하기</button>
               <button class="basket_btn">상품삭제</button>
+              <button class="basket_edit_btn">상품수정</button>
             </div>
           </div>
         </div>
@@ -122,6 +255,47 @@
     </div>
   </body>
   <script>
-    includeHTML();
+    includeHTML()
+
+    // JavaScript 코드 수정
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   const tableBody = document.querySelector(".basket_table tbody")
+
+    //   tableBody.addEventListener("input", function (event) {
+    //     const target = event.target
+    //     if (target.classList.contains("basket_quantity")) {
+    //       const row = target.closest(".t_tr")
+    //       const priceCell = row.querySelector(".basket_proPrice")
+    //       const totalPriceCell = row.querySelector("td.basket_total")
+
+    //       updateTotal(row, priceCell, target, totalPriceCell)
+    //       updateOverallTotal()
+    //     }
+    //   })
+
+    //   function updateTotal(row, priceCell, quantityInput, totalPriceCell) {
+    //     const price = parseInt(priceCell.textContent)
+    //     const quantity = parseInt(quantityInput.value)
+    //     const total = price * quantity
+
+    //     totalPriceCell.textContent = total.toLocaleString() + "원"
+    //   }
+
+    //   function updateOverallTotal() {
+    //     const totalCells = document.querySelectorAll("td.basket_total")
+    //     let overallTotal = 0
+
+    //     totalCells.forEach((cell) => {
+    //       const total = parseInt(cell.textContent.replace(/\D/g, ""))
+    //       overallTotal += total
+    //     })
+
+    //     const totalPriceDiv = document.getElementById("totalPrice")
+    //     totalPriceDiv.textContent =
+    //       "총 주문금액: " + overallTotal.toLocaleString() + "원"
+    //   }
+
+    //   updateOverallTotal()
+    // })
   </script>
 </html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>카테고리 > 추천</title>
-    <link rel="stylesheet" type="text/css" href="/Frontend/CSS/category.css" />
-    <link rel="stylesheet" type="text/css" href="/Frontend/CSS/style.css" /> 
+    <link rel="stylesheet" type="text/css" href="/Styles/CSS/category.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/CSS/style.css" />
     <script src="/Frontend/Javascript/includeHTML.js"></script>
   </head>
   <body>
@@ -13,81 +13,154 @@
       <header include-html="/Frontend/HTML/Main/header.html"></header>
       <nav include-html="/Frontend/HTML/Main/nav.html"></nav>
       <main>
-    <div class="item-list">
-      <h2 class="highball">🥵더운 여름밤에 하이볼 한잔🥃</h2>
-      <div class="first-line">
-        <div class="recommend">
-          <img class="recommend-image" src="/Frontend/images/술 사진/위스키/짐빔.png"/>
-          <img class="recommend-image" src="/Frontend/images/안주사진/위스키안주_명란구이.png"/>
-          <h5>짐빔 + 명란구이</h5>
-          <p>58,500원</p>
+        <div id="recommend_lists">
+          <div class="recommend_list">
+            <div class="recommend_title">🥵더운 여름밤에 하이볼 한잔🥃</div>
+            <div class="recommend_items">
+              <div class="recommend_item">
+                <div class="recommend_imgs">
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/alcohol_image/whisky/jimbeam.png"
+                  />
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/snack_image/broiledmyungran.png"
+                  />
+                </div>
+                <span>짐빔 + 명란구이</span>
+                <p>58,500원</p>
+              </div>
+              <div class="recommend_item">
+                <div class="recommend_imgs">
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/alcohol_image/whisky/scotsgrey.png"
+                  />
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/snack_image/gambas.png"
+                  />
+                </div>
+                <span>스카치 그레이 + 감바스</span>
+                <p>33,100원</p>
+              </div>
+              <div class="recommend_item">
+                <div class="recommend_imgs">
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/alcohol_image/vodka/stolibanilla.png"
+                  />
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/snack_image/broiledsalmon.png"
+                  />
+                </div>
+                <span>스톨리 바닐라 + 연어구이</span>
+                <p>51,900원</p>
+              </div>
+            </div>
+          </div>
+          <div class="recommend_list">
+            <div class="recommend_title">퇴근 후 맥주 한잔🍻</div>
+            <div class="recommend_items">
+              <div class="recommend_item">
+                <div class="recommend_imgs">
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/alcohol_image/beer/budweiser.png"
+                  />
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/snack_image/buffalochickenwingbong.png"
+                  />
+                </div>
+                <span>버드와이저 + 버팔로 윙봉</span>
+                <p>17,700원</p>
+              </div>
+              <div class="recommend_item">
+                <div class="recommend_imgs">
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/alcohol_image/beer/heineken.png"
+                  />
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/snack_image/baconvegetableroll.png"
+                  />
+                </div>
+                <span>하이네켄 + 베이컨 야채말이</span>
+                <p>15,900원</p>
+              </div>
+              <div class="recommend_item">
+                <div class="recommend_imgs">
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/alcohol_image/beer/qingdao.png"
+                  />
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/snack_image/chapsteak.png"
+                  />
+                </div>
+                <span>칭따오 + 찹 스테이크</span>
+                <p>21,700원</p>
+              </div>
+            </div>
+          </div>
+          <div class="recommend_list">
+            <div class="recommend_title">혼술하기 좋은 안성맞춤 조합👍</div>
+            <div class="recommend_items">
+              <div class="recommend_item">
+                <div class="recommend_imgs">
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/alcohol_image/soju/hwanggeumbori.png"
+                  />
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/snack_image/kimchijjigae.png"
+                  />
+                </div>
+                <span>항금보리 + 김치찌개</span>
+                <p>14,130원</p>
+              </div>
+              <div class="recommend_item">
+                <div class="recommend_imgs">
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/alcohol_image/soju/seoul'snight.png"
+                  />
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/snack_image/footofchicken.png"
+                  />
+                </div>
+                <span>서울의 밤 + 닭발</span>
+                <p>14,700원</p>
+              </div>
+              <div class="recommend_item">
+                <div class="recommend_imgs">
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/alcohol_image/soju/jeonjuyigangju.png"
+                  />
+                  <img
+                    class="recommend_img"
+                    src="/Styles/images/snack_image/gopchangjeongol.png"
+                  />
+                </div>
+                <span>전주이강주 + 곱창전골</span>
+                <p>24,350원</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="recommend">
-          <img class="recommend-image" src="/Frontend/images/술 사진/위스키/스카치 그레이.png" />
-          <img class="recommend-image" src="/Frontend/images/안주사진/위스키안주_감바스.png"/>
-          <h5>스카치 그레이 + 감바스</h5>
-          <p>33,100원</p>
-        </div>
-        <div class="recommend">
-          <img class="recommend-image" src="/Frontend/images/술 사진/보드카/스톨리 바닐라.png" />
-          <img class="recommend-image" src="/Frontend/images/안주사진/사케안주_연어구이.png">
-          <h5>스톨리 바닐라 + 연어구이</h5>
-          <p>51,900원</p>
-      </div>
+      </main>
+      <footer include-html="/Frontend/HTML/Main/footer.html"></footer>
     </div>
-    <div class="item-list">
-      <hr>
-      <h2>퇴근 후 맥주 한잔🍻</h2>
-      <div class="second-line">
-        <div class="recommend">
-          <img class="recommend-image" src="/Frontend/images/술 사진/맥주/버드와이저.png">
-          <img class="recommend-image" src="/Frontend/images/안주사진/맥주안주_버팔로윙봉.png" />
-          <h5>버드와이저 + 버팔로 윙봉</h5>
-          <p>17,700원</p>
-        </div>
-        <div class="recommend">
-          <img class="recommend-image" src="/Frontend/images/술 사진/맥주/하이네켄.png">
-          <img class="recommend-image" src="/Frontend/images/안주사진/맥주안주_베이컨야채말이.png" />
-          <h5>하이네켄 + 베이컨 야채말이</h5>
-          <p>15,900원</p>
-        </div>
-        <div class="recommend">
-          <img class="recommend-image" src="/Frontend/images/술 사진/맥주/칭따오.png">
-          <img class="recommend-image" src="/Frontend/images/안주사진/와인안주_찹 스테이크.png" />
-          <h5>칭따오 + 찹 스테이크</h5>
-          <p>21,700원</p>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class="item-list">
-      <h2>혼술하기 좋은 안성맞춤 조합👍</h2>
-      <div class="third-line">
-        <div class="recommend">
-          <img class="recommend-image" src="/Frontend/images/술 사진/소주/황금보리.png">
-          <img class="recommend-image" src="/Frontend/images/안주사진/소주안주_김치찌개.png" />
-          <h5>항금보리 + 김치찌개</h5>
-          <p>14,130원</p>
-        </div>
-        <div class="recommend">
-          <img class="recommend-image" src="/Frontend/images/술 사진/소주/서울의밤.png">
-          <img class="recommend-image" src="/Frontend/images/안주사진/소주안주_닭발.png" />
-          <h5>서울의 밤 + 닭발</h5>
-          <p>14,700원</p>
-        </div>
-        <div class="recommend">
-          <img class="recommend-image" src="/Frontend/images/술 사진/소주/전주이강주.png">
-          <img class="recommend-image" src="/Frontend/images/안주사진/소주안주_곱창전골.png" />
-          <h5>전주이강주 + 곱창전골</h5>
-          <p>24,350원</p>
-        </div>
-      </div>
-    </div>
-  </main>
-    <footer include-html="/Frontend/HTML/Main/footer.html"></footer>
-  </div>
   </body>
   <script>
-    includeHTML();
+    includeHTML()
   </script>
 </html>

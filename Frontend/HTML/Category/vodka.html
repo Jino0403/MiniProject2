@@ -4,82 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>카테고리 > 보드카</title>
-    <link rel="stylesheet" type="text/css" href="/Frontend/CSS/category.css" />
-    <link rel="stylesheet" type="text/css" href="/Frontend/CSS/style.css" />
-    <script src="/Frontend/Javascript/includeHTML.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Styles/CSS/category.css" />
+    <link rel="stylesheet" type="text/css" href="/Styles/CSS/style.css" />
+    <script src="/Styles/Javascript/includeHTML.js"></script>
+    <script src="/Styles/Javascript/category.js"></script>
   </head>
   <body>
     <div id="wrapper">
       <header include-html="/Frontend/HTML/Main/header.html"></header>
       <nav include-html="/Frontend/HTML/Main/nav.html"></nav>
       <main>
-        <div class="item-list">
-          <div class="first-line">
-            <div class="item">
-              <img src="/Frontend/images/술 사진/보드카/앱솔루트 어피치.png" />
-              <h5>앱솔루트 어피치</h5>
-              <p>35,900원</p>
-            </div>
-            <div class="item">
+        <div id="item_lists">
+          <div class="item_line">
+            <div class="items">
               <img
-                src="/Frontend/images/술 사진/보드카/스미노프 그린애플.png"
+                class="items_img"
+                src="/Styles/images/alcohol_image/vodka/absoluteapeach.png"
               />
-              <h5>스미노프 그린애플</h5>
-              <p>37,300원</p>
+              <span class="item_span">앱솔루트 어피치</span>
+              <p class="item_p">35,900원</p>
             </div>
-            <div class="item">
-              <img src="/Frontend/images/술 사진/보드카/벨베디어 보드카.png" />
-              <h5>벨베디어 보드카</h5>
-              <p>64,200원</p>
-            </div>
-            <div class="item">
+            <div class="items">
               <img
-                src="/Frontend/images/술 사진/보드카/그레이구스 보드카 레몬향.png"
+                class="items_img"
+                src="/Styles/images/alcohol_image/vodka/smirnoffgreenapple.png"
               />
-              <h5>그레이구스 레몬향</h5>
-              <p>68,400원</p>
+              <span class="item_span">스미노프 그린애플</span>
+              <p class="item_p">37,300원</p>
             </div>
-            <div class="item">
-              <img src="/Frontend/images/술 사진/보드카/휘틀리 보드카.png" />
-              <h5>휘틀리 보드카</h5>
-              <p>48,500원</p>
+            <div class="items">
+              <img
+                class="items_img"
+                src="/Styles/images/alcohol_image/vodka/belvederevodka.png"
+              />
+              <span class="item_span">벨베디어 보드카</span>
+              <p class="item_p">64,200원</p>
+            </div>
+            <div class="items">
+              <img
+                class="items_img"
+                src="/Styles/images/alcohol_image/vodka/greygoosevodkalemon.png"
+              />
+              <span class="item_span">그레이구스 레몬향</span>
+              <p class="item_p">68,400원</p>
+            </div>
+            <div class="items">
+              <img
+                class="items_img"
+                src="/Styles/images/alcohol_image/vodka/wheatleyvodka.png"
+              />
+              <span class="item_span">휘틀리 보드카</span>
+              <p class="item_p">48,500원</p>
+            </div>
+            <div class="items">
+              <img
+                class="items_img"
+                src="/Styles/images/alcohol_image/vodka/stolibanilla.png"
+              />
+              <span class="item_span">스톨리 바닐라</span>
+              <p class="item_p">37,100원</p>
+            </div>
+            <div class="items">
+              <img
+                class="items_img"
+                src="/Styles/images/alcohol_image/vodka/stolisaltedcaramel.png"
+              />
+              <span class="item_span">스톨리 솔티드 캐러멜</span>
+              <p class="item_p">37,100원</p>
+            </div>
+            <div class="items">
+              <img
+                class="items_img"
+                src="/Styles/images/alcohol_image/vodka/greygoosevodka.png"
+              />
+              <span class="item_span">그레이구스 보드카</span>
+              <p class="item_p">68,400원</p>
+            </div>
+            <div class="items">
+              <img
+                class="items_img"
+                src="/Styles/images/alcohol_image/vodka/absolutelime.png"
+              />
+              <span class="item_span">앱솔루트 라임</span>
+              <p class="item_p">35,900원</p>
+            </div>
+            <div class="items">
+              <img
+                class="items_img"
+                src="/Styles/images/alcohol_image/whisky/mr.bostonbourbon.png"
+              />
+              <span class="item_span">그레이구스 오렌지향</span>
+              <p class="item_p">68,400원</p>
             </div>
           </div>
-        </div>
-        <hr />
-        <div class="item-list">
-          <div class="second-line">
-            <div class="item">
-              <img src="/Frontend/images/술 사진/보드카/스톨리 바닐라.png" />
-              <h5>스톨리 바닐라</h5>
-              <p>37,100원</p>
-            </div>
-            <div class="item">
-              <img
-                src="/Frontend/images/술 사진/보드카/스톨리 솔티드 캐러멜.png"
-              />
-              <h5>스톨리 솔티드 캐러멜</h5>
-              <p>37,100원</p>
-            </div>
-            <div class="item">
-              <img
-                src="/Frontend/images/술 사진/보드카/그레이구스 보드카.png"
-              />
-              <h5>그레이구스 보드카</h5>
-              <p>68,400원</p>
-            </div>
-            <div class="item">
-              <img src="/Frontend/images/술 사진/보드카/앱솔루트 라임.png" />
-              <h5>앱솔루트 라임</h5>
-              <p>35,900원</p>
-            </div>
-            <div class="item">
-              <img
-                src="/Frontend/images/술 사진/보드카/그레이구스 보드카 오렌지향.png"
-              />
-              <h5>그레이구스 오렌지향</h5>
-              <p>68,400원</p>
-            </div>
+          <div id="pagination" class="pagination-grid">
+            <div id="page-buttons"></div>
           </div>
         </div>
       </main>
@@ -87,6 +106,6 @@
     </div>
   </body>
   <script>
-    includeHTML();
+    includeHTML()
   </script>
 </html>
