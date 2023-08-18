@@ -1,39 +1,5 @@
 /*카테고리 섹션에 들어갈 CSS 파일*/
 
-.item-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-}
-/* 상품 나열 첫번째줄 */
-.first-line {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  margin-top: 80px;
-  margin-bottom: 50px;
-}
-/* 상품 나열 두번째줄 */
-.second-line {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 80px auto;
-  margin-bottom: 100px;
-}
-/* 추천,안주에만 있는 상품 나열 세번째줄 */
-.third-line {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 80px auto 100px;
-}
 /* 상품 이미지 CSS */
 .img {
   width: 195px;
@@ -45,18 +11,6 @@
 /* 이미지 커서 올려놓을시 CSS */
 .img:hover {
   box-shadow: 0 0 6px darkgray;
-}
-/* 상품 사진, 상품명, 가격 CSS */
-.item {
-  width: 200px;
-  height: 330px;
-  margin: 10px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  cursor: pointer;
 }
 /* 상품명 CSS */
 span {
@@ -77,26 +31,7 @@ p {
   font-size: 18px;
   user-select: none;
 }
-/* 추천 카테고리에서 하이볼 부제목 */
-.highball {
-  margin-top: 100px;
-}
 
-/* 추천 카테고리 사진 */
-.recommend-image {
-  width: 200px;
-  height: 190px;
-  margin: auto -3px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-/* 추천 상품 사진, 이름, 가격 CSS */
-.recommend {
-  width: 450px;
-  text-align: center;
-  cursor: pointer;
-}
-/* 안주류 카테고리 전체div CSS*/
 .snack-category-list {
   margin: 50px 0px 0px 70px;
   display: flex;
@@ -107,15 +42,15 @@ p {
 }
 /* 안주류 카테고리 CSS */
 .snack-category {
+  width: 80px;
+  padding: 8px;
   margin: 10px 23px;
-  text-decoration: none;
-  color: black;
   border: 1px solid white;
   border-radius: 6px;
-  padding: 8px;
-  font-size: 20px;
-  width: 80px;
   box-shadow: 0 0 2px;
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
 }
 /* 안주류 카테고리 클릭시 CSS */
 a:hover {
@@ -123,27 +58,124 @@ a:hover {
   font-weight: bold;
 }
 /* 안주 고기류 두번째 줄 */
-.snack-item-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: flex-start;
-  margin-left: -10px;
+
+/*상품 카테고리에서 리스트 전체를 감싸는 부분*/
+
+.item_line {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+  padding: 30px;
 }
-/* 안주류 카테고리 들어가서 item div */
-.snack-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
-  margin: 80px 0px 100px 22px;
+
+/*상품 카테고리 리스트*/
+
+.items {
+  width: 250px;
+  height: 400px;
+  margin-top: 10px;
 }
-/* 안주류 카테고리 안에서 상품 나열 */
-.snack-first-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: flex-start;
-  margin-left: -10px;
+
+/*상품 카테고리 */
+
+.items_img {
+  width: 100%;
+  height: 60%;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 2px lightgray;
+}
+
+/*상품 이미지*/
+
+.items_img:hover {
+  border: 1px solid transparent;
+  box-shadow: 0 0 5px black;
+  cursor: pointer;
+}
+
+/*상품 이미지 hover*/
+
+.item_span {
+  height: 20%;
+  color: black;
+}
+
+/*상품명*/
+.item_p {
+  height: 20%;
+}
+
+/*상품 가격*/
+
+#recommend_lists {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  place-items: center;
+  gap: 30px;
   margin-top: 50px;
 }
+
+/*추천 카테고리 전체*/
+
+.recommend_list {
+  width: 100%;
+}
+
+/*추천 카테고리 별로 묶은 div*/
+
+.recommend_title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/*추천 카테고리 타이틀*/
+
+.recommend_items {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  place-items: center;
+}
+
+/*추천 카테고리 별 상품을 묶어놓은 div*/
+
+.recommend_item {
+  width: 30%;
+}
+
+/*추천 카테고리별 상품 div*/
+
+.recommend_item span {
+  height: 10%;
+  margin-top: 20px;
+}
+
+/*추천 카테고리 상품명*/
+
+.recommend_item p {
+  height: 10%;
+}
+
+/*추천 카테고리 가격*/
+
+.recommend_imgs {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.recommend_imgs:hover {
+  box-shadow: 0 0 5px darkgray;
+  cursor: pointer;
+}
+
+/*추천 카테고리 이미지들을 묶은 div*/
+
+.recommend_img {
+  width: 216px;
+  height: 200px;
+}
+
+/*추천 카테고리 이미지*/
