@@ -7,7 +7,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="../../../Styles/CSS/manageLogin.css"
+      href="../../..../../../Styles/CSS/manageLogin.css"
     />
     <title>관리자 로그인</title>
   </head>
@@ -15,7 +15,7 @@
     <div id="login_wrapper">
       <div id="login">
         <div class="login_logo">
-          <img src="../../../Styles/images/logo%201.png" />
+          <img src="../../..../../../Styles/images/logo%201.png" />
         </div>
         <div class="form_wrapper">
           <h2>관리자 로그인</h2>

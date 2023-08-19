@@ -76,14 +76,21 @@ a:hover {
   margin-top: 10px;
 }
 
+/*상품 카테고리 Form Submit 버튼*/
+#items-submit{
+  background: white;
+  border: 1px solid transparent;
+}
+
 /*상품 카테고리 */
 
 .items_img {
-  width: 100%;
-  height: 60%;
+  width: 250px;
+  height: 240px;
   border: 1px solid transparent;
   border-radius: 8px;
   box-shadow: 0 0 2px lightgray;
+  object-fit: fill;
 }
 
 /*상품 이미지*/

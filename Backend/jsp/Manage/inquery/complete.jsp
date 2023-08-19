@@ -5,16 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
-      src="../../../../Styles/Javascript/jquery-3.7.0.js"
+      src="../../../..../../../Styles/Javascript/jquery-3.7.0.js"
       type="text/javascript"></script>
     <script
-      src="../../../../Styles/Javascript/manage.js"
+      src="../../../..../../../Styles/Javascript/manage.js"
       type="text/javascript"
       defer="defer"></script>
     <link
       rel="stylesheet"
       type="text/css"
-      href="../../../../Styles/CSS/managePage.css"/>
+      href="../../../..../../../Styles/CSS/managePage.css"/>
     <title>관리자 페이지</title>
   </head>
   <body>
@@ -23,7 +23,7 @@
         <div class="manage_menu">
           <div>
             <a href="../manageMain.html"
-              ><img src="../../../../Styles/images/logo 1.png"
+              ><img src="../../../..../../../Styles/images/logo 1.png"
             /></a>
             <h3>관리자페이지</h3>
             <ul id="nav_bar2">
