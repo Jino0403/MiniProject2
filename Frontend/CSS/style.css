@@ -69,7 +69,7 @@ header {
 /*검색, 로그인, 회원가입를 감싸는 부분*/
 
 #header_search {
-  height: 50px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

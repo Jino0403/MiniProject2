@@ -33,3 +33,31 @@
   font-size: 18px;
   color: #333;
 }
+
+#header_search {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 6px;
+  user-select: none;
+}
+
+/*header 부분 검색 감싸는 div*/
+
+#header_search img {
+  width: 20px;
+  height: 20px;
+  margin: 6px 5px 5px 5px;
+}
+
+#header_search input {
+  width: 350px;
+  height: 25px;
+  margin: 0 15px;
+  outline: 0;
+  border: 0;
+}
+
+/*검색 input창*/
