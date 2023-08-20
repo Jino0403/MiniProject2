@@ -134,14 +134,14 @@ a:hover {
 
 .recommend_items {
   display: grid;
-  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   place-items: center;
 }
 
 /*추천 카테고리 별 상품을 묶어놓은 div*/
 
 .recommend_item {
-  width: 30%;
+  /* width: 30%; */
 }
 
 /*추천 카테고리별 상품 div*/
