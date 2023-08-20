@@ -13,16 +13,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script
-          src="../../../../Styles/Javascript/jquery-3.7.0.js"
+          src="../../../..../../../Styles/Javascript/jquery-3.7.0.js"
           type="text/javascript"></script>
   <script
-          src="../../../../Styles/Javascript/pageUser.js"
+          src="../../../..../../../Styles/Javascript/pageUser.js"
           type="text/javascript" defer></script>
-  <script src="../../../../Styles/Javascript/userfun.js" defer></script>
+  <script src="../../../..../../../Styles/Javascript/userfun.js" defer></script>
   <link
           rel="stylesheet"
           type="text/css"
-          href="../../../../Styles/CSS/managePage.css" />
+          href="../../../..../../../Styles/CSS/managePage.css" />
   <title>관리자 페이지</title>
 </head>
 <body>
