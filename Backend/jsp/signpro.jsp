@@ -21,12 +21,12 @@ try{
                 HttpSession session1 = request.getSession();
                 session1.setAttribute("username", enteredUsername);
                 session1.setMaxInactiveInterval(360 * 60);
-                response.sendRedirect("manageMain.jsp");
+                response.sendRedirect("Manage/manageMain.jsp");
             } else {
                 HttpSession session1 = request.getSession();
                 session1.setAttribute("username", enteredUsername);
                 session1.setMaxInactiveInterval(360 * 60);
-                response.sendRedirect("sign.jsp"); // 대시보드 페이지로 이동
+                response.sendRedirect("Main/index.jsp"); // 대시보드 페이지로 이동
             }
         } else{
             out.println("로그인 실패");

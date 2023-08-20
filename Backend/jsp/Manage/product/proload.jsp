@@ -13,20 +13,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
-      src="../../../../Styles/Javascript/jquery-3.7.0.js"
+      src="../../../..../../../Styles/Javascript/jquery-3.7.0.js"
       type="text/javascript"></script>
     <script
-      src="../../../../Styles/Javascript/pagePro.js"
+      src="../../../..../../../Styles/Javascript/pagePro.js"
       type="text/javascript"
       defer="defer"></script>
     <script
-            src="../../../../Styles/Javascript/profun.js"
+            src="../../../..../../../Styles/Javascript/profun.js"
             type="text/javascript"
             defer="defer"></script>
     <link
       rel="stylesheet"
       type="text/css"
-      href="../../../../Styles/CSS/managePage.css" />
+      href="../../../..../../../Styles/CSS/managePage.css" />
     <title>관리자 페이지</title>
   </head>
   <body>
@@ -104,6 +104,7 @@
                   String productText = resultSet.getString("ptext");
                   String productUrl = resultSet.getString("purl");
                   String productCharge = resultSet.getString("mid");
+                  String productPriceWon = String.format("%,d 원", productPrice);
               %>
                 <tr class="t_tr">
                   <td><input type="checkbox" name="productCheck" value="<%=productNumber%>" class="productCheckbox"/></td>
@@ -111,17 +112,17 @@
                   <td>
                     <img
                       class="pro_img"
-                      src="<%=productUrl%>" alt="picture"/>
+                      src="${pageContext.request.contextPath}<%=productUrl%>" alt="picture"/>
                   </td>
-                  <td><%=productName%></td></td>
-                  <td><%=productCategory%></td></td>
-                  <td><%=productPrice%> 원</td>
-                  <td><%=productQuantity%></td></td>
+                  <td><%=productName%></td>
+                  <td><%=productCategory%></td>
+                  <td><%=productPriceWon%></td>
+                  <td><%=productQuantity%></td>
                   <td><%=productMl%> mL</td>
                   <td><%=productAlcohol%> %</td>
-                  <td><%=productCountry%></td></td>
-                  <td><%=productText%></td></td>
-                  <td><%=productCharge%></td></td>
+                  <td><%=productCountry%></td>
+                  <td><%=productText%></td>
+                  <td><%=productCharge%></td>
                 </tr>
                 <%
                   }
