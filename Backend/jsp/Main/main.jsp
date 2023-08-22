@@ -19,7 +19,7 @@
       <div class="main_product_list">
         <%
           try {
-            String bestSelectQuery = "SELECT * FROM product where pdiv = '1' order by RAND()LIMIT 5;";
+            String bestSelectQuery = "SELECT * FROM product where pdiv = '1' order by RAND() LIMIT 5;";
             PreparedStatement preparedStatement = conn.prepareStatement(bestSelectQuery);
             ResultSet bestResultSet = preparedStatement.executeQuery();
             while (bestResultSet.next()) {
@@ -30,9 +30,14 @@
               String productPriceWon = String.format("%,d 원", productPrice);
         %>
         <div class="main_product">
+          <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+            <button type="submit" class="items-submit">
+              <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
           <img src="${pageContext.request.contextPath}<%=productUrl%>" />
           <span><%=productName%></span>
           <p><%=productPriceWon%></p>
+            </button>
+          </form>
           </div>
         <%
             }
@@ -64,9 +69,14 @@
               String productPriceWon = String.format("%,d 원", productPrice);
           %>
           <div class="main_product">
-            <img src="${pageContext.request.contextPath}<%=productUrl%>" alt="picture"/>
-            <span><%=productName%></span>
-            <p><%=productPriceWon%></p>
+            <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+              <button type="submit" class="items-submit">
+                <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
+                <img src="${pageContext.request.contextPath}<%=productUrl%>" />
+                <span><%=productName%></span>
+                <p><%=productPriceWon%></p>
+              </button>
+            </form>
           </div>
           <%
               }
@@ -100,9 +110,14 @@
                 String productPriceWon = String.format("%,d 원", productPrice);
           %>
           <div class="main_product">
-            <img src="${pageContext.request.contextPath}<%=productUrl%>" alt="picture"/>
-            <span><%=productName%></span>
-            <p><%=productPriceWon%></p>
+            <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+              <button type="submit" class="items-submit">
+                <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
+                <img src="${pageContext.request.contextPath}<%=productUrl%>" />
+                <span><%=productName%></span>
+                <p><%=productPriceWon%></p>
+              </button>
+            </form>
           </div>
           <%
               }
@@ -135,9 +150,14 @@
                 String productPriceWon = String.format("%,d 원", productPrice);
           %>
           <div class="main_product">
-            <img src="${pageContext.request.contextPath}<%=productUrl%>" alt="picture"/>
-            <span><%=productName%></span>
-            <p><%=productPriceWon%></p>
+            <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+              <button type="submit" class="items-submit">
+                <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
+                <img src="${pageContext.request.contextPath}<%=productUrl%>" />
+                <span><%=productName%></span>
+                <p><%=productPriceWon%></p>
+              </button>
+            </form>
           </div>
           <%
               }
@@ -170,9 +190,14 @@
                 String productPriceWon = String.format("%,d 원", productPrice);
           %>
           <div class="main_product">
-            <img src="${pageContext.request.contextPath}<%=productUrl%>" alt="picture"/>
-            <span><%=productName%></span>
-            <p><%=productPriceWon%></p>
+            <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+              <button type="submit" class="items-submit">
+                <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
+                <img src="${pageContext.request.contextPath}<%=productUrl%>" />
+                <span><%=productName%></span>
+                <p><%=productPriceWon%></p>
+              </button>
+            </form>
           </div>
           <%
               }
@@ -205,9 +230,14 @@
                 String productPriceWon = String.format("%,d 원", productPrice);
           %>
           <div class="main_product">
-            <img src="${pageContext.request.contextPath}<%=productUrl%>" alt="picture"/>
-            <span><%=productName%></span>
-            <p><%=productPriceWon%></p>
+            <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+              <button type="submit" class="items-submit">
+                <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
+                <img src="${pageContext.request.contextPath}<%=productUrl%>" />
+                <span><%=productName%></span>
+                <p><%=productPriceWon%></p>
+              </button>
+            </form>
           </div>
           <%
               }
@@ -240,9 +270,14 @@
                 String productPriceWon = String.format("%,d 원", productPrice);
           %>
           <div class="main_product">
-            <img src="${pageContext.request.contextPath}<%=productUrl%>" alt="picture"/>
-            <span><%=productName%></span>
-            <p><%=productPriceWon%></p>
+            <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+              <button type="submit" class="items-submit">
+                <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
+                <img src="${pageContext.request.contextPath}<%=productUrl%>" />
+                <span><%=productName%></span>
+                <p><%=productPriceWon%></p>
+              </button>
+            </form>
           </div>
           <%
               }
@@ -275,9 +310,14 @@
                 String productPriceWon = String.format("%,d 원", productPrice);
           %>
           <div class="main_product">
-            <img src="${pageContext.request.contextPath}<%=productUrl%>" alt="picture"/>
-            <span><%=productName%></span>
-            <p><%=productPriceWon%></p>
+            <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+              <button type="submit" class="items-submit">
+                <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
+                <img src="${pageContext.request.contextPath}<%=productUrl%>" />
+                <span><%=productName%></span>
+                <p><%=productPriceWon%></p>
+              </button>
+            </form>
           </div>
           <%
               }
@@ -310,9 +350,14 @@
                 String productPriceWon = String.format("%,d 원", productPrice);
           %>
           <div class="main_product">
-            <img src="${pageContext.request.contextPath}<%=productUrl%>" alt="picture"/>
-            <span><%=productName%></span>
-            <p><%=productPriceWon%></p>
+            <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+              <button type="submit" class="items-submit">
+                <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
+                <img src="${pageContext.request.contextPath}<%=productUrl%>" />
+                <span><%=productName%></span>
+                <p><%=productPriceWon%></p>
+              </button>
+            </form>
           </div>
           <%
               }
