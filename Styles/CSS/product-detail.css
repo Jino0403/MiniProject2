@@ -123,19 +123,19 @@ h3 {
 }
 /* 추천 안주 나열 */
 .product-second {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin: 80px 50px 80px;
+  margin: 80px 50px 80px; */
 }
 /* 추천 안주 사진,이름,가격 정렬 */
 .second-line {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin: auto 10px;
+  margin: auto 10px; */
 }
 /* 추천 안주 사진 */
 .product-recommend-image {
