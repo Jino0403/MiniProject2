@@ -2,8 +2,8 @@
 <%@ page import="java.sql.*"%>
 <%@ include file="../conn.jsp"%>
 <%
+  int searchId = Integer.parseInt(request.getParameter("alcoholid"));
   try {
-    int searchId = Integer.parseInt(request.getParameter("alcoholid"));
     String selectQuery = "SELECT * FROM product where pno = ? ";
     PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
     preparedStatement.setInt(1, searchId);
@@ -90,58 +90,41 @@
         </div>
 
         <hr />
+
         <h2 class="recommend-comment">곁들이면 찰떡궁합인 안주 추천</h2>
         <div class="product-second">
           <div class="second-line">
+            <%
+              }
+              resultSet.close();
+              preparedStatement.close();
+
+              String selectQuery2 = "SELECT * FROM product where pdiv = 2 order by RAND() LIMIT 5";
+              PreparedStatement preparedStatement2 = conn.prepareStatement(selectQuery2);
+              ResultSet resultSet2 = preparedStatement2.executeQuery();
+
+              while (resultSet2.next()){
+                int productNumber2 = resultSet2.getInt("pno");
+                String productName2 = resultSet2.getString("pname");
+                int productPrice2 = resultSet2.getInt("pprice");
+                String productUrl2 = resultSet2.getString("purl");
+                String productPriceWon2 = String.format("%,d 원", productPrice2);
+            %>
             <div class="product-recommend-image">
               <img
                 class="recommed-with-product"
-                src="${pageContext.request.contextPath}/images/안주사진/맥주안주_버팔로윙봉.png"
+                src="${pageContext.request.contextPath}<%=productUrl2%>"
               />
             </div>
-            <h5>버팔로 윙봉</h5>
-            <p>16,200원</p>
+            <h5><%=productName2%></h5>
+            <p><%=productPriceWon2%></p>
+            <%
+              }
+              resultSet2.close();
+              preparedStatement2.close();
+            %>
           </div>
-          <div class="second-line">
-            <div class="product-recommend-image">
-              <img
-                class="recommed-with-product"
-                src="${pageContext.request.contextPath}/images/안주사진/위스키안주_감바스.png"
-              />
-            </div>
-            <h5>감바스</h5>
-            <p>13,200원</p>
-          </div>
-          <div class="second-line">
-            <div class="product-recommend-image">
-              <img
-                class="recommed-with-product"
-                src="${pageContext.request.contextPath}/images/안주사진/와인안주_찹 스테이크.png"
-              />
-            </div>
-            <h5>찹 스테이크</h5>
-            <p>16,200원</p>
-          </div>
-          <div class="second-line">
-            <div class="product-recommend-image">
-              <img
-                class="recommed-with-product"
-                src="${pageContext.request.contextPath}/images/안주사진/사케안주_연어구이.png"
-              />
-            </div>
-            <h5>연어구이</h5>
-            <p>3,300원</p>
-          </div>
-          <div class="second-line">
-            <div class="product-recommend-image">
-              <img
-                class="recommed-with-product"
-                src="${pageContext.request.contextPath}/images/안주사진/와인안주_홍합스튜.png"
-              />
-            </div>
-            <h5>홍합스튜</h5>
-            <p>10,700원</p>
-          </div>
+
         </div>
         <hr />
         <div class="product-third"></div>
@@ -156,6 +139,26 @@
               <th class="table-top">원산지</th>
               <th class="table-top">용량</th>
             </tr>
+            <%
+                String selectQuery3 = "SELECT * FROM product where pno = ? ";
+                PreparedStatement preparedStatement3 = conn.prepareStatement(selectQuery3);
+                preparedStatement3.setInt(1, searchId);
+                ResultSet resultSet3 = preparedStatement3.executeQuery();
+
+              while (resultSet3.next()) {
+                int productNumber = resultSet3.getInt("pno");
+                String productName = resultSet3.getString("pname");
+                String productCategory = resultSet3.getString("pcategory");
+                int productPrice = resultSet3.getInt("pprice");
+                int productQuantity = resultSet3.getInt("pquantity");
+                int productMl = resultSet3.getInt("pml");
+                double productAlcohol= resultSet3.getDouble("palcohol");
+                String productCountry = resultSet3.getString("pcountry");
+                String productText = resultSet3.getString("ptext");
+                String productUrl = resultSet3.getString("purl");
+                String productCharge = resultSet3.getString("mid");
+                String productPriceWon = String.format("%,d 원", productPrice);
+            %>
             <tr>
               <th class="table-bottom"><%=productCategory%></th>
               <th class="table-bottom"><%=productAlcohol%> %</th>
@@ -175,8 +178,8 @@
         />
         <%
             }
-            resultSet.close();
-            preparedStatement.close();
+            resultSet3.close();
+            preparedStatement3.close();
             conn.close();
           } catch (Exception e) {
             e.printStackTrace();
