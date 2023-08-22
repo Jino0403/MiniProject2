@@ -1,14 +1,21 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.sql.*"%>
-<%@ include file="../../conn.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %> <%@ page
+import="java.sql.*"%> <%@ include file="../../conn.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>카테고리 > 안주류 > 탕류</title>
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Styles/CSS/category.css" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Styles/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="${pageContext.request.contextPath}/Styles/CSS/category.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="${pageContext.request.contextPath}/Styles/CSS/style.css"
+    />
     <script src="${pageContext.request.contextPath}/Styles/Javascript/includeHTML.js"></script>
   </head>
   <body>
