@@ -31,9 +31,9 @@
                   String productPriceWon = String.format("%,d 원", productPrice);
             %>
             <div class="items">
-              <form id="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
-                <button type="submit" id="items-submit">
-                  <input type="hidden" value="<%=productNumber%>" id="alcoholid" name="alcoholid">
+              <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+                <button type="submit" class="items-submit">
+                  <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
                   <img class="items_img" id="items-img" src="${pageContext.request.contextPath}<%=productUrl%>" />
                   <span class="item_span"><%=productName%></span>
                   <p class="item_p"><%=productPriceWon%></p>

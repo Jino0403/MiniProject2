@@ -20,153 +20,65 @@ import="java.sql.*"%> <%@ include file="../conn.jsp"%>
   </head>
   <body>
     <div id="wrapper">
-      <header include-html="/Frontend/HTML/Main/header.html"></header>
-      <nav include-html="/Frontend/HTML/Main/nav.html"></nav>
+      <header><jsp:include page="../Main/header.jsp" /></header>
+      <nav><jsp:include page="../Main/nav.jsp" /></nav>
       <div class="snack-category-list">
         <a class="snack-category" href="../Category/snack.jsp">전체</a>
         <a
           class="snack-category"
-          href="/Frontend/HTML/Category/snack/snack_soup.html"
+          href="snack/snack_soup.jsp"
           >탕류</a
         >
         <a
           class="snack-category"
-          href="/Frontend/HTML/Category/snack/snack_meat.html"
+          href="snack/snack_meat.jsp"
           >고기류</a
         >
         <a
           class="snack-category"
           href="../../../Backend/jsp/Category/snack/snack_seafood.jsp"
+
           >해산물류</a
         >
       </div>
       <main>
         <div id="item_lists">
           <div class="item_line">
+            <%
+              try {
+                String meatSelectQuery = "SELECT * FROM product where pdiv = 2;";
+                PreparedStatement preparedStatement = conn.prepareStatement(meatSelectQuery);
+                ResultSet meatResultSet = preparedStatement.executeQuery();
+                while (meatResultSet.next()) {
+                  int productNumber = meatResultSet.getInt("pno");
+                  String productName = meatResultSet.getString("pname");
+                  int productPrice = meatResultSet.getInt("pprice");
+                  String productUrl = meatResultSet.getString("purl");
+                  String productPriceWon = String.format("%,d 원", productPrice);
+            %>
             <div class="items">
-              <img
-                class="items_img"
-                src="../../../Styles/images/snack_image/beefjeon.png"
-              />
-              <span class="item_span">육전</span>
-              <p class="item_p">11,000원</p>
+              <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+                <button type="submit" class="items-submit">
+                  <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
+                  <img class="items_img" id="items-img" src="${pageContext.request.contextPath}<%=productUrl%>" />
+                  <span class="item_span"><%=productName%></span>
+                  <p class="item_p"><%=productPriceWon%></p>
+                </button>
+              </form>
             </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/jokbal.png"
-              />
-              <span class="item_span">족발</span>
-              <p class="item_p">16,000원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/buffalochickenwingbong.png"
-              />
-              <span class="item_span">버팔로 윙봉</span>
-              <p class="item_p">16,200원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/baconvegetableroll.png"
-              />
-              <span class="item_span">베이컨 야채말이</span>
-              <p class="item_p">11,900원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/broiledsalmon.png"
-              />
-              <span class="item_span">연어구이</span>
-              <p class="item_p">3,300원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/fishcakesoup.png"
-              />
-              <span class="item_span">어묵탕</span>
-              <p class="item_p">9,700원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/gopchangjeongol.png"
-              />
-              <span class="item_span">곱창전골</span>
-              <p class="item_p">12,000원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/kimchijjigae.png"
-              />
-              <span class="item_span">김치찌개</span>
-              <p class="item_p">4,000원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/footofchicken.png"
-              />
-              <span class="item_span">무뼈 닭발</span>
-              <p class="item_p">6,800원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/clamsoup.png"
-              />
-              <span class="item_span">조개탕</span>
-              <p class="item_p">8,000원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/slicedmeat.png"
-              />
-              <span class="item_span">편육</span>
-              <p class="item_p">5,020원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/chapsteak.png"
-              />
-              <span class="item_span">찹 스테이크</span>
-              <p class="item_p">16,200원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/musselstew.png"
-              />
-              <span class="item_span">홍합 스튜</span>
-              <p class="item_p">10,700원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/gambas.png"
-              />
-              <span class="item_span">감바스</span>
-              <p class="item_p">13,200원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/broiledmyungran.png"
-              />
-              <span class="item_span">명란구이</span>
-              <p class="item_p">12,500원</p>
-            </div>
+            <%
+                }
+                meatResultSet.close();
+                preparedStatement.close();
+                conn.close();
+              } catch (Exception e) {
+                e.printStackTrace();
+              }
+            %>
           </div>
         </div>
       </main>
-      <footer include-html="/Frontend/HTML/Main/footer.html"></footer>
+      <footer><jsp:include page="../Main/footer.jsp" /></footer>
     </div>
   </body>
   <script>

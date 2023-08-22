@@ -33,38 +33,37 @@ import="java.sql.*"%> <%@ include file="../../conn.jsp"%>
       <main>
         <div id="item_lists">
           <div class="item_line">
+            <%
+              try {
+                String soupSelectQuery = "SELECT * FROM product where pcategory = '탕류';";
+                PreparedStatement preparedStatement = conn.prepareStatement(soupSelectQuery);
+                ResultSet soupResultSet = preparedStatement.executeQuery();
+                while (soupResultSet.next()) {
+                  int productNumber = soupResultSet.getInt("pno");
+                  String productName = soupResultSet.getString("pname");
+                  int productPrice = soupResultSet.getInt("pprice");
+                  String productUrl = soupResultSet.getString("purl");
+                  String productPriceWon = String.format("%,d 원", productPrice);
+            %>
             <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/fishcakesoup.png"
-              />
-              <span class="item_span">어묵탕</span>
-              <p class="item_p">9,700원</p>
+              <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
+                <button type="submit" class="items-submit">
+                  <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
+                  <img class="items_img" id="items-img" src="${pageContext.request.contextPath}<%=productUrl%>" />
+                  <span class="item_span"><%=productName%></span>
+                  <p class="item_p"><%=productPriceWon%></p>
+                </button>
+              </form>
             </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/gopchangjeongol.png"
-              />
-              <span class="item_span">곱창전골</span>
-              <p class="item_p">12,000원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/kimchijjigae.png"
-              />
-              <span class="item_span">김치찌개</span>
-              <p class="item_p">4,000원</p>
-            </div>
-            <div class="items">
-              <img
-                class="items_img"
-                src="/Styles/images/snack_image/clamsoup.png"
-              />
-              <span class="item_span">조개탕</span>
-              <p class="item_p">8,000원</p>
-            </div>
+            <%
+                }
+                soupResultSet.close();
+                preparedStatement.close();
+                conn.close();
+              } catch (Exception e) {
+                e.printStackTrace();
+              }
+            %>
           </div>
         </div>
       </main>
