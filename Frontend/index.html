@@ -19,6 +19,37 @@
       <header include-html="./HTML/Main/header.html"></header>
       <nav include-html="./HTML/Main/nav.html"></nav>
       <main include-html="./HTML/Main/main.html"></main>
+      <div class="board_wrapper">
+        <form class="board_form" action="" method="post">
+          <table class="board_table">
+            <thead>
+              <tr>
+                <th class="board_th">No</th>
+                <th class="board_th">작성자</th>
+                <th class="board_content" colspan="3">내용</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>임꺽정</td>
+                <td class="board_td" colspan="2">
+                  <!-- 수정 버튼을 누르면 나타나는 내용 -->
+                  <span class="editable-content">여기 술 진짜 맛있네</span>
+                  <input type="text" class="edit-input" style="display: none" />
+                </td>
+                <td class="board_td_btn">
+                  <button class="edit-button">수정</button>
+                  <button class="save-button" style="display: none">
+                    수정완료
+                  </button>
+                  <button class="delete-button">삭제</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
       <footer include-html="./HTML/Main/footer.html"></footer>
     </div>
 
@@ -26,22 +57,48 @@
     <script>
       includeHTML()
 
-      const searchInput = document.getElementById("searchInput")
-      const searchButton = document.getElementById("searchButton")
-
-      function performSearch() {
-        const searchTerm = searchInput.value
-        // 검색 결과 페이지로 이동
-        window.location.href = `./HTML/Search/search.html?query=${searchTerm}`
-      }
-
-      searchInput.addEventListener("keydown", (event) => {
-        if (event.key === "Enter") {
-          performSearch()
-        }
+      // 수정 버튼 클릭 시 동작
+      const editButtons = document.querySelectorAll(".edit-button")
+      editButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const row = button.parentElement.parentElement
+          const editableContent = row.querySelector(".editable-content")
+          const editInput = row.querySelector(".edit-input")
+          const saveButton = row.querySelector(".save-button")
+          editableContent.style.display = "none"
+          editInput.value = editableContent.textContent
+          editInput.style.display = "inline"
+          saveButton.style.display = "inline"
+          button.style.display = "none"
+        })
       })
 
-      searchButton.addEventListener("click", performSearch)
+      // 수정완료 버튼 클릭 시 동작
+      const saveButtons = document.querySelectorAll(".save-button")
+      saveButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const row = button.parentElement.parentElement
+          const editableContent = row.querySelector(".editable-content")
+          const editInput = row.querySelector(".edit-input")
+          const editButton = row.querySelector(".edit-button")
+          editableContent.textContent = editInput.value
+          editableContent.style.display = "inline"
+          editInput.style.display = "none"
+          button.style.display = "none"
+          editButton.style.display = "inline"
+        })
+      })
+
+      // 삭제 버튼 클릭 시 동작
+      const deleteButtons = document.querySelectorAll(".delete-button")
+      deleteButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          if (confirm("정말 삭제하시겠습니까?")) {
+            const row = button.parentElement.parentElement
+            row.remove()
+          }
+        })
+      })
     </script>
   </body>
 </html>

@@ -23,20 +23,20 @@ import="java.sql.*"%> <%@ include file="../conn.jsp"%>
       <header><jsp:include page="../Main/header.jsp" /></header>
       <nav><jsp:include page="../Main/nav.jsp" /></nav>
       <div class="snack-category-list">
-        <a class="snack-category" href="../Category/snack.jsp">전체</a>
+        <a class="snack-category" href="snack.jsp">전체</a>
         <a
           class="snack-category"
-          href="snack/snack_soup.jsp"
+          href="snack_soup.jsp"
           >탕류</a
         >
         <a
           class="snack-category"
-          href="snack/snack_meat.jsp"
+          href="snack_meat.jsp"
           >고기류</a
         >
         <a
           class="snack-category"
-          href="../../../Backend/jsp/Category/snack/snack_seafood.jsp"
+          href="snack_seafood.jsp"
 
           >해산물류</a
         >
