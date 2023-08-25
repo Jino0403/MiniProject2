@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %> <%@ page
-import="java.sql.*"%> <%@ include file="../../conn.jsp"%>
+import="java.sql.*"%> <%@ include file="../conn.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -20,43 +20,29 @@ import="java.sql.*"%> <%@ include file="../../conn.jsp"%>
   </head>
   <body>
     <div id="wrapper">
-      <header><jsp:include page="../../Main/header.jsp" /></header>
-      <nav><jsp:include page="../../Main/nav.jsp" /></nav>
-      <!-- 카테고리 리스트 -->
+      <header><jsp:include page="../Main/header.jsp" /></header>
+      <nav src="../../Main/nav.jsp">
+        <jsp:include page="../Main/nav.jsp" />
+      </nav>
       <div class="snack-category-list">
-        <a class="snack-category" href="../snack.jsp"
-        >전체</a
-        >
-        <a
-                class="snack-category"
-                href="snack_soup.jsp"
-        >탕류</a
-        >
-        <a
-                class="snack-category"
-                href="snack_meat.jsp"
-        >고기류</a
-        >
-        <a
-                class="snack-category"
-                href="snack_seafood.jsp"
-        >해산물류</a
-        >
+        <a class="snack-category" href="snack.jsp">전체</a>
+        <a class="snack-category" href="snack_soup.jsp">탕류</a>
+        <a class="snack-category" href="snack_meat.jsp">고기류</a>
+        <a class="snack-category" href="snack_seafood.jsp">해산물류</a>
       </div>
       <main>
-        <!-- 안주류 고기류 상품 첫번째줄 -->
         <div id="item_lists">
           <div class="item_line">
             <%
               try {
-                String meatSelectQuery = "SELECT * FROM product where pcategory = '고기류';";
-                PreparedStatement preparedStatement = conn.prepareStatement(meatSelectQuery);
-                ResultSet meatResultSet = preparedStatement.executeQuery();
-                while (meatResultSet.next()) {
-                  int productNumber = meatResultSet.getInt("pno");
-                  String productName = meatResultSet.getString("pname");
-                  int productPrice = meatResultSet.getInt("pprice");
-                  String productUrl = meatResultSet.getString("purl");
+                String soupSelectQuery = "SELECT * FROM product where pcategory = '탕류';";
+                PreparedStatement preparedStatement = conn.prepareStatement(soupSelectQuery);
+                ResultSet soupResultSet = preparedStatement.executeQuery();
+                while (soupResultSet.next()) {
+                  int productNumber = soupResultSet.getInt("pno");
+                  String productName = soupResultSet.getString("pname");
+                  int productPrice = soupResultSet.getInt("pprice");
+                  String productUrl = soupResultSet.getString("purl");
                   String productPriceWon = String.format("%,d 원", productPrice);
             %>
             <div class="items">
@@ -71,7 +57,7 @@ import="java.sql.*"%> <%@ include file="../../conn.jsp"%>
             </div>
             <%
                 }
-                meatResultSet.close();
+                soupResultSet.close();
                 preparedStatement.close();
                 conn.close();
               } catch (Exception e) {
@@ -81,7 +67,7 @@ import="java.sql.*"%> <%@ include file="../../conn.jsp"%>
           </div>
         </div>
       </main>
-      <footer><jsp:include page="../../Main/footer.jsp" /></footer>
+      <footer><jsp:include page="../Main/footer.jsp" /></footer>
     </div>
   </body>
   <script>

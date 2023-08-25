@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.sql.*"%>
-<%@ include file="../../conn.jsp"%>
+<%@ include file="../conn.jsp"%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,10 +13,10 @@
   </head>
   <body>
     <div id="wrapper">
-      <header><jsp:include page="../../Main/header.jsp" /></header>
-      <nav><jsp:include page="../../Main/nav.jsp" /></nav>
+      <header><jsp:include page="../Main/header.jsp" /></header>
+      <nav><jsp:include page="../Main/nav.jsp" /></nav>
       <div class="snack-category-list">
-        <a class="snack-category" href="../snack.jsp"
+        <a class="snack-category" href="snack.jsp"
           >전체</a
         >
         <a
@@ -73,7 +73,7 @@
         </div>
         <hr />
       </main>
-      <footer><jsp:include page="../../Main/footer.jsp" /></footer>
+      <footer><jsp:include page="../Main/footer.jsp" /></footer>
     </div>
   </body>
   <script>

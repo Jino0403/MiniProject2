@@ -20,8 +20,8 @@ import="java.sql.*"%> <%@ include file="../conn.jsp"%>
   </head>
   <body>
     <div id="wrapper">
-      <header include-html="/Frontend/HTML/Main/header.html"></header>
-      <nav include-html="/Frontend/HTML/Main/nav.html"></nav>
+      <header><jsp:include page="../Main/header.jsp" /></header>
+      <nav><jsp:include page="../Main/nav.jsp" /></nav>
       <main>
         <div id="recommend_lists">
           <div class="recommend_list">
@@ -167,7 +167,7 @@ import="java.sql.*"%> <%@ include file="../conn.jsp"%>
           </div>
         </div>
       </main>
-      <footer include-html="/Frontend/HTML/Main/footer.html"></footer>
+      <footer><jsp:include page="../Main/footer.jsp" /></footer>
     </div>
   </body>
   <script>
