@@ -257,45 +257,55 @@
   <script>
     includeHTML()
 
-    // JavaScript 코드 수정
-    // document.addEventListener("DOMContentLoaded", function () {
-    //   const tableBody = document.querySelector(".basket_table tbody")
+    document.addEventListener("DOMContentLoaded", function () {
+      const deleteButtons = document.querySelectorAll(".basket_btn")
 
-    //   tableBody.addEventListener("input", function (event) {
-    //     const target = event.target
-    //     if (target.classList.contains("basket_quantity")) {
-    //       const row = target.closest(".t_tr")
-    //       const priceCell = row.querySelector(".basket_proPrice")
-    //       const totalPriceCell = row.querySelector("td.basket_total")
+      deleteButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          const checkedCheckboxes = document.querySelectorAll(
+            '.t_tr input[type="checkbox"]:checked'
+          )
 
-    //       updateTotal(row, priceCell, target, totalPriceCell)
-    //       updateOverallTotal()
-    //     }
-    //   })
+          checkedCheckboxes.forEach(function (checkbox) {
+            const row = checkbox.closest(".t_tr")
+            row.remove()
+          })
 
-    //   function updateTotal(row, priceCell, quantityInput, totalPriceCell) {
-    //     const price = parseInt(priceCell.textContent)
-    //     const quantity = parseInt(quantityInput.value)
-    //     const total = price * quantity
+          // Update the page content and recalculate the total price
+          updatePageContent()
+        })
+      })
 
-    //     totalPriceCell.textContent = total.toLocaleString() + "원"
-    //   }
+      function updatePageContent() {
+        // Recalculate the total price
+        updateTotalPrice()
+      }
 
-    //   function updateOverallTotal() {
-    //     const totalCells = document.querySelectorAll("td.basket_total")
-    //     let overallTotal = 0
+      function updateTotalPrice() {
+        let totalPrice = 0
+        const basketTotalElements = document.querySelectorAll(".t_tr")
 
-    //     totalCells.forEach((cell) => {
-    //       const total = parseInt(cell.textContent.replace(/\D/g, ""))
-    //       overallTotal += total
-    //     })
+        basketTotalElements.forEach(function (row) {
+          if (row.querySelector('input[type="checkbox"]').checked) {
+            const priceElement = row.querySelector(".basket_proPrice")
+            const quantityElement = row.querySelector(".basket_quantity")
+            const price = parseFloat(
+              priceElement.textContent.replace("원", "").replace(",", "")
+            )
+            const quantity = parseInt(quantityElement.value)
 
-    //     const totalPriceDiv = document.getElementById("totalPrice")
-    //     totalPriceDiv.textContent =
-    //       "총 주문금액: " + overallTotal.toLocaleString() + "원"
-    //   }
+            totalPrice += price * quantity
+          }
+        })
 
-    //   updateOverallTotal()
-    // })
+        const totalPriceElement = document.getElementById("totalPrice")
+        if (totalPrice > 0) {
+          totalPriceElement.textContent =
+            "총 주문금액 : " + totalPrice.toLocaleString() + "원"
+        } else {
+          totalPriceElement.textContent = "총 주문금액 : 0원"
+        }
+      }
+    })
   </script>
 </html>

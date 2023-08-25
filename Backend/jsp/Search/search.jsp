@@ -4,7 +4,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../../../Styles/CSS/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../Styles/CSS/style.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +16,11 @@
       rel="stylesheet"
     />
     <script src="../../../Styles/Javascript/search.js"></script>
-    <link rel="stylesheet" type="text/css" href="../../../Styles/CSS/search.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../../../Styles/CSS/search.css"
+    />
     <script src="../../../Styles/Javascript/includeHTML.js"></script>
     <title>메인 페이지</title>
   </head>
@@ -38,7 +46,10 @@
           <a class="header_menu_item">회원가입</a>
         </div> -->
       </header>
-      <nav include-html="../Main/nav.jsp"></nav>
+      <nav
+        include-html="../Main/nav.jsp"
+        href="../../../Styles/images/search 1.png"
+      ></nav>
       <main>
         <div id="search_wrapper">
           <div id="search_results"></div>
