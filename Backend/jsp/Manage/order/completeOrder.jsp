@@ -26,19 +26,16 @@
               <a href="../manageMain.jsp">Alcohol</a>
             </div>
 
-            <h3>관리자페이지</h3>
+            <h3>관리자 페이지</h3>
             <ul id="nav_bar2">
               <li class="menu_bar2">
-                <a href="../user/userload.jsp">고객 관리</a>
+                <a href="../user/userload.jsp">고객관리 ▸</a>
               </li>
               <li class="menu_bar2">
-                <a href="../product/proload.jsp">상품 관리</a>
+                <a href="../product/proload.jsp">상품관리 ▸</a>
               </li>
               <li class="menu_bar2">
-                <a href="orderload.jsp">주문 관리</a>
-              </li>
-              <li class="menu_bar2">
-                <a href="../inquery/receipt.jsp">1:1 문의</a>
+                <a href="orderload.jsp">주문관리 ▸</a>
               </li>
             </ul>
           </div>
@@ -56,7 +53,7 @@
               >
               <button class="manage_btn">주문 삭제</button>
             </div>
-
+		<form action="completeOrder.jsp" method="post">
             <table class="order_table" border="1">
               <thead>
                 <tr>
@@ -76,7 +73,7 @@
               </thead>
               <tbody>
                 <tr class="t_tr">
-                  <td><input type="checkbox" /></td>
+                  <td class="check_box"><input type="checkbox" /></td>
                   <td>1</td>
                   <td>soundasads</td>
                   <td>칸티나 자키니니 달 트랄체토 체라수올로 외 3건</td>
@@ -119,6 +116,7 @@
                 </tr>
               </tbody>
             </table>
+            </form>
           </div>
           <div id="pagination-container"></div>
         </div>
