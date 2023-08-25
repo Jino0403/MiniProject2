@@ -1,14 +1,15 @@
-
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
-<%@ page import="java.sql.*"%>
-<%@ include file="../conn.jsp"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.sql.*" %>
+<%@ include file="../conn.jsp" %>
 <%
-int searchId = Integer.parseInt(request.getParameter("alcoholid"));
-try {
-	String selectQuery = "SELECT * FROM product where pno = ? ";
-	PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
-	preparedStatement.setInt(1, searchId);
-	ResultSet resultSet = preparedStatement.executeQuery();
+    int searchId = Integer.parseInt(request.getParameter("alcoholid"));
+    HttpSession session1 = request.getSession();
+    String userid = (String) session1.getAttribute("username");
+    try {
+        String selectQuery = "SELECT * FROM product where pno = ? ";
+        PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
+        preparedStatement.setInt(1, searchId);
+        ResultSet resultSet = preparedStatement.executeQuery();
 %>
 
 <!DOCTYPE html>
@@ -223,5 +224,6 @@ try {
 </body>
 <script>
 	includeHTML()
+
 </script>
 </html>
