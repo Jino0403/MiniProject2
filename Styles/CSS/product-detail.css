@@ -118,24 +118,24 @@ h3 {
 /* 추천조합 부제목 */
 .recommend-comment {
   margin-top: 50px;
-  margin-bottom: -20px;
   margin-left: 105px;
 }
 /* 추천 안주 나열 */
 .product-second {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  margin: 80px 50px 80px; */
+	margin:60px;
 }
+
+.product-line {
+	display:grid;
+	grid-template-columns:repeat(5,1fr);	
+}
+
 /* 추천 안주 사진,이름,가격 정렬 */
 .second-line {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto 10px; */
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
 }
 /* 추천 안주 사진 */
 .product-recommend-image {
@@ -157,6 +157,8 @@ h3 {
   margin: auto 0px;
   width: 200px;
   height: 200px;
+  border:1px solid transparent;
+  border-radius: 10px;
 }
 /* 추천 안주 이름 */
 h5 {
