@@ -24,28 +24,5 @@
       <main><jsp:include page="main.jsp" /></main>
       <footer><jsp:include page="footer.jsp" /></footer>
     </div>
-
-    <!-- JavaScript 파일 포함 -->
-<%--    <script>--%>
-<%--      includeHTML()--%>
-
-<%--      document.addEventListener("DOMContentLoaded", function () {--%>
-<%--        const header = document.getElementById("header")--%>
-<%--        if (header) {--%>
-<%--          const searchButton = header.querySelector("#search_button")--%>
-<%--          const searchInput = header.querySelector("#search_input")--%>
-
-<%--          searchButton.addEventListener("click", function () {--%>
-<%--            const searchTerm = searchInput.value.trim()--%>
-
-<%--            if (searchTerm !== "") {--%>
-<%--              window.location.href = `../Search/search.jsp?term=${encodeURIComponent(--%>
-<%--                searchTerm--%>
-<%--              )}`--%>
-<%--            }--%>
-<%--          })--%>
-<%--        }--%>
-<%--      })--%>
-<%--    </script>--%>
   </body>
 </html>

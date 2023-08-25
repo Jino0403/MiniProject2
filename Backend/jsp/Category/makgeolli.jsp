@@ -30,6 +30,7 @@
                 String productUrl = makResultSet.getString("purl");
                 String productPriceWon = String.format("%,d 원", productPrice);
           %>
+          <div class="items">
           <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
             <button type="submit" class="items-submit">
               <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
@@ -39,6 +40,7 @@
               </button>
             </form>
           </div>
+          
           <%
               }
               makResultSet.close();
