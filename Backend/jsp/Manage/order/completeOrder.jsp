@@ -1,4 +1,35 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="java.sql.*"%>
+<%@ include file="../../conn.jsp"%>
+<%
+	try {
+		String selectQuery = "SELECT * FROM order";
+		PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
+		Resultset resultSet = preparedStatement.executeQuery();
+		
+%>
+<%
+	try {
+		String selectQuery = "SELECT * FROM member";
+		PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
+		Resultset resultSet = preparedStatement.executeQuery();
+		
+%>
+<%
+	try {
+		String selectQuery = "SELECT * FROM product";
+		PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
+		Resultset resultSet = preparedStatement.executeQuery();
+		
+%>
+<%
+	try {
+		String selectQuery = "SELECT * FROM cart";
+		PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
+		Resultset resultSet = preparedStatement.executeQuery();
+		
+%>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -72,48 +103,49 @@
                 </tr>
               </thead>
               <tbody>
-                <tr class="t_tr">
-                  <td class="check_box"><input type="checkbox" /></td>
-                  <td>1</td>
-                  <td>soundasads</td>
-                  <td>칸티나 자키니니 달 트랄체토 체라수올로 외 3건</td>
-                  <td>10,800,800원</td>
-                  <td>1000개</td>
-                  <td>독고진호</td>
-                  <td>서울특별시 강북구 개포동 삼동전보아파트 102동 333호</td>
-                  <td>010-0000-0000</td>
-                  <td>강남사랑상품권</td>
-                  <td>10,300,000원</td>
-                  <td>배송메모의 제한은 20자로 하겠습니다</td>
+              <% 
+              	while (resultSet.next()) {
+              		int orderNumber = resultSet.getInt("ono");
+              		int orderProductNumber = resultSet.getInt("pno");
+              		String memberId = resultSet.getString("mid");
+              		int cartNumber = resultSet.getInt("cno");
+              		String productName = resultSet.getString("pname");
+              		int productPrice = resultSet.getInt("pprice");
+              		int cartQuantity = resultSet.getInt("cquanity");
+              		String memberName = resultSet.getString("mname");
+              		String memberAddress = resultSet.getString("madress");
+              		String memberPhone = resultSet.getString("mphone");
+              		String orderText = resultSet.getString("otext");
+              		int orderPay = resultSet.getInt("opay");
+              		int cartTotalPrice = resultSet.getInt("ctotalprice");
+              		Timestamp orderTime = resultSet.getTimestamp("otime");
+                    
+              %>
+              	<tr class="t_tr">
+                  <%-- <td><input type="checkbox" name="orderCheck" value="<%=orderNumber%>" class="orderCheckbox"/></td> --%>
+                  <td><%=orderNumber%></td>
+                  <td><%=memberId%></td>
+                  <td><%=productName%></td>
+                  <td><%=productPrice%></td>
+                  <td><%=cartQuantity%></td>
+                  <td><%=memberName%></td>
+                  <td><%=memberAddress %></td>
+                  <td><%=memberPhone%></td>
+                  <td><%=orderPay %></td>
+                  <td><%=cartTotalPrice%></td>
+                  <td><%=orderText %></td>
                 </tr>
-                <tr class="t_tr">
-                  <td><input type="checkbox" /></td>
-                  <td>1</td>
-                  <td>soundasads</td>
-                  <td>칸티나 자키니니 달 트랄체토 체라수올로 외 3건</td>
-                  <td>52,800원</td>
-                  <td>1000개</td>
-                  <td>독고진호</td>
-                  <td>서울특별시 강북구 개포동 삼동전보아파트 102동 333호</td>
-                  <td>010-0000-0000</td>
-                  <td>강남사랑상품권</td>
-                  <td>10,300,000원</td>
-                  <td>배송메모의 제한은 20자로 하겠습니다</td>
-                </tr>
-                <tr class="t_tr">
-                  <td><input type="checkbox" /></td>
-                  <td>1</td>
-                  <td>soundasads</td>
-                  <td>칸티나 자키니니 달 트랄체토 체라수올로 외 3건</td>
-                  <td>52,800원</td>
-                  <td>1000개</td>
-                  <td>독고진호</td>
-                  <td>서울특별시 강북구 개포동 삼동전보아파트 102동 333호</td>
-                  <td>010-0000-0000</td>
-                  <td>강남사랑상품권</td>
-                  <td>10,300,000원</td>
-                  <td>배송메모의 제한은 20자로 하겠습니다</td>
-                </tr>
+
+                <%
+				}	
+                resultSet.close();
+                preparedStatement.close();
+                conn.close();
+                } catch (Excetption e) {
+                	e.printStackTrace();
+                }
+                %>
+               
               </tbody>
             </table>
             </form>

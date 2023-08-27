@@ -169,7 +169,6 @@
                 } catch (Excetption e) {
                 	e.printStackTrace();
                 }
-                
                 %>
               </tbody>
             </table>

@@ -11,6 +11,29 @@
         preparedStatement.setInt(1, searchId);
         ResultSet resultSet = preparedStatement.executeQuery();
 %>
+<%
+	try {
+		String selectQuery = "SELECT * FROM reply";
+		PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
+		Resultset resultSet = preparedStatement.executeQuery();
+		
+%>
+
+<%
+	try {
+		String selectQuery = "SELECT * FROM member";
+		PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
+		Resultset resultSet = preparedStatement.executeQuery();
+		
+%>
+
+<%
+	try {
+		String selectQuery = "SELECT * FROM border";
+		PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
+		Resultset resultSet = preparedStatement.executeQuery();
+		
+%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -192,26 +215,51 @@
 			    <table class="board_table">
 			      <thead>
 			        <tr>
+			          <th style="display:hidden"></th>
+			       	  <th>No</th>
 			          <th class="board_th">아이디</th>
-			          <th class="board_th">작성자</th>
 			          <th  colspan="2">내용</th>
 			          <th></th>
 			        </tr>
 			      </thead>
 			      <tbody>
+			      <% 
+						while(resultSet.next()) {
+							int boardNumber = resultSet.getInt("bno");
+							int commentNumber = resultSet.getInt("rno");
+							String memberId = resultSet.getString("mid");
+							String commentText = resultSet.getString("rtext");
+							Timestamp commentTime = resultSet.getTimestamp("rtime");
+			
+					%>
 			        <tr>
-			          <td class="board_td">dkdleldi</td>
+			         <td style="display:hidden"><%=boardNumber %></td>
+			         <td><%=commentNumber %></td>
+			         <td><%=memberId%></td>
+			         <td><%=commentText %></td>
+			         
+			        
+			          <!-- <td class="board_td">dkdleldi</td>
 			          <td class="board_td">임꺽정</td>
 			          <td class="board_td" colspan="2">
 			            <span class="editable-content">여기 술 진짜 맛있네</span>
 			            <input type="text" class="edit-input" style="display: none" />
-			          </td>
+			          </td> -->
 			          <td class="board_td_btn">
 			            <button class="edit-button" type="button">수정</button>
 			            <button class="save-button" type="button" style="display: none">완료</button>
 			            <button class="delete-button" type="button">삭제</button>
 			          </td>
 			        </tr>
+			        <%
+						}
+			      		resultSet.close();
+			      		preparedStatement.close();
+			      		conn.close();
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+			        %>
 			      </tbody>
 			    </table>
 			  </form>
