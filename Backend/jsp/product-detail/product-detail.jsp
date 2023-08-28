@@ -68,11 +68,15 @@
 							<button id="increment">+</button>
 						</div>
 						<div class="product-buy-button">
-							<form>
-								<input type="hidden" value="" id="cart-value" />
-								<button class="basket-button" type="submit"
-									onclick="location.href='.jsp'">
-									장바구니에 담기</button>
+							<form action="cartpro.jsp" method="post">
+								<input type="hidden" value="<%=searchId%>" id="productNo" name="productNo"/>
+								<input type="hidden" value="<%=userid%>" id="memberId" name="memberId"/>
+								<input type="hidden" value="1" id="productQuan" name="productQuan"/>
+								<button
+										class="basket-button"
+										type="submit">
+									장바구니에 담기
+								</button>
 							</form>
 							<form>
 								<input type="hidden" value="" id="buy-value" />
