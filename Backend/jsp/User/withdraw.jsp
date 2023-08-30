@@ -35,15 +35,15 @@
           <div class="mypage_introduction">
             <h2>정말 탈퇴하시고자 한다면 비밀번호를 입력해주세요.</h2>
             <div>
-              <form class="withdraw_form">
+              <form class="withdraw_form" action="withdrawpro.jsp" method="post">
                 <label>아이디</label>
-                <input type="text" name="mid" readonly />
+                <input type="text" name="mid" value=""/>
                 <label>비밀번호</label>
-                <input type="password" name="mpw" />
+                <input type="password" name="mpw" value=""/>
+                <div class="withdraw_btns">
+                  <button class="withdraw_btn" type="submit">탈퇴하기</button>
+                </div>
               </form>
-            </div>
-            <div class="withdraw_btns">
-              <button class="withdraw_btn" type="submit">탈퇴하기</button>
             </div>
           </div>
         </div>
