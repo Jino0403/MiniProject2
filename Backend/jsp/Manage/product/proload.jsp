@@ -62,6 +62,14 @@
             <div class="manage_btns">
               <a href="proadd.jsp"><button class="manage_btn">상품 추가</button></a>
               <form action="prodel.jsp" method="post">
+              <%
+                  try {
+                      String selectQuery1 = "SELECT * FROM `order`"; // Make sure the table name is correct
+                      PreparedStatement preparedStatement1 = conn.prepareStatement(selectQuery1);
+                      ResultSet resultSet1 = preparedStatement1.executeQuery();
+                      if (resultSet1.next()) {
+                          int orderDiv1 = resultSet1.getInt("odiv");
+                %>
                 <button class="manage_btn" type="submit" name="manage_del_btn">상품 삭제</button>
                 <input type="hidden" name="delselectedProduct" value="" id="delselectedProduct" />
               </form>

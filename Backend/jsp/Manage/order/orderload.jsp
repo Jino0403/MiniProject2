@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.sql.*"%>
 <%@ include file="../../conn.jsp"%>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,16 +52,29 @@
             <a href="../../logout.jsp">로그아웃</a>
           </div>
         </div>
-
+		<%
+			try {
+				    String selectQuery1 = "SELECT * FROM `order`"; // Make sure the table name is correct
+				    PreparedStatement preparedStatement1 = conn.prepareStatement(selectQuery1);
+				    ResultSet resultSet1 = preparedStatement1.executeQuery();
+				    
+					    while(resultSet1.next()) {
+					    	int orderDiv1 = resultSet1.getInt("odiv");
+					    	int orderNumber1 = resultSet1.getInt("ono");
+				    
+			
+			%>
         <div id="manage_section">
           <div id="manage_detail">
             <div class="order_btns">
               <form action="completeOrder.jsp" method="post">
                 <button class="manage_btn" type="submit">완료된 주문</button>
                </form>
-              <form action="orderupdate.jsp" method="post">
+               <form action="orderupdate.jsp" method="post">
+               	<input type="hidden" name="orderDiv1" value="<%=orderDiv1 %>"/>
+               	<input type="hidden" name="orderNumber1" value="<%=orderNumber1 %>"/>
               	<button class="manage_btn" type="submit">주문 확인</button>
-              </form>
+              	</form>
               <form action="orderdel.jsp" method="post">
               	<button class="manage_btn manage_btn_delete" type="submit">주문 삭제</button>
               	<input type="hidden"  name="delselectedOrders" value="" id="delselectedOrders"/>
@@ -85,9 +99,18 @@
                 </tr>
               </thead>
               <tbody>
-              <% 
+              
+              <% }
+				    resultSet1.close();
+			        preparedStatement1.close();
+	    		} catch (Exception e) {
+	    			e.printStackTrace();
+	    		}
+				%>
+
+				<%    
 				              try {
-				          	    String selectQuery = "SELECT * FROM `order`"; // Make sure the table name is correct
+				          	    String selectQuery = "SELECT * FROM `order` where odiv = 1"; // Make sure the table name is correct
 				          	    PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
 				          	    ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -104,7 +127,7 @@
                                     int orderPay = resultSet.getInt("opay");
                                     int cartTotalPrice = resultSet.getInt("ctotalprice");
                                     String orderText = resultSet.getString("otext");
-                                    int cartDiv = resultSet.getInt("cdiv");
+                                    int cartDiv = resultSet.getInt("odiv");
                             %>
                             <tr class="t_tr">
                             	<td><input type="checkbox" name="orderCheck" value="<%=orderNumber%>" class="orderCheckbox"/></td>

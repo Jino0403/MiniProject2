@@ -6,7 +6,7 @@
 try {
     // 1. 사용자로부터 전달받은 파라미터 추출
     int enteredCommentNumber = Integer.valueOf(request.getParameter("rno"));
-    int enteredBoardNumber = Integer.valueOf(request.getParameter("bno"));
+    int enteredProductNumber = Integer.valueOf(request.getParameter("pno"));
     String enteredUserId = request.getParameter("mid");
     String enteredCommentText = request.getParameter("rtext");
     Timestamp enteredTimeStamp = new Timestamp(System.currentTimeMillis());  // 현재 시간으로 타임스탬프 생성
@@ -19,10 +19,10 @@ try {
         connection = DriverManager.getConnection("your_database_url", "your_username", "your_password");
 
         // 3. 댓글 추가를 위한 SQL 쿼리 준비
-        String insertQuery = "INSERT INTO reply (comment_number, board_number, user_id, comment_text, timestamp) VALUES (?, ?, ?, ?, ?)";
+        String insertQuery = "INSERT INTO reply (rno, pno, mid, rtext, sysdate) VALUES (?, ?, ?, ?, ?)";
         preparedStatement = connection.prepareStatement(insertQuery);
         preparedStatement.setInt(1, enteredCommentNumber);
-        preparedStatement.setInt(2, enteredBoardNumber);
+        preparedStatement.setInt(2, enteredProductNumber);
         preparedStatement.setString(3, enteredUserId);
         preparedStatement.setString(4, enteredCommentText);
         preparedStatement.setTimestamp(5, enteredTimeStamp);

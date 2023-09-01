@@ -3,11 +3,22 @@
 <%@ include file="../conn.jsp"%>
 <%
 
-	int searchId = Integer.parseInt(request.getParameter("alcoholid"));
+	/* int searchId = Integer.parseInt(request.getParameter("alcoholid")); */
+	
 	HttpSession session1 = request.getSession();
-	String userid = (String) session1.getAttribute("username");
+	String userid = (String) session1.getAttribute("username"); 
 	
-	
+	String alcoholidParam = request.getParameter("alcoholid");
+	int searchId = 0; // Default value if the parameter is not present or empty
+
+	if (alcoholidParam != null && !alcoholidParam.isEmpty()) {
+	    try {
+	        searchId = Integer.parseInt(alcoholidParam);
+	    } catch (NumberFormatException e) {
+	        // Handle the case where the parameter cannot be parsed as an integer
+	        e.printStackTrace(); // You can log the error or handle it as needed
+	    }
+	}
 	   
 %>
 
@@ -98,6 +109,7 @@
 				<div class="product-line">
 
 				<% 
+				
 				int productDiv = Integer.parseInt(request.getParameter("productDiv"));
                 String selectQuery2;
                
@@ -143,7 +155,7 @@
 		                
 						resultSet2.close();
 						preparedStatement2.close();
-
+			
 										
 					    %>
 				</div>
@@ -169,9 +181,11 @@
 
 						String selectQuery3 = "SELECT * FROM product where pno = ? ";
 						PreparedStatement preparedStatement3 = conn.prepareStatement(selectQuery3);
+						preparedStatement3.setInt(1, searchId);
 						ResultSet resultSet3 = preparedStatement3.executeQuery();
 
 						while (resultSet3.next()) {
+						int productDiv3 = resultSet3.getInt("pdiv");
 						int productNumber3 = resultSet3.getInt("pno");
 						String productName3 = resultSet3.getString("pname");
 						String productCategory3 = resultSet3.getString("pcategory");
@@ -184,6 +198,7 @@
 						String productUrl3 = resultSet3.getString("purl");
 						String productCharge3 = resultSet3.getString("mid");
 						String productPriceWon3 = String.format("%,d 원", productPrice3);
+						
 						%>
 						<tr>
 							<th class="table-bottom"><%=productCategory3%></th>
@@ -208,7 +223,6 @@
 						<form action="commentadd.jsp" method="post">
 							<button class="write-comment-button" type="submit">작성완료</button>
 						</form>
-						<!-- 추가하는 로직도 짜야함. -->
 					</div>
 				</form>
 
@@ -217,10 +231,10 @@
 					<table class="board_table">
 						<thead>
 							<tr>
-								<!-- <th style="display: hidden"></th> -->
+								<th style="display: hidden"></th>
 								<th>No</th>
 								<th class="board_th">아이디</th>
-								<th colspan="2">내용</th>
+								<th >내용</th>
 								<th></th>
 							</tr>
 						</thead>
@@ -228,32 +242,41 @@
 							<%
 					}
 
-                    resultSet3.close();
-                    preparedStatement3.close();
+                    /* resultSet3.close();
+                    preparedStatement3.close(); */
                     
-                    String selectQuery4 = "SELECT * FROM reply";
+                    int productDiv2 = Integer.parseInt(request.getParameter("productDiv"));
+                    
+                    String selectQuery4 = "SELECT * FROM reply JOIN product ON reply.pno = product.pno ";
                     PreparedStatement preparedStatement4 = conn.prepareStatement(selectQuery4);
                     ResultSet resultSet4 = preparedStatement4.executeQuery();
                     
                     while (resultSet4.next()) {
-                        int productNumber4 = resultSet4.getInt("pno");
+                    	
+                    	int productDiv4 = resultSet4.getInt("pdiv");
+                    	int productNumber4 = resultSet4.getInt("pno");
                         int commentNumber4 = resultSet4.getInt("rno");
                         String memberId4 = resultSet4.getString("mid");
                         String commentText4 = resultSet4.getString("rtext");
                         Timestamp commentTime4 = resultSet4.getTimestamp("rtime");
                 		%>
 							<tr>
-								<td><input type="hidden" name="productNumber4" value="<%=productNumber4 %>"/></td>
+								<td><input type="hidden" name="productNumber4" value="<%=productNumber4%>" /></td>
 								<td><%=commentNumber4 %></td>
 								<td><%=memberId4%></td>
 								<td><%=commentText4 %></td>
 								<td class="board_td_btn">
-								 <form action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
-								 <input type="hidden" name="commentNumber4" />
-									<button class="edit-button" type="submit" value="수정" />
-									<button class="save-button" type="submit" style="display: none">완료</button>
-									<button class="delete-button" type="submit">삭제</button>
-								</form>
+									<button class="edit-button" >수정</button>
+									<form action="commentupdate.jsp" method="post">
+										<input type="hidden" name="productDiv" value="<%=productDiv4%>"  />
+										<input type="hidden" name="alcoholid" value="<%=productNumber4%>" />
+											
+										<button class="save-button" type="submit" style="display: none">완료</button>
+									</form>
+									<form action="commentdel.jsp" method="post">	
+										<input type="hidden" name="alcoholid" value="<%=productNumber4%>" />
+										<button class="delete-button" type="submit">삭제</button>
+									</form>
 								</td>
 								
 							</tr>
