@@ -3,11 +3,11 @@
 <%@ include file="../../conn.jsp"%>
 
 <%
-  int selectedOrder = Integer.parseInt(request.getParameter("delselectedOrder"));
+  int selectedOrders = Integer.parseInt(request.getParameter("delselectedOrders"));
     try {
       String deleteQuery = "DELETE FROM order WHERE ono = ? ";
       PreparedStatement deleteStatement = conn.prepareStatement(deleteQuery);
-      deleteStatement.setInt(1, selectedOrder);
+      deleteStatement.setInt(1, selectedOrders);
       deleteStatement.executeUpdate();
       deleteStatement.close();
       response.sendRedirect("orderload.jsp");

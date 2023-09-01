@@ -1,6 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.sql.*" %>
 <%@ include file="../conn.jsp" %>
+<%
+  HttpSession session1 = request.getSession();
+  String UserName = (String) session1.getAttribute("username");
+  try {
+    String selectQuery = "SELECT * FROM member where mid = ? ";
+    PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
+    preparedStatement.setString(1, UserName);
+    ResultSet resultSet = preparedStatement.executeQuery();
+%>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Styles/CSS/style.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Styles/CSS/user.css" />
-    <script src="${pageContext.request.contextPath}/Styles/Javascript/includeHTML.js"></script>
+    <script src="${pageContext.request.contextPath}/Styles/Javascript/includeHTML.js" ></script>
     <title>장바구니 목록</title>
   </head>
   <body>
@@ -36,13 +45,23 @@
                 <span>내 정보 수정</span>
                 <p>아이디와 이름을 제외한 수정하실 사항을 입력해주세요.</p>
               </div>
-              <form class="mypage_edit" method="post">
+              <form class="mypage_edit" method="post" action="editpro.jsp">
+                <%
+                  while (resultSet.next()) {
+                    String memberId = resultSet.getString("mid");
+                    String memberPassword = resultSet.getString("mpw");
+                    String memberName = resultSet.getString("mname");
+                    String memberPhone = resultSet.getString("mphone");
+                    String memberAdress = resultSet.getString("madress");
+                    String memberbirth = resultSet.getString("mbirth");
+                %>
                 <label name="username">아이디</label>
                 <input
                   type="text"
                   id="username"
                   name="username"
                   placeholder="아이디 입력 (6-20)"
+                  value="<%=memberId%>"
                   required
                   readonly
                 />
@@ -51,6 +70,7 @@
                   type="password"
                   id="password"
                   name="password"
+                  value=""
                   placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 6-20자리)"
                   required
                 />
@@ -68,6 +88,7 @@
                   id="name"
                   name="name"
                   placeholder="이름을 입력해주세요"
+                  value="<%=memberName%>"
                   required
                   readonly
                 />
@@ -77,6 +98,7 @@
                   id="address"
                   name="address"
                   placeholder="상세 주소"
+                  value="<%=memberAdress%>"
                   required
                 />
                 <label name="phone">전화번호</label>
@@ -85,6 +107,7 @@
                   id="phone"
                   name="phone"
                   placeholder="휴대폰 번호 입력 (010-1111-1111)"
+                  value="<%=memberPhone%>"
                   required
                 />
                 <label name="birthday">생년월일</label>
@@ -95,6 +118,18 @@
                   min="1930-01-01"
                   required
                 />
+                 <%
+                    }
+                    resultSet.close();
+                    preparedStatement.close();
+                    conn.close();
+                  } catch (Exception e) {
+                    e.printStackTrace();
+                  }
+                %>
+                <div class="edit_btns">
+                  <button type="submit" class="edit_btn">수정하기</button>
+                </div>
               </form>
             </div>
             <div class="edit_btns">

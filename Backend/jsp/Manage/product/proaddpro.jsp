@@ -15,7 +15,7 @@
   String ProductUserName = (String) session1.getAttribute("username");
 
   // 이 부분은 실제 데이터베이스 조회 등의 로직이 들어가야 합니다.
-  boolean userExists = false;
+  boolean productExists = false;
   try {
     String checkQuery = "SELECT COUNT(*) FROM product WHERE pname = ?";
     PreparedStatement checkStatement = conn.prepareStatement(checkQuery);
@@ -24,7 +24,7 @@
     if (resultSet.next()) {
       int count = resultSet.getInt(1);
       if (count > 0) {
-        userExists = true;
+        productExists = true;
       }
     }
   } catch (Exception e) {
@@ -32,7 +32,7 @@
   }
 
   try {
-    if (userExists) {
+    if (productExists) {
       // 이미 존재하는 사용자인 경우 업데이트 수행
       out.println("존재하는 상품 입니다.");
     } else {
