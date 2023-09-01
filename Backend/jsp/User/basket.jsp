@@ -115,6 +115,7 @@
             <form action="" method="post">
               <button class="basket_btn" type="submit">상품주문하기</button>
              </form> 
+              
               <form action="cartdelete.jsp" method="post">
                 <input type="hidden" value="" id="productNum" name="productNum"/>
                 <button class="basket_btn" type="submit">상품삭제</button>
