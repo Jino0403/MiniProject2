@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Styles/CSS/style.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Styles/CSS/user.css" />
-    <script src="${pageContext.request.contextPath}/Styles/Javascript/includeHTML.js"></script>
+    <script src="${pageContext.request.contextPath}/Styles/Javascript/includeHTML.js" ></script>
     <title>장바구니 목록</title>
   </head>
   <body>
@@ -72,6 +72,7 @@
                   type="password"
                   id="password"
                   name="password"
+                  value=""
                   placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 6-20자리)"
                   value=""
                   required
@@ -122,6 +123,7 @@
                   required
                 />
                 <%
+
                     }
                     resultSet.close();
                     preparedStatement.close();

@@ -71,18 +71,18 @@ document.addEventListener('DOMContentLoaded', function () {
       button.style.fontSize = '25px'
       button.style.border = '1px solid transparent'
       button.style.borderRadius = '6px'
-      button.style.backgroundColor = page === currentPage ? 'darkgray' : 'white'
+      button.style.backgroundColor = page === currentPage ? 'black' : 'white'
       button.style.margin = '0 5px'
       button.style.color = page === currentPage ? 'white' : 'black'
       button.addEventListener('click', () => goToPage(page))
       button.addEventListener('mouseover', () => {
-        button.style.backgroundColor = 'darkgray'
+        button.style.backgroundColor = 'black'
         button.style.borderRadius = '6px'
         button.style.color = 'white'
       })
       button.addEventListener('mouseout', () => {
         button.style.backgroundColor =
-          page === currentPage ? 'darkgray' : 'white'
+          page === currentPage ? 'black' : 'white'
         button.style.color = page === currentPage ? 'white' : 'black'
       })
       pageButtonsContainer.appendChild(button)

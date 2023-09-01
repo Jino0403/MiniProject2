@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const itemsPerPage = 5 // Number of items to show per page
+  const itemsPerPage = 4 // Number of items to show per page
   const totalItems = document.querySelectorAll(".t_tr").length // Total number of items
 
   const totalPages = Math.ceil(totalItems / itemsPerPage) // Calculate total number of pages
