@@ -43,8 +43,8 @@
                 <div class="withdraw_btns">
                   <button class="withdraw_btn" type="submit">탈퇴하기</button>
                 </div>
-            <div class="withdraw_btns">
-              <button class="withdraw_btn" type="submit">탈퇴하기</button>
+              </form>
+
             </div>
           </div>
         </div>
