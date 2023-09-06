@@ -17,16 +17,16 @@
     <link
             rel="stylesheet"
             type="text/css"
-            href="../../../../Styles/CSS/managePage.css"/>
-    <link rel="stylesheet" type="text/css" href="../../../../Styles/CSS/signup.css" />
+            href="../../../..../../../Styles/CSS/managePage.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../..../../../Styles/CSS/signup.css" />
     <script
-      src="../../../../Styles/Javascript/jquery-3.7.0.js"
+      src="../../../..../../../Styles/Javascript/jquery-3.7.0.js"
       type="text/javascript"></script>
     <script
-      src="../../../../Styles/Javascript/manage.js"
+      src="../../../..../../../Styles/Javascript/manage.js"
       type="text/javascript"
       defer="defer"></script>
-    <script type="text/javascript" href="../../../../Styles/Javascript/signup.js" defer="defer"></script>
+    <script type="text/javascript" href="../../../..../../../Styles/Javascript/signup.js" defer="defer"></script>
     <title>관리자 페이지</title>
   </head>
   <body>
