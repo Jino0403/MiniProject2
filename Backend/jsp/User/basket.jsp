@@ -73,18 +73,11 @@
                     int productPrice = resultSet.getInt("pprice");
                     int productQuantity = resultSet.getInt("cquantity");
                     String productPriceWon = String.format("%,d 원", productPrice); %>
-                    
                     <tr class="t_tr">
-                      <th><input type="checkbox" /></th>
+                      <th><input type="checkbox" class="cartCheckBox" value="<%=productNumber%>"/></th>
                       <td><%=cartNumber%></td>
-                      <td class="basket_proName"><input type="text" id="productname" name="productname" value="<%=productName%>" 
-					required
-                    readonly
-                /></td>
-                      <td class="basket_proPrice"><input type="number" id="productprice" name="productname" value="<%=productPrice%>" 
-					required
-                    readonly
-                /></td>
+                      <td class="basket_proName"><%=productName%></td>
+                      <td class="basket_proPrice"><%=productPrice%></td>
                       <td>
                         <input
                           type="number"
@@ -118,13 +111,14 @@
               <div class="result" id="totalPrice">총 주문금액 :</div>
             </div>
             <div class="basket_btns">
-              <form class="basket" method="post" 
-              action="${pageContext.request.contextPath}/Backend/jsp/Purchase/purchase-detail.jsp">
-              
               <button class="basket_btn" type="submit">상품주문하기</button>
-            </form>
-            <button class="basket_btn">상품삭제</button>
-            <button class="basket_edit_btn">상품수정</button>
+
+              <form action="cartdelete.jsp" method="post">
+                <input type="hidden" value="" id="productNum" name="productNum"/>
+                <button class="basket_btn" type="submit">상품삭제</button>
+              </form>
+
+              <button class="basket_edit_btn">상품수정</button>
             </div>
           </div>
         </div>
