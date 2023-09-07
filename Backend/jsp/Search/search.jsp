@@ -61,15 +61,18 @@
             %>
             `<div class='items'>
             	<form name="searchResult" action="../product-detail/product-detail.jsp" method="post">
-            		<button type="submit" style="background-color:white; border:1px solid transparent">
+            		<button class="item_btn" type="submit">
             			<input type="hidden" name="productDiv" value="<%=productDiv%>" />
 		                <input type="hidden" name="alcoholid" value="<%=productNumber%>"/>
-		                <img class='items_img' src='${contextPath}<%=productUrl%>' alt='picture" />
-		                <span class='item_span'><%= productName %></span>
+		                <img class='items_img' src='${contextPath}<%=productUrl%>' alt='picture"/>
+		                <span class='item_span'></span>
+		                <p class='item_span'><%=productName%></p>
 		                <p class='item_p'><%= productPrice %>원</p>
                 	</button>
                 </form>
             </div>`,
+            
+            
             <% 
                 }
                 resultSet.close();
@@ -80,7 +83,7 @@
             } 
             %>
         ];
-
+		
         const searchButton = document.getElementById('searchButton');
         const searchInput = document.getElementById('searchInput');
         const searchResultsContainer = document.getElementById('searchResults');
@@ -97,6 +100,7 @@
 
                 if (lowerCaseResult.includes(searchTerm)) {
                     searchResultsContainer.innerHTML += resultHTML;
+
                 }
             });
         });

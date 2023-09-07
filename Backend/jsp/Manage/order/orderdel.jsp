@@ -5,7 +5,7 @@
 <%
   int selectedOrders = Integer.parseInt(request.getParameter("delselectedOrders"));
     try {
-      String deleteQuery = "DELETE FROM order WHERE ono = ? ";
+      String deleteQuery = "DELETE FROM `order` WHERE ono = ? ";
       PreparedStatement deleteStatement = conn.prepareStatement(deleteQuery);
       deleteStatement.setInt(1, selectedOrders);
       deleteStatement.executeUpdate();

@@ -25,7 +25,7 @@
 	try {
 		String selectQuery1 = "SELECT * FROM member where mid = ? ";
 		PreparedStatement preparedStatement1 = conn.prepareStatement(selectQuery1);
-		preparedStatement1.setString(1, "guddn13212");
+		preparedStatement1.setString(1, userid);
 		ResultSet resultSet1 = preparedStatement1.executeQuery();
 	%>
 
@@ -71,7 +71,7 @@
 	try {
 		String selectQuery2 = "SELECT * FROM cart where mid = ?";
 		PreparedStatement preparedStatement2 = conn.prepareStatement(selectQuery2);
-		preparedStatement2.setString(1, "guddn13212"); // 인덱스 1로 수정    
+		preparedStatement2.setString(1, userid); // 인덱스 1로 수정    
 		ResultSet resultSet2 = preparedStatement2.executeQuery();
 	%>
 

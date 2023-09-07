@@ -23,6 +23,7 @@
             PreparedStatement preparedStatement = conn.prepareStatement(bestSelectQuery);
             ResultSet bestResultSet = preparedStatement.executeQuery();
             while (bestResultSet.next()) {
+              int productDiv = bestResultSet.getInt("pdiv");
               int productNumber = bestResultSet.getInt("pno");
               String productName = bestResultSet.getString("pname");
               int productPrice = bestResultSet.getInt("pprice");
@@ -32,6 +33,7 @@
         <div class="main_product">
           <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
             <button type="submit" class="items-submit">
+              <input type="hidden" value="<%=productDiv %>" class="alcoholid" name="productDiv" />
               <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
           <img src="${pageContext.request.contextPath}<%=productUrl%>" />
           <span><%=productName%></span>
@@ -62,6 +64,7 @@
               PreparedStatement preparedStatement = conn.prepareStatement(whiskeySelectQuery);
               ResultSet whiskeyResultSet = preparedStatement.executeQuery();
             while (whiskeyResultSet.next()) {
+              int productDiv = whiskeyResultSet.getInt("pdiv");
               int productNumber = whiskeyResultSet.getInt("pno");
               String productName = whiskeyResultSet.getString("pname");
               int productPrice = whiskeyResultSet.getInt("pprice");
@@ -71,6 +74,7 @@
           <div class="main_product">
             <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
               <button type="submit" class="items-submit">
+              	<input type="hidden" value="<%=productDiv %>" class="alcoholid" name="productDiv" />
                 <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
                 <img src="${pageContext.request.contextPath}<%=productUrl%>" />
                 <span><%=productName%></span>
@@ -103,6 +107,7 @@
               PreparedStatement preparedStatement = conn.prepareStatement(wineSelectQuery);
               ResultSet wineResultSet = preparedStatement.executeQuery();
               while (wineResultSet.next()) {
+            	int productDiv = wineResultSet.getInt("pdiv");
                 int productNumber = wineResultSet.getInt("pno");
                 String productName = wineResultSet.getString("pname");
                 int productPrice = wineResultSet.getInt("pprice");
@@ -112,6 +117,7 @@
           <div class="main_product">
             <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
               <button type="submit" class="items-submit">
+              	<input type="hidden" value="<%=productDiv %>" class="alcoholid" name="productDiv" />
                 <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
                 <img src="${pageContext.request.contextPath}<%=productUrl%>" />
                 <span><%=productName%></span>
@@ -143,6 +149,7 @@
               PreparedStatement preparedStatement = conn.prepareStatement(sakeSelectQuery);
               ResultSet sakeResultSet = preparedStatement.executeQuery();
               while (sakeResultSet.next()) {
+            	int productDiv = sakeResultSet.getInt("pdiv");
                 int productNumber = sakeResultSet.getInt("pno");
                 String productName = sakeResultSet.getString("pname");
                 int productPrice = sakeResultSet.getInt("pprice");
@@ -152,6 +159,7 @@
           <div class="main_product">
             <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
               <button type="submit" class="items-submit">
+              	<input type="hidden" value="<%=productDiv %>" class="alcoholid" name="productDiv" />
                 <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
                 <img src="${pageContext.request.contextPath}<%=productUrl%>" />
                 <span><%=productName%></span>
@@ -183,6 +191,7 @@
               PreparedStatement preparedStatement = conn.prepareStatement(vodkaSelectQuery);
               ResultSet vodkaResultSet = preparedStatement.executeQuery();
               while (vodkaResultSet.next()) {
+            	int productDiv = vodkaResultSet.getInt("pdiv");
                 int productNumber = vodkaResultSet.getInt("pno");
                 String productName = vodkaResultSet.getString("pname");
                 int productPrice = vodkaResultSet.getInt("pprice");
@@ -192,6 +201,7 @@
           <div class="main_product">
             <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
               <button type="submit" class="items-submit">
+              	<input type="hidden" value="<%=productDiv %>" class="alcoholid" name="productDiv" />
                 <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
                 <img src="${pageContext.request.contextPath}<%=productUrl%>" />
                 <span><%=productName%></span>
@@ -223,6 +233,7 @@
               PreparedStatement preparedStatement = conn.prepareStatement(sojuSelectQuery);
               ResultSet sojuResultSet = preparedStatement.executeQuery();
               while (sojuResultSet.next()) {
+            	int productDiv = sojuResultSet.getInt("pdiv");
                 int productNumber = sojuResultSet.getInt("pno");
                 String productName = sojuResultSet.getString("pname");
                 int productPrice = sojuResultSet.getInt("pprice");
@@ -232,6 +243,7 @@
           <div class="main_product">
             <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
               <button type="submit" class="items-submit">
+              	<input type="hidden" value="<%=productDiv %>" class="alcoholid" name="productDiv" />
                 <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
                 <img src="${pageContext.request.contextPath}<%=productUrl%>" />
                 <span><%=productName%></span>
@@ -263,6 +275,7 @@
               PreparedStatement preparedStatement = conn.prepareStatement(beerSelectQuery);
               ResultSet sojuResultSet = preparedStatement.executeQuery();
               while (sojuResultSet.next()) {
+            	int productDiv = sojuResultSet.getInt("pdiv");
                 int productNumber = sojuResultSet.getInt("pno");
                 String productName = sojuResultSet.getString("pname");
                 int productPrice = sojuResultSet.getInt("pprice");
@@ -272,6 +285,7 @@
           <div class="main_product">
             <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
               <button type="submit" class="items-submit">
+              	<input type="hidden" value="<%=productDiv %>" class="alcoholid" name="productDiv" />
                 <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
                 <img src="${pageContext.request.contextPath}<%=productUrl%>" />
                 <span><%=productName%></span>
@@ -303,6 +317,7 @@
               PreparedStatement preparedStatement = conn.prepareStatement(makSelectQuery);
               ResultSet makResultSet = preparedStatement.executeQuery();
               while (makResultSet.next()) {
+            	int productDiv = makResultSet.getInt("pdiv");
                 int productNumber = makResultSet.getInt("pno");
                 String productName = makResultSet.getString("pname");
                 int productPrice = makResultSet.getInt("pprice");
@@ -312,6 +327,7 @@
           <div class="main_product">
             <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
               <button type="submit" class="items-submit">
+              	<input type="hidden" value="<%=productDiv %>" class="alcoholid" name="productDiv" />
                 <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
                 <img src="${pageContext.request.contextPath}<%=productUrl%>" />
                 <span><%=productName%></span>
@@ -343,6 +359,7 @@
               PreparedStatement preparedStatement = conn.prepareStatement(foodSelectQuery);
               ResultSet foodResultSet = preparedStatement.executeQuery();
               while (foodResultSet.next()) {
+            	int productDiv = foodResultSet.getInt("pdiv");
                 int productNumber = foodResultSet.getInt("pno");
                 String productName = foodResultSet.getString("pname");
                 int productPrice = foodResultSet.getInt("pprice");
@@ -351,7 +368,8 @@
           %>
           <div class="main_product">
             <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
-              <button type="submit" class="items-submit">
+              <button type="submit" class="items-submit">              	
+                <input type="hidden" value="<%=productDiv%>" class="alcoholid" name="productDiv">
                 <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
                 <img src="${pageContext.request.contextPath}<%=productUrl%>" />
                 <span><%=productName%></span>
