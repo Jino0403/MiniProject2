@@ -988,6 +988,22 @@ footer {
 	user-select:none;
 }
 
+/*게시판 수정, 삭제 버튼 일괄적용*/
+.board_td_btn button {
+	padding: 4px;
+	border: 1px solid transparent;
+	background-color: white;
+	font-size: 20px;
+	cursor: pointer;
+	user-select:none;
+}
+
+/*게시판 수정, 삭제 버튼 */
+.board_td_btn button:hover {
+	color:red;
+	font-weight:bold;
+}
+
 /*테이블 헤더 부분*/
 .board_table th {
 	padding: 10px;
@@ -1067,44 +1083,11 @@ footer {
 	user-select:none;
 }
 
-#edit-button {
-	padding: 4px;
-	border: 1px solid transparent;
-	background-color: white;
-	font-size: 20px;
-	cursor: pointer;
-	user-select:none;
+.commentT input{
+	width:100%;
+	padding:4px;
+	border:1px solid transparent;
+	font-size:20px;
+	outline:none;
 }
 
-#edit-button:hover {
-	font-weight: bold;
-	color: red;
-}
-
-#save-button {
-	padding: 4px;
-	border: 1px solid transparent;
-	background-color: white;
-	font-size: 20px;
-	cursor: pointer;
-	user-select:none;
-}
-
-#save-button:hover {
-	font-weight: bold;
-	color: red;
-}
-
-#delete-button {
-	padding: 4px;
-	border: 1px solid transparent;
-	background-color: white;
-	font-size: 20px;
-	cursor: pointer;
-	user-select:none;
-}
-
-#delete-button:hover {
-	font-weight: bold;
-	color: red;
-}
