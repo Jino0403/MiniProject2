@@ -4,7 +4,6 @@
 <%
   HttpSession session1 = request.getSession();
   String UserName = (String) session1.getAttribute("username");
-
   try {
     String selectQuery = "SELECT * FROM member where mid = ? ";
     PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
@@ -46,7 +45,6 @@
                 <span>내 정보 수정</span>
                 <p>아이디와 이름을 제외한 수정하실 사항을 입력해주세요.</p>
               </div>
-
               <form class="mypage_edit" method="post" action="editpro.jsp">
                 <%
                   while (resultSet.next()) {
@@ -74,7 +72,6 @@
                   name="password"
                   value=""
                   placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 6-20자리)"
-                  value=""
                   required
                 />
                 <label name="confirm-password">비밀번호 확인</label>
@@ -119,11 +116,9 @@
                   id="birthday"
                   name="birthday"
                   min="1930-01-01"
-                  value="<%=memberbirth%>"
                   required
                 />
-                <%
-
+                 <%
                     }
                     resultSet.close();
                     preparedStatement.close();
@@ -137,7 +132,9 @@
                 </div>
               </form>
             </div>
-
+            <div class="edit_btns">
+              <button type="submit" class="edit_btn">수정하기</button>
+            </div>
           </div>
         </div>
       </main>
