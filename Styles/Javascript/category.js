@@ -36,31 +36,37 @@ document.addEventListener('DOMContentLoaded', function () {
     const end = Math.min(totalPages, start + maxVisibleButtons - 1)
 
     const firstButton = document.createElement('button')
-    firstButton.textContent = '≪'
+    firstButton.textContent = '맨앞'
     firstButton.style.fontSize = '25px'
     firstButton.style.border = '1px solid transparent'
     firstButton.style.backgroundColor = 'white'
     firstButton.style.margin = '0 5px'
     firstButton.addEventListener('click', () => goToPage(1))
     firstButton.addEventListener('mouseover', () => {
+	  firstButton.style.color = "red";
       firstButton.style.fontWeight = '600'
+      firstButton.style.cursor = "pointer";
     })
     firstButton.addEventListener('mouseout', () => {
+	  firstButton.style.color = "";
       firstButton.style.fontWeight = ''
     })
     pageButtonsContainer.appendChild(firstButton)
 
     const prevButton = document.createElement('button')
-    prevButton.textContent = '<'
+    prevButton.textContent = '이전'
     prevButton.style.fontSize = '25px'
     prevButton.style.border = '1px solid transparent'
     prevButton.style.backgroundColor = 'white'
     prevButton.style.margin = '0 5px'
     prevButton.addEventListener('click', () => goToPage(currentPage - 1))
     prevButton.addEventListener('mouseover', () => {
+      prevButton.style.color = "red";
       prevButton.style.fontWeight = '600'
+      prevButton.style.cursor = "pointer";
     })
     prevButton.addEventListener('mouseout', () => {
+      prevButton.style.color = "";
       prevButton.style.fontWeight = ''
     })
     pageButtonsContainer.appendChild(prevButton)
@@ -76,44 +82,53 @@ document.addEventListener('DOMContentLoaded', function () {
       button.style.color = page === currentPage ? 'white' : 'black'
       button.addEventListener('click', () => goToPage(page))
       button.addEventListener('mouseover', () => {
-        button.style.backgroundColor = 'black'
-        button.style.borderRadius = '6px'
-        button.style.color = 'white'
+        button.style.backgroundColor = 'black';
+        button.style.borderRadius = '6px';
+        button.style.color = 'white';
+        button.style.fontWeight = "bold";
+        button.style.cursor = "pointer";
       })
       button.addEventListener('mouseout', () => {
         button.style.backgroundColor =
           page === currentPage ? 'black' : 'white'
         button.style.color = page === currentPage ? 'white' : 'black'
+        button.style.fontWeight = "";
       })
       pageButtonsContainer.appendChild(button)
     }
 
     const nextButton = document.createElement('button')
-    nextButton.textContent = '>'
+    nextButton.textContent = '다음'
     nextButton.style.fontSize = '25px'
     nextButton.style.border = '1px solid transparent'
     nextButton.style.backgroundColor = 'white'
     nextButton.style.margin = '0 5px'
     nextButton.addEventListener('click', () => goToPage(currentPage + 1))
     nextButton.addEventListener('mouseover', () => {
+	  nextButton.style.color = "red";
       nextButton.style.fontWeight = '600'
+      nextButton.style.cursor = "pointer";
     })
     nextButton.addEventListener('mouseout', () => {
+      nextButton.style.color = "";
       nextButton.style.fontWeight = ''
     })
     pageButtonsContainer.appendChild(nextButton)
 
     const lastButton = document.createElement('button')
-    lastButton.textContent = '≫'
+    lastButton.textContent = '맨끝'
     lastButton.style.fontSize = '25px'
     lastButton.style.border = '1px solid transparent'
     lastButton.style.backgroundColor = 'white'
     lastButton.style.margin = '0 5px'
     lastButton.addEventListener('click', () => goToPage(totalPages))
     lastButton.addEventListener('mouseover', () => {
+	  lastButton.style.color = "red";
       lastButton.style.fontWeight = '600'
+      lastButton.style.cursor = "pointer";
     })
     lastButton.addEventListener('mouseout', () => {
+	  lastButton.style.color = "";
       lastButton.style.fontWeight = ''
     })
     pageButtonsContainer.appendChild(lastButton)

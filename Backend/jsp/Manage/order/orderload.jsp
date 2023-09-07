@@ -35,7 +35,7 @@
       src="../../../../../../../Styles/Javascript/jquery-3.7.0.js"
       type="text/javascript"></script>
     <script
-      src="../../../../../../../Styles/Javascript/pageOrder.js"
+      src="../../../../../Styles/Javascript/pageOrder.js"
       type="text/javascript"
       defer="defer"></script>
       <script src="../../../../../../../Styles/Javascript/orderdel.js" type="text/javascript" defer="defer"></script>
