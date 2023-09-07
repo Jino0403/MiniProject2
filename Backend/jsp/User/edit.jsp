@@ -4,7 +4,6 @@
 <%
   HttpSession session1 = request.getSession();
   String UserName = (String) session1.getAttribute("username");
-
   try {
     String selectQuery = "SELECT * FROM member where mid = ? ";
     PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
@@ -18,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Styles/CSS/style.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Styles/CSS/user.css" />
-    <script src="${pageContext.request.contextPath}/Styles/Javascript/includeHTML.js"></script>
+    <script src="${pageContext.request.contextPath}/Styles/Javascript/includeHTML.js" ></script>
     <title>장바구니 목록</title>
   </head>
   <body>
@@ -46,7 +45,6 @@
                 <span>내 정보 수정</span>
                 <p>아이디와 이름을 제외한 수정하실 사항을 입력해주세요.</p>
               </div>
-
               <form class="mypage_edit" method="post" action="editpro.jsp">
                 <%
                   while (resultSet.next()) {
@@ -72,8 +70,8 @@
                   type="password"
                   id="password"
                   name="password"
-                  placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 6-20자리)"
                   value=""
+                  placeholder="비밀번호 입력 (문자,숫자,특수문자 포함 6-20자리)"
                   required
                 />
                 <label name="confirm-password">비밀번호 확인</label>
@@ -118,10 +116,9 @@
                   id="birthday"
                   name="birthday"
                   min="1930-01-01"
-                  value="<%=memberbirth%>"
                   required
                 />
-                <%
+                 <%
                     }
                     resultSet.close();
                     preparedStatement.close();
@@ -135,7 +132,9 @@
                 </div>
               </form>
             </div>
-
+            <div class="edit_btns">
+              <button type="submit" class="edit_btn">수정하기</button>
+            </div>
           </div>
         </div>
       </main>

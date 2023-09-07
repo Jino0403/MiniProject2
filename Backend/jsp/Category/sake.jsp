@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Styles/CSS/category.css" />
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/Styles/CSS/style.css" />
     <script src="${pageContext.request.contextPath}/Styles/Javascript/includeHTML.js"></script>
+    <script src="${pageContext.request.contextPath}/Styles/Javascript/category.js"></script>
   </head>
   <body>
   <div id="wrapper">
@@ -24,6 +25,7 @@
               PreparedStatement preparedStatement = conn.prepareStatement(sakeSelectQuery);
               ResultSet sakeResultSet = preparedStatement.executeQuery();
               while (sakeResultSet.next()) {
+            	int productDiv = sakeResultSet.getInt("pdiv");
                 int productNumber = sakeResultSet.getInt("pno");
                 String productName = sakeResultSet.getString("pname");
                 int productPrice = sakeResultSet.getInt("pprice");
@@ -33,6 +35,7 @@
           <div class="items">
             <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
               <button type="submit" class="items-submit">
+                <input type="hidden" value="<%=productDiv%>" class="alcoholid" name="productDiv">
                 <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
                 <img class="items_img" id="items-img" src="${pageContext.request.contextPath}<%=productUrl%>" />
                 <span class="item_span"><%=productName%></span>

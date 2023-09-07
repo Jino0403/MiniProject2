@@ -38,19 +38,16 @@
               <a href="../manageMain.jsp">Alcohol</a>
             </div>
 
-            <h3>관리자페이지</h3>
+            <h3>관리자 페이지</h3>
             <ul id="nav_bar2">
               <li class="menu_bar2">
-                <a href="../user/userload.jsp">고객 관리</a>
+                <a href="../user/userload.jsp">고객관리 ▸</a>
               </li>
               <li class="menu_bar2">
-                <a href="../product/proload.jsp">상품 관리</a>
+                <a href="../product/proload.jsp">상품관리 ▸</a>
               </li>
               <li class="menu_bar2">
-                <a href="../order/orderload.jsp">주문 관리</a>
-              </li>
-              <li class="menu_bar2">
-                <a href="../inquery/receipt.jsp">1:1 문의</a>
+                <a href="../order/orderload.jsp">주문관리 ▸</a>
               </li>
             </ul>
           </div>
@@ -65,6 +62,7 @@
             <div class="manage_btns">
               <a href="proadd.jsp"><button class="manage_btn">상품 추가</button></a>
               <form action="prodel.jsp" method="post">
+              
                 <button class="manage_btn" type="submit" name="manage_del_btn">상품 삭제</button>
                 <input type="hidden" name="delselectedProduct" value="" id="delselectedProduct" />
               </form>
@@ -105,6 +103,7 @@
                   String productUrl = resultSet.getString("purl");
                   String productCharge = resultSet.getString("mid");
                   String productPriceWon = String.format("%,d 원", productPrice);
+                
               %>
                 <tr class="t_tr">
                   <td><input type="checkbox" name="productCheck" value="<%=productNumber%>" class="productCheckbox"/></td>

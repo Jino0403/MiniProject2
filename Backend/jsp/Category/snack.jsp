@@ -17,6 +17,7 @@ import="java.sql.*"%> <%@ include file="../conn.jsp"%>
       href="${pageContext.request.contextPath}/Styles/CSS/style.css"
     />
     <script src="${pageContext.request.contextPath}/Styles/Javascript/includeHTML.js"></script>
+    <script src="${pageContext.request.contextPath}/Styles/Javascript/category.js"></script>
   </head>
   <body>
     <div id="wrapper">
@@ -50,6 +51,7 @@ import="java.sql.*"%> <%@ include file="../conn.jsp"%>
                 PreparedStatement preparedStatement = conn.prepareStatement(meatSelectQuery);
                 ResultSet meatResultSet = preparedStatement.executeQuery();
                 while (meatResultSet.next()) {
+                  int productDiv = meatResultSet.getInt("pdiv");
                   int productNumber = meatResultSet.getInt("pno");
                   String productName = meatResultSet.getString("pname");
                   int productPrice = meatResultSet.getInt("pprice");
@@ -59,6 +61,7 @@ import="java.sql.*"%> <%@ include file="../conn.jsp"%>
             <div class="items">
               <form class="alcohol-detail" action="${pageContext.request.contextPath}/Backend/jsp/product-detail/product-detail.jsp" method="post">
                 <button type="submit" class="items-submit">
+                <input type="hidden" value="<%=productDiv%>" class="alcoholid" name="productDiv">
                   <input type="hidden" value="<%=productNumber%>" class="alcoholid" name="alcoholid">
                   <img class="items_img" id="items-img" src="${pageContext.request.contextPath}<%=productUrl%>" />
                   <span class="item_span"><%=productName%></span>

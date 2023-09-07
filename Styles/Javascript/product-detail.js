@@ -18,5 +18,3 @@ incrementButton.addEventListener("click", () => {
   quantitySpan.textContent = quantity;
   quantitySend.value = quantity;
 });
-
-

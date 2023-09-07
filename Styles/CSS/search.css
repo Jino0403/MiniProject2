@@ -8,11 +8,19 @@
   margin-top: 15px;
 }
 
-#header_search {
-  text-align: center;
-  margin: 0 auto;
+.items {
+	width:100%;
+	height:100%;
 }
-#header_search input {
-  display: block;
-  margin: 0 auto;
+
+.item_btn {
+	border:1px solid transparent;
+	background-color:white; 
+}
+
+#searchButton {
+	border:1px solid transparent;
+	background-color:white;
+	cursor:pointer;
+	
 }
