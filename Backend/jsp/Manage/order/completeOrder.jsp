@@ -71,7 +71,7 @@
                                 try {
                                 
                                 	
-                                    String selectQuery = "SELECT * FROM `order` where cdiv = 3" ; // Make sure the table name is correct
+                                    String selectQuery = "SELECT * FROM `order` where odiv = 3" ; // Make sure the table name is correct
                                     PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
                                     ResultSet resultSet = preparedStatement.executeQuery();
 
@@ -87,7 +87,7 @@
                                         int orderPay = resultSet.getInt("opay");
                                         int cartTotalPrice = resultSet.getInt("ctotalprice");
                                         String orderText = resultSet.getString("otext");
-                                        int cartDiv = resultSet.getInt("cdiv");
+                                        int cartDiv = resultSet.getInt("odiv");
                                 %>
 								<tr class="t_tr">
 									<td><input type="checkbox" name="orderCCheck" value="<%=orderNumber%>" class="orderCCheckbox"/></td>

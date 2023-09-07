@@ -105,8 +105,12 @@ a:hover {
 
 .item_span {
   height: 20%;
-  margin-top: 40px;
+  font-size:30px;
   color: black;
+}
+
+.item_span1 {
+	display:none;
 }
 
 /*상품명*/

@@ -3,34 +3,34 @@
 <%@ include file="../conn.jsp"%>
 
 <%
+	HttpSession session1 = request.getSession();
+	String userid = (String) session1.getAttribute("username");
+		
 try {
     // 1. 사용자로부터 전달받은 파라미터 추출
-    int enteredCommentNumber = Integer.valueOf(request.getParameter("rno"));
-    int enteredBoardNumber = Integer.valueOf(request.getParameter("bno"));
-    String enteredUserId = request.getParameter("mid");
-    String enteredCommentText = request.getParameter("rtext");
-    Timestamp enteredTimeStamp = new Timestamp(System.currentTimeMillis());  // 현재 시간으로 타임스탬프 생성
+    int alcoholid = Integer.parseInt(request.getParameter("alcoholid"));
+    int productDiv = Integer.parseInt(request.getParameter("productDiv"));
+    String enteredCommentText = request.getParameter("commentText");
 
     // 2. 데이터베이스 연결을 위한 Connection 생성
-    Connection connection = null;
+	
     PreparedStatement preparedStatement = null;
 
     try {
-        connection = DriverManager.getConnection("your_database_url", "your_username", "your_password");
 
         // 3. 댓글 추가를 위한 SQL 쿼리 준비
-        String insertQuery = "INSERT INTO reply (comment_number, board_number, user_id, comment_text, timestamp) VALUES (?, ?, ?, ?, ?)";
-        preparedStatement = connection.prepareStatement(insertQuery);
-        preparedStatement.setInt(1, enteredCommentNumber);
-        preparedStatement.setInt(2, enteredBoardNumber);
-        preparedStatement.setString(3, enteredUserId);
-        preparedStatement.setString(4, enteredCommentText);
-        preparedStatement.setTimestamp(5, enteredTimeStamp);
+        String insertQuery = "INSERT INTO reply (pno, mid, rtext) VALUES (?, ?, ?)";
+        preparedStatement = conn.prepareStatement(insertQuery);
+        preparedStatement.setInt(1, alcoholid);
+        preparedStatement.setString(2, userid);
+        preparedStatement.setString(3, enteredCommentText);
 
         // 4. SQL 쿼리 실행하여 댓글 추가
         int rowsAffected = preparedStatement.executeUpdate();
         if (rowsAffected > 0) {
-            out.println("댓글이 성공적으로 추가되었습니다.");
+        	response.sendRedirect("product-detail.jsp?alcoholid=" + alcoholid + "&productDiv=" + productDiv);
+
+            
         } else {
             out.println("댓글 추가에 실패했습니다.");
         }
@@ -41,8 +41,8 @@ try {
         if (preparedStatement != null) {
             preparedStatement.close();
         }
-        if (connection != null) {
-            connection.close();
+        if (conn != null) {
+            conn.close();
         }
     }
 } catch (Exception e) {

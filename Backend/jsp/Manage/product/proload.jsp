@@ -62,6 +62,7 @@
             <div class="manage_btns">
               <a href="proadd.jsp"><button class="manage_btn">상품 추가</button></a>
               <form action="prodel.jsp" method="post">
+              
                 <button class="manage_btn" type="submit" name="manage_del_btn">상품 삭제</button>
                 <input type="hidden" name="delselectedProduct" value="" id="delselectedProduct" />
               </form>

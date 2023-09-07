@@ -45,9 +45,6 @@
           <li class="menu_bar2">
             <a href="../order/orderload.jsp">주문관리 ▸</a>
           </li>
-          <li class="menu_bar2">
-            <a href="../inquery/receipt.jsp">1:1문의 ▸</a>
-          </li>
         </ul>
       </div>
 

@@ -1,4 +1,5 @@
-const editButtons = document.querySelectorAll(".edit-button");
+/*document.addEventListener("DOMContentLoaded", function () {
+  const editButtons = document.querySelectorAll(".edit-button");
   editButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const row = button.parentElement.parentElement;
@@ -102,3 +103,26 @@ const editButtons = document.querySelectorAll(".edit-button");
       commentInput.value = "";
     }
   });
+});*/
+
+function buttonOpen() {
+	let editButton = document.getElementById('edit-button').style.display="none";
+	let saveButton = document.getElementById('save-button').style.display="block";
+	let commentText = document.getElementById('commentText').readOnly=false;
+	
+	editButton.style.display="none";
+	saveButton.style.display="block";
+	commentText.readOnly = false;
+	commentText.style.border="1px solid black";
+
+}
+
+function buttonComplete() {
+	let editButton = document.getElementById('edit-button').style.display="none";
+	let saveButton = document.getElementById('save-button').style.display="block";
+	let commentText = document.getElementById('commentText').readOnly=false;
+	
+	editButton.style.display="block";
+	saveButton.style.display="none";
+	commentText.readOnly = true;
+}

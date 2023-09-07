@@ -101,6 +101,7 @@ CREATE TABLE `order` (
   `opay` int DEFAULT NULL,
   `ctotalprice` int DEFAULT NULL,
   `otime` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `cdiv` int DEFAULT NULL,
   PRIMARY KEY (`ono`),
   KEY `pno` (`pno`),
   KEY `mid` (`mid`),
