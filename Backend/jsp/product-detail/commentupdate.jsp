@@ -1,9 +1,11 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page  pageEncoding="UTF-8" contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.sql.*"%>
 <%@ include file="../conn.jsp"%>
 <%
 	HttpSession session1 = request.getSession();
 	String userid = (String) session1.getAttribute("username");
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
 
   Integer productDiv = Integer.parseInt(request.getParameter("productDiv"));
   Integer alcoholid = Integer.parseInt(request.getParameter("alcoholid"));
@@ -48,6 +50,7 @@
     	preparedStatement.setInt(6, commentNumber);
     	preparedStatement.executeUpdate();
         out.println("데이터가 성공적으로 업데이트되었습니다.");
+        response.setContentType("text/html; charset=UTF-8");
       response.sendRedirect("product-detail.jsp?alcoholid=" + alcoholid + "&productDiv=" + productDiv);
     /*   response.sendRedirect("product-detail.jsp"); // 상품 페이지로 이동 */
     } catch (Exception e) {
