@@ -71,7 +71,7 @@
                                 try {
                                 
                                 	
-                                    String selectQuery = "SELECT * FROM `order` where odiv = 3" ; // Make sure the table name is correct
+                                    String selectQuery = "SELECT * FROM `order` where odiv = 2" ; // Make sure the table name is correct
                                     PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
                                     ResultSet resultSet = preparedStatement.executeQuery();
 
