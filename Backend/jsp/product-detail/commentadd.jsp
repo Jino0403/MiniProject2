@@ -1,10 +1,12 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page pageEncoding="UTF-8" contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.sql.*"%>
 <%@ include file="../conn.jsp"%>
 
 <%
 	HttpSession session1 = request.getSession();
 	String userid = (String) session1.getAttribute("username");
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
 		
 try {
     // 1. 사용자로부터 전달받은 파라미터 추출
