@@ -2,6 +2,8 @@
 <%@ page import="java.sql.*"%>
 <%@ include file="../../conn.jsp"%>
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
   String enteredUsername = request.getParameter("username");
   String enteredPassword = request.getParameter("password");
   String enteredName= request.getParameter("name");
