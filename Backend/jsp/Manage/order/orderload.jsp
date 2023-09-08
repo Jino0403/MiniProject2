@@ -164,24 +164,24 @@
   </body>
   <script>
   function updateOrder() {
-      // 체크된 체크박스 찾기
-      var checkboxes = document.querySelectorAll('.orderCheckbox');
-      var selectedOrderNumber = '';
-      
-      for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].checked) {
-              // 체크된 체크박스의 data-order-number 값을 가져와서 설정
-              selectedOrderNumber = checkboxes[i].getAttribute('data-order-number');
-              break; // 하나만 선택되도록
-          }
-      }
-      
-      // 숨겨진 필드에 값을 설정
-      document.getElementById("orderNumber1").value = selectedOrderNumber;
-      
-      // 폼 제출
-      var form = document.getElementById("orderUpdateForm");
-      form.submit();
-  }
+	    // 체크된 체크박스 찾기
+	    var checkboxes = document.querySelectorAll('.orderCheckbox');
+	    var selectedOrderNumber = '';
+
+	    for (var i = 0; i < checkboxes.length; i++) {
+	        if (checkboxes[i].checked) {
+	            // 체크된 체크박스의 value 값을 가져와서 설정
+	            selectedOrderNumber = checkboxes[i].value;
+	            break; // 하나만 선택되도록
+	        }
+	    }
+
+	    // 숨겨진 필드에 값을 설정
+	    document.getElementsByName("orderNumber1")[0].value = selectedOrderNumber;
+
+	    // 폼 제출
+	    var form = document.getElementById("orderUpdateForm");
+	    form.submit();
+	}
   </script>
 </html>
