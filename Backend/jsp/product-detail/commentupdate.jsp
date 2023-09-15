@@ -14,12 +14,6 @@
   String commentText = request.getParameter("commentText");
   Timestamp commentTime = Timestamp.valueOf(request.getParameter("commentTime"));
   
-  out.println("productDiv: " + productDiv);
-  out.println("alcoholid: " + alcoholid);
-  out.println("commentNumber: " + commentNumber);
-  out.println("memberId: " + memberId);
-  out.println("commentText: " + commentText);
-  out.println("commentTime: " + commentTime);
   // 이 부분은 실제 데이터베이스 조회 등의 로직이 들어가야 합니다.
   boolean commentExists = false;
   try {
@@ -35,7 +29,6 @@
     }
   } catch (Exception e) {
     out.println("오류: " + e.getMessage());
-    out.println("아니진짜제발");
   }
 
   if (commentExists) {
