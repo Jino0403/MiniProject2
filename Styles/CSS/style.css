@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
 	font-family: "Lobster-Regular";
 	src: url("/Frontend/fonts/Lobster-Regular.ttf");
 }
@@ -26,7 +26,7 @@ h1 {
 	min-height: 1024px;
 	margin: 0 auto;
 }
-/*전체 페이지를 감싸는 부분*/
+전체 페이지를 감싸는 부분
 header {
 	padding: 30px;
 	display: flex;
@@ -35,7 +35,7 @@ header {
 	align-items: center;
 }
 
-/*header부분*/
+header부분
 #header_title {
 	width: 300px;
 	margin: 0 30px;
@@ -48,13 +48,13 @@ header {
 	user-select: none;
 }
 
-/*쇼핑몰 이름*/
+쇼핑몰 이름
 #header_title img {
 	width: 100px;
 	height: 100px;
 }
 
-/*쇼핑몰 로고*/
+쇼핑몰 로고
 #header_menu {
 	margin: 0 40px;
 	display: flex;
@@ -63,7 +63,7 @@ header {
 	align-items: center;
 	user-select: none;
 }
-/*검색, 로그인, 회원가입를 감싸는 부분*/
+검색, 로그인, 회원가입를 감싸는 부분
 #header_search {
 	height: 50px;
 	margin: 0 auto;
@@ -77,7 +77,7 @@ header {
   
 }
 
-/*header 부분 검색 감싸는 div*/
+header 부분 검색 감싸는 div
 #header_search img {
 	width: 20px;
 	height: 20px;
@@ -101,7 +101,7 @@ header {
 	color: black;
 	text-decoration: none;
 }
-/*검색,로그인,회원가입 각각*/
+검색,로그인,회원가입 각각
 .header_menu_item:hover {
 	text-decoration: none;
 	font-weight: bold;
@@ -117,13 +117,13 @@ nav {
 	justify-content: center;
 	align-items: center;
 }
-/*nav 부분 CSS*/
+nav 부분 CSS
 #nav_menu {
 	display: flex;
 	list-style: none;
 }
 
-/*nav 안의 ul 태그 CSS*/
+nav 안의 ul 태그 CSS
 .nav_menu_item {
 	padding: 7px;
 	margin: 0 43px;
@@ -142,11 +142,11 @@ nav {
 	user-select: none;
 }
 
-/*nav 안 li 태그 안 a 태그 CSS*/
+nav 안 li 태그 안 a 태그 CSS
 main {
 	user-select: none;
 }
-/*main 부분 CSS*/
+main 부분 CSS
 #main_banner {
 	width: 1440px;
 	height: 600px;
@@ -154,14 +154,14 @@ main {
 	user-select: none;
 }
 
-/*메인 배너 부분 */
+메인 배너 부분
 #main_banner img {
 	width: 100%;
 	height: 100%;
 	border: 1px solid transparent;
 }
 
-/*메인 배너 이미지 부분 */
+메인 배너 이미지 부분
 #main_list_wrapper {
 	width: 1440px;
 	display: flex;
@@ -170,7 +170,7 @@ main {
 	align-items: center;
 }
 
-/*메인 부분 리스트 섹션을 감싸는 div*/
+메인 부분 리스트 섹션을 감싸는 div
 .main_category_list {
 	width: 1296px;
 	margin: 50px auto;
@@ -180,7 +180,7 @@ main {
 	align-items: center;
 }
 
-/*메인부분 카테고리 별 리스트 div*/
+메인부분 카테고리 별 리스트 div
 .main_category_introduction {
 	width: 100%;
 }
@@ -195,9 +195,9 @@ main {
 	user-select: none;
 }
 
-/* .main_category_introduction */
+.main_category_introduction
 
-/*카테고리 제목 및 간단소개*/
+카테고리 제목 및 간단소개
 .main_product_list {
 	width: 100%;
 	margin: 10px auto;
@@ -207,7 +207,7 @@ main {
 	align-items: center;
 }
 
-/*카테고리 내 상품을 감싸는 div*/
+카테고리 내 상품을 감싸는 div
 .main_product {
 	width: 200px;
 	height: 330px;
@@ -219,7 +219,7 @@ main {
 	user-select: none;
 }
 
-/*카테고리별 각 상품*/
+카테고리별 각 상품
 .main_product img {
 	width: 195px;
 	height: 190px;
@@ -246,9 +246,9 @@ main {
 	user-select: none;
 }
 
-/*위 세 개는 각 상품별 이미지,제목,가격*/
+위 세 개는 각 상품별 이미지,제목,가격
 
-/*여기서 부터는 footer 부분*/
+여기서 부터는 footer 부분
 footer {
 	background-color: black;
 	color: white;
@@ -261,7 +261,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 }
-/*footer section을 감싸는 div*/
+footer section을 감싸는 div
 .footer_section1 {
 	width: 100%;
 	padding: 10px;
@@ -279,7 +279,7 @@ footer {
 	user-select: none;
 }
 
-/*footer에 들어갈 정보*/
+footer에 들어갈 정보
 .footer_section2 {
 	width: 100%;
 	padding: 10px;
@@ -297,19 +297,19 @@ footer {
 	user-select: none;
 }
 
-/**/
 
-/*footer section 부분*/
 
-/*마이페이지 및 장바구니 섹션 CSS*/
+footer section 부분
+
+마이페이지 및 장바구니 섹션 CSS
 #mypage_center {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	/* border: 1px solid red; */
+	border: 1px solid red;
 }
-/*mypage의 main 부분을 담당하는 CSS*/
+mypage의 main 부분을 담당하는 CSS
 .mypage_list {
 	width: 300px;
 	height: 819.2px;
@@ -324,7 +324,7 @@ footer {
 	box-shadow: 0px 0px 1.2px black;
 }
 
-/*mypage main부분의 선택가능한 목록 CSS*/
+mypage main부분의 선택가능한 목록 CSS
 .mypage_list a {
 	margin: 32px auto;
 	text-decoration: none;
@@ -332,7 +332,7 @@ footer {
 	line-height: 2;
 }
 
-/*mypage main부분 목록 각각링크의 CSS*/
+mypage main부분 목록 각각링크의 CSS
 .mypage_list ul {
 	padding-left: 0;
 }
@@ -348,7 +348,7 @@ footer {
 	cursor: pointer;
 }
 
-/*mypage 부분 리스트 관련 CSS*/
+mypage 부분 리스트 관련 CSS
 .mypage_introduction {
 	width: 900px;
 	height: 819.2px;
@@ -362,7 +362,7 @@ footer {
 	box-shadow: 0 0 1.2px black;
 }
 
-/*mypage에서 목록 중 한개 선택할 때 나오는 CSS*/
+mypage에서 목록 중 한개 선택할 때 나오는 CSS
 .basket_list {
 	margin-top: 30px;
 	display: flex;
@@ -373,7 +373,7 @@ footer {
 }
 
 .basket_title {
-	/* margin-top: 25px; */
+	margin-top: 25px;
 	font-size: 30px;
 }
 
@@ -382,13 +382,13 @@ footer {
 	border-collapse: collapse;
 }
 
-/*내 장바구니에서 테이블과 title을 감싸고 있는 div*/
+내 장바구니에서 테이블과 title을 감싸고 있는 div
 .basket_table {
 	border-collapse: collapse;
 	border: 1px solid black;
 }
 
-/*장바구니 테이블*/
+장바구니 테이블
 .basket_table td {
 	text-align: center;
 	border: 1px solid black;
@@ -411,19 +411,20 @@ footer {
 	width: 120px;
 }
 
-/*장바구니 테이블을 감싸는*/
+장바구니 테이블을 감싸는
 .basket_result {
 	margin-top: auto;
 	font-size: 30px;
 }
 
-/*장바구니에 담긴 값들에 대한 CSS*/
+장바구니에 담긴 값들에 대한 CSS
 .basket_btns {
+	display:flex;
 	margin-top: 10px;
 	margin-bottom: 30px;
 }
 
-/*장바구니 탭의 버튼을 감싸고 있는 div*/
+장바구니 탭의 버튼을 감싸고 있는 div
 .basket_btn {
 	width: 150px;
 	padding: 10px;
@@ -435,11 +436,11 @@ footer {
 	font-size: 20px;
 }
 
-/*장바구니 탭의 버튼*/
+장바구니 탭의 버튼
 .mypage_edit {
 	width: 300px;
 	padding: 50px;
-	/* margin-top: auto; */
+	margin-top: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -447,17 +448,17 @@ footer {
 	border: 1px solid black;
 }
 
-/*고객정보 수정에 관한 폼 */
+고객정보 수정에 관한 폼
 .mypage_edit label {
 	margin: 10px 0;
 }
-/*고객정보 수정에 대한 label*/
+고객정보 수정에 대한 label
 .edit_btns {
 	margin: 30px auto;
 	text-align: center;
 }
 
-/*고객정보 수정버튼을 감싸는 div*/
+고객정보 수정버튼을 감싸는 div
 .edit_btn {
 	width: 300px;
 	height: 40px;
@@ -467,7 +468,7 @@ footer {
 	font-size: 20px;
 }
 
-/*고객정보 수정버튼*/
+고객정보 수정버튼
 .withdraw_form {
 	border: 1px solid black;
 	padding: 30px;
@@ -483,9 +484,9 @@ footer {
 }
 
 .withdraw_btns {
-	/* width: 100px; */
 	margin-top: 30px;
-	border: 1px solid black;
+	border: 1px solid gray;
+	display:flex;
 }
 
 .withdraw_btn {
@@ -494,7 +495,7 @@ footer {
 	background-color: black;
 	border-radius: 4px;
 	color: white;
-}
+} */
 
 @font-face {
 	font-family: "Lobster-Regular";
@@ -926,7 +927,9 @@ footer {
 /*회원탈퇴 버튼을 감싸는 div*/
 .withdraw_btns {
 	margin-top: 30px;
-	border: 1px solid black;
+	border: 1px solid transparent;
+	display:flex;
+	justify-content:center;
 }
 
 /*회원탈퇴 버튼*/
@@ -986,6 +989,22 @@ footer {
 	justify-content:center;
 	text-align: center;
 	user-select:none;
+}
+
+/*게시판 수정, 삭제 버튼 일괄적용*/
+.board_td_btn button {
+	padding: 4px;
+	border: 1px solid transparent;
+	background-color: white;
+	font-size: 20px;
+	cursor: pointer;
+	user-select:none;
+}
+
+/*게시판 수정, 삭제 버튼 */
+.board_td_btn button:hover {
+	color:red;
+	font-weight:bold;
 }
 
 /*테이블 헤더 부분*/
@@ -1067,44 +1086,11 @@ footer {
 	user-select:none;
 }
 
-#edit-button {
-	padding: 4px;
-	border: 1px solid transparent;
-	background-color: white;
-	font-size: 20px;
-	cursor: pointer;
-	user-select:none;
+.commentT input{
+	width:100%;
+	padding:4px;
+	border:1px solid transparent;
+	font-size:20px;
+	outline:none;
 }
 
-#edit-button:hover {
-	font-weight: bold;
-	color: red;
-}
-
-#save-button {
-	padding: 4px;
-	border: 1px solid transparent;
-	background-color: white;
-	font-size: 20px;
-	cursor: pointer;
-	user-select:none;
-}
-
-#save-button:hover {
-	font-weight: bold;
-	color: red;
-}
-
-#delete-button {
-	padding: 4px;
-	border: 1px solid transparent;
-	background-color: white;
-	font-size: 20px;
-	cursor: pointer;
-	user-select:none;
-}
-
-#delete-button:hover {
-	font-weight: bold;
-	color: red;
-}

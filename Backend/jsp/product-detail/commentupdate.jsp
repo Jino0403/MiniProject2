@@ -1,21 +1,25 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page  pageEncoding="UTF-8" contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="java.sql.*"%>
 <%@ include file="../conn.jsp"%>
 <%
 	HttpSession session1 = request.getSession();
 	String userid = (String) session1.getAttribute("username");
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
 
-  Integer enteredProductNumber = Integer.parseInt(request.getParameter("pno"));
-  Integer enteredCommentNumber = Integer.parseInt(request.getParameter("rno"));
-  String enteredMemberId = request.getParameter("mid");
-  String enteredCommentText = request.getParameter("rtext");
+  Integer productDiv = Integer.parseInt(request.getParameter("productDiv"));
+  Integer alcoholid = Integer.parseInt(request.getParameter("alcoholid"));
+  Integer commentNumber = Integer.parseInt(request.getParameter("commentNumber"));
+  String memberId = request.getParameter("memberId");
+  String commentText = request.getParameter("commentText");
+  Timestamp commentTime = Timestamp.valueOf(request.getParameter("commentTime"));
+  
   // 이 부분은 실제 데이터베이스 조회 등의 로직이 들어가야 합니다.
   boolean commentExists = false;
   try {
     String checkQuery = "SELECT COUNT(*) FROM reply WHERE rno = ?";
     PreparedStatement checkStatement = conn.prepareStatement(checkQuery);
-    checkStatement.setInt(1, enteredProductNumber);
-    checkStatement.setInt(2, enteredCommentNumber);
+    checkStatement.setInt(1, commentNumber);
     ResultSet resultSet = checkStatement.executeQuery();
     if (resultSet.next()) {
       int count = resultSet.getInt(1);
@@ -29,19 +33,22 @@
 
   if (commentExists) {
     try {
-      String updateQuery = "UPDATE reply SET pno = ?, rno = ?, mid = ?, rtext = ?, rtime = ? WHERE rno = ?";
-      PreparedStatement preparedStatement = conn.prepareStatement(updateQuery);
-      preparedStatement.setInt(1, enteredProductNumber);
-      preparedStatement.setInt(2, enteredCommentNumber);
-      preparedStatement.setString(3, enteredMemberId);
-      preparedStatement.setString(4, enteredCommentText);
-      preparedStatement.executeUpdate();
-      out.println("데이터가 성공적으로 업데이트되었습니다.");
-      session.setAttribute("pno", enteredProductNumber);
-      response.sendRedirect("product-detail.jsp");
+    	String updateQuery = "UPDATE `reply` SET rno = ?, pno = ?, mid = ?, rtext = ?, rtime = ? WHERE rno = ?";
+    	PreparedStatement preparedStatement = conn.prepareStatement(updateQuery);
+    	preparedStatement.setInt(1, commentNumber);
+    	preparedStatement.setInt(2, alcoholid);
+    	preparedStatement.setString(3, memberId);
+    	preparedStatement.setString(4, commentText);
+    	preparedStatement.setTimestamp(5, commentTime);
+    	preparedStatement.setInt(6, commentNumber);
+    	preparedStatement.executeUpdate();
+        out.println("데이터가 성공적으로 업데이트되었습니다.");
+        response.setContentType("text/html; charset=UTF-8");
+      response.sendRedirect("product-detail.jsp?alcoholid=" + alcoholid + "&productDiv=" + productDiv);
     /*   response.sendRedirect("product-detail.jsp"); // 상품 페이지로 이동 */
     } catch (Exception e) {
-      out.println("오류: " + e.getMessage());
+    	e.printStackTrace(); // 오류를 로그에 기록
+        out.println("오류가 발생했습니다. 나중에 다시 시도해주세요."); 
     }
   }
 %>

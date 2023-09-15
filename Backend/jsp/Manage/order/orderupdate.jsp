@@ -3,6 +3,8 @@
 <%@ include file="../../conn.jsp"%>
 
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
     String orderDiv1Param = request.getParameter("orderDiv1");
     String orderNumber1Param = request.getParameter("orderNumber1");
     

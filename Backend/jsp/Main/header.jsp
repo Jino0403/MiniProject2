@@ -9,10 +9,17 @@
 </div>
 <div id="header_menu">
   <a class="header_menu_item" href="../../../Backend/jsp/Search/search.jsp">검색</a>
-  <% if (session.getAttribute("loggedIn") != null && (boolean) session.getAttribute("loggedIn")) { %>
-        <a class="header_menu_item" href="../logout.jsp">로그아웃</a>
-    <% } else { %>
-        <a class="header_menu_item" href="../sign.jsp">로그인</a>
-    <% } %>
-  <a class="header_menu_item" href="../signup.jsp">회원가입</a>
+  <%
+    if (session.getAttribute("loggedIn") != null && (boolean) session.getAttribute("loggedIn")) {
+  %>
+    <a class="header_menu_item" href="../logout.jsp">로그아웃</a>
+    <a class="header_menu_item" href="../User/basket.jsp">마이페이지</a> <!-- Replace 마이페이지_URL with the actual URL for the user's profile page -->
+  <%
+    } else {
+  %>
+    <a class="header_menu_item" href="../sign.jsp">로그인</a>
+    <a class="header_menu_item" href="../signup.jsp">회원가입</a>
+  <%
+    }
+  %>
 </div>

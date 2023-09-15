@@ -33,7 +33,7 @@
           <div class="mypage_list">
             <ul>
               <li>
-                <a href="./basket.jsp"><strong>내 장바구니</strong></a>
+                <a href="./basket.jsp">내 장바구니</a>
               </li>
               <li><a href="./edit.jsp"><strong>회원정보수정</strong></a></li>
               <li><a href="./withdraw.jsp">회원탈퇴</a></li>
@@ -131,9 +131,6 @@
                   <button type="submit" class="edit_btn">수정하기</button>
                 </div>
               </form>
-            </div>
-            <div class="edit_btns">
-              <button type="submit" class="edit_btn">수정하기</button>
             </div>
           </div>
         </div>

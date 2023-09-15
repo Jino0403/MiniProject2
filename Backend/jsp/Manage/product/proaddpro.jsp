@@ -2,6 +2,8 @@
 <%@ page import="java.sql.*"%>
 <%@ include file="../../conn.jsp"%>
 <%
+  request.setCharacterEncoding("UTF-8");
+  response.setContentType("text/html; charset=UTF-8");
   String enteredProductName = request.getParameter("productName");
   String enteredProductCategory = request.getParameter("productCategory");
   Integer enteredProductPrice = Integer.valueOf(request.getParameter("productPrice"));
