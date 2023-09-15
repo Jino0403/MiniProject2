@@ -4,6 +4,7 @@
 
 <%
 	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html;charset=UTF-8");
    /* int searchId = Integer.parseInt(request.getParameter("alcoholid")); */
 
    HttpSession session1 = request.getSession();
