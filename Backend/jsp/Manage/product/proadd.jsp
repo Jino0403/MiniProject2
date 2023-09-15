@@ -77,6 +77,10 @@
               <input type="text" name="productCountry"/>
               <label>상품설명</label>
               <input type="text" maxlength="200" name="productText"/>
+              <label>상품이미지</label>
+              <input type="file" name="productImg">
+              <label>상품상세이미지</label>
+              <input type="file" name="productDetailImg">
               <div class="userinfo_btns">
                 <button class="user_btn">추가하기</button>
                 <button class="user_btn" type="button"><a href="proload.jsp">뒤로가기</a></button>

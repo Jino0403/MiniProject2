@@ -1,4 +1,4 @@
-
+/*
 document.addEventListener("DOMContentLoaded", function () {
   updateOverallTotal();
 });
@@ -35,7 +35,7 @@ function updateOverallTotal() {
   const totalPriceDiv = document.getElementById("totalPrice");
   totalPriceDiv.textContent = "총 주문금액 : " + overallTotal.toLocaleString() + " 원";
   updateOverallTotal();
-}
+}*/
 
 // HTML에서 받아온 데이터를 기반으로 총 가격 계산 및 입력
 // 여러 상품에 대한 계산을 위한 함수
@@ -71,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     result.textContent = "총 주문금액 : " + addCommasToNumber(resultTotal) + "원";
 });
+
 
 
 
