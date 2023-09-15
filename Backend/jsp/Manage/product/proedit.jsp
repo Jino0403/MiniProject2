@@ -2,8 +2,6 @@
 <%@ page import="java.sql.*"%>
 <%@ include file="../../conn.jsp"%>
 <%
-  request.setCharacterEncoding("UTF-8");
-  response.setContentType("text/html; charset=UTF-8");
   try {
     int updateId = Integer.parseInt(request.getParameter("updateselectedProduct"));
     String selectQuery = "SELECT * FROM product where pno = ? ";
