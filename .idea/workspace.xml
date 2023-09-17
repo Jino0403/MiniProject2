@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d709c861-36a9-4bee-a724-0f11fbc84cee" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-complete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-complete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-detail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-pro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-pro.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/mysql/주류쇼핑몰 DB.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mysql/주류쇼핑몰 DB.xlsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2VWbEKbM9W3oyN2Z0h8SRxftHD5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "jaemin",
+    "last_opened_file_path": "C:/Users/woals/OneDrive/문서/GitHub/Study/Mini/MiniProject2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="d709c861-36a9-4bee-a724-0f11fbc84cee" name="변경" comment="" />
+      <created>1694954670405</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694954670405</updated>
+      <workItem from="1694954671435" duration="185000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
