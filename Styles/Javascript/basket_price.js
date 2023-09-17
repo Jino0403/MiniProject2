@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const quantities = document.querySelectorAll(".basket_quantity");
     const totalPrices = document.querySelectorAll(".baksetTotal");
     const result = document.getElementById("totalPrice");
+    const returnResult = document.getElementById("ctotalPrice");
 
     let resultTotal = 0;
 
@@ -69,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         resultTotal += total;
     }
+    returnResult.value = resultTotal.value
     result.textContent = "총 주문금액 : " + addCommasToNumber(resultTotal) + "원";
 });
 

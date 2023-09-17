@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d709c861-36a9-4bee-a724-0f11fbc84cee" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-complete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-complete.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-detail.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-pro.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/jsp/Purchase/purchase-pro.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/mysql/주류쇼핑몰 DB.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mysql/주류쇼핑몰 DB.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Backend/jsp/User/baskettotal.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/jsp/User/basket.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/jsp/User/basket.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Styles/Javascript/basket_price.js" beforeDir="false" afterPath="$PROJECT_DIR$/Styles/Javascript/basket_price.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +21,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2VWbEKbM9W3oyN2Z0h8SRxftHD5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,6 +36,10 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "jaemin",
     "last_opened_file_path": "C:/Users/woals/OneDrive/문서/GitHub/Study/Mini/MiniProject2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -45,6 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1694954670405</updated>
       <workItem from="1694954671435" duration="185000" />
+      <workItem from="1694961166385" duration="1194000" />
     </task>
     <servers />
   </component>

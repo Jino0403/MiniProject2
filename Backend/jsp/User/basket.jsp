@@ -132,7 +132,9 @@
         </div>
         <div class="basket_btns">
           <form method="post"
-                action="${pageContext.request.contextPath}/Backend/jsp/Purchase/purchase-detail.jsp">
+                action="baskettotal.jsp">
+            <input type="hidden" id="ctotalprice" name="ctotalprice" value="">
+
             <button class="basket_btn" type="submit">상품주문하기</button>
           </form>
           <form action="cartdelete.jsp" method="post">
