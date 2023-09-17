@@ -29,7 +29,7 @@
 		try {
 			String selectQuery = "SELECT * FROM `order` where mid = ? ";
 			PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
-			preparedStatement.setString(1, "kms1109");
+			preparedStatement.setString(1, userid);
 			ResultSet resultSet = preparedStatement.executeQuery();
 
 			// 각 주문 정보를 저장할 변수

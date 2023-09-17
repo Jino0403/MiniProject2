@@ -2,6 +2,8 @@
 <%@ page import="java.util.*" %>
 <%@ include file="../conn.jsp" %>
 <%
+    HttpSession session1 = request.getSession();
+    String userid = (String) session1.getAttribute("username");
 
     ResultSet resultSet3 = null;
     PreparedStatement preparedStatement3 = null;
@@ -18,7 +20,7 @@
     try {
         String selectQuery3 = "SELECT * FROM `member` JOIN cart ON member.mid = cart.mid where member.mid = ? ";
         preparedStatement3 = conn.prepareStatement(selectQuery3);
-        preparedStatement3.setString(1, "kos1");
+        preparedStatement3.setString(1, userid);
         resultSet3 = preparedStatement3.executeQuery();
 
         while (resultSet3.next()) {
@@ -92,7 +94,7 @@
         try {
             String deleteQuery = "DELETE FROM `cart` WHERE mid = ? ";
             PreparedStatement deleteStatement = conn.prepareStatement(deleteQuery);
-            deleteStatement.setString(1, "kos1");
+            deleteStatement.setString(1, userid);
             deleteStatement.executeUpdate();
             deleteStatement.close();
         } catch (Exception e) {
