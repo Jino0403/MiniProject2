@@ -2,6 +2,8 @@
 <%@ page import="java.sql.*"%>
 <%@ include file="../../conn.jsp"%>
 <%
+  request.setCharacterEncoding("UTF-8");
+  response.setContentType("text/html; charset=UTF-8");
   try {
     int updateId = Integer.parseInt(request.getParameter("updateselectedProduct"));
     String selectQuery = "SELECT * FROM product where pno = ? ";
@@ -25,7 +27,7 @@
       rel="stylesheet"
       type="text/css"
       href="../../../..../../../Styles/CSS/managePage.css" />
-    <title>관리자 페이지</title>
+    <title>관리자페이지</title>
   </head>
   <body>
     <div id="manage_wrapper">
@@ -39,16 +41,13 @@
             <h3>관리자페이지</h3>
             <ul id="nav_bar2">
               <li class="menu_bar2">
-                <a href="../user/userload.jsp">고객 관리</a>
+                <a href="../user/userload.jsp">고객관리 ▸</a>
               </li>
               <li class="menu_bar2">
-                <a href="proload.jsp">상품 관리</a>
+                <a href="proload.jsp">상품관리 ▸</a>
               </li>
               <li class="menu_bar2">
-                <a href="../order/orderload.jsp">주문 관리</a>
-              </li>
-              <li class="menu_bar2">
-                <a href="../inquery/receipt.jsp">1:1 문의</a>
+                <a href="../order/orderload.jsp">주문관리 ▸</a>
               </li>
             </ul>
           </div>
@@ -60,8 +59,10 @@
 
         <div id="manage_section">
           <div class="manage_pro">
-            <div class="manage_protitle">상품 정보 수정</div>
+            <div class="manage_protitle">📦 상품 정보 수정</div>
             <form class="proadd_form" action="proupdatepro.jsp">
+            <div class="proadd_section">
+            	
               <%
                 while (resultSet.next()) {
                   int productNumber = resultSet.getInt("pno");
@@ -74,12 +75,14 @@
                   String productCountry = resultSet.getString("pcountry");
                   String productText = resultSet.getString("ptext");
                   String productUrl = resultSet.getString("purl");
+                  String productUrl2 = resultSet.getString("purl2");
                   String productCharge = resultSet.getString("mid");
               %>
               <input type="hidden" value="<%=productNumber%>" name="productNumber">
-              <label>상품명</label>
+              <div class="proadd_section1">
+              <label>📛 상품명</label>
               <input type="text" value="<%=productName%>" name="productName"/>
-              <label>카테고리</label>
+              <label>🍹 카테고리</label>
               <select name="productCategory" class="select_category">
                 <option value="위스키" <%=productCategory.equals("위스키") ? "selected" : ""%>>위스키</option>
                 <option value="와인" <%=productCategory.equals("와인") ? "selected" : ""%>>와인</option>
@@ -88,20 +91,31 @@
                 <option value="소주" <%=productCategory.equals("소주") ? "selected" : ""%>>소주</option>
                 <option value="맥주" <%=productCategory.equals("맥주") ? "selected" : ""%>>맥주</option>
                 <option value="막걸리" <%=productCategory.equals("막걸리") ? "selected" : ""%>>막걸리</option>
-                <option value="안주류" <%=productCategory.equals("안주류") ? "selected" : ""%>>안주류</option>
+                <option value="고기류" <%=productCategory.equals("고기류") ? "selected" : ""%>>고기류</option>
+                <option value="해산물류" <%=productCategory.equals("해산물류") ? "selected" : ""%>>해산물류</option>
+                <option value="탕류" <%=productCategory.equals("탕류") ? "selected" : ""%>>탕류</option>
               </select>
-              <label>상품가격</label>
+              <label>💰 상품가격</label>
               <input type="text" value="<%=productPrice%>" name="productPrice" />
-              <label>재고량</label>
+              <label>🧺 재고량</label>
               <input type="text" value="<%=productQuantity%>" name="productQuantity" />
-              <label>용량</label>
+              <label>🥤 용량</label>
               <input type="text" value="<%=productMl%>" name="productMl" />
-              <label>도수</label>
+              </div>
+              <div class="proadd_section2">
+              <label>🥛 도수</label>
               <input type="text" value="<%=productAlcohol%>" name="productAlcohol" />
-              <label>국가</label>
+              <label>🇰🇷 국가</label>
               <input type="text" value="<%=productCountry%>" name="productCountry" />
-              <label>상품설명</label>
+              <label>📄 상품설명</label>
               <input type="text" maxlength="200" value="<%=productText%>" name="productText" />
+			  <label>📷 상품이미지</label>
+			  <input type="file" name="productImg">
+		      <label>📷 상품상세이미지</label>
+			  <input type="file" name="productDetailImg">
+              
+              </div>
+              </div>
               <div class="proinfo_btns">
                 <button class="pro_btn">수정하기</button>
                 <a href="proload.jsp"

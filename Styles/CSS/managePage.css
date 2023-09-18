@@ -300,8 +300,76 @@ main {
 }
 
 .manage_protitle {
-  font-size: 40px;
   margin-bottom: 30px;
+  font-size: 40px;
+  user-select: none;
+}
+
+.proadd_section {
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	
+}
+
+.proadd_section1 {
+  margin: 0 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 8px lightgray;
+}
+
+.proadd_section1 select {
+  width: 100%;
+  height: 39px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  user-select: none;
+}
+
+.proadd_section1 input {
+  width: 400px;
+  height: 35px;
+  padding-left: 10px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  user-select: none;
+}
+
+/*상품 추가 폼의 section1 부분*/
+
+.proadd_section2 {
+  margin: 0 30px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 8px lightgray;
+}
+
+.proadd_section2 input[type="file"] {
+  height: 30px;
+  margin-bottom: 2px;
+  padding: 4px;
+  user-select: none;
+}
+
+.proadd_section2 input {
+  width: 400px;
+  height: 35px;
+  padding-left: 10px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  user-select: none;
 }
 
 .proadd_form {

@@ -1,9 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html;charset=UTF-8"
 		 pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*"%>
 <%@ page import="java.util.ArrayList" %>
 <%@ include file="../conn.jsp"%>
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html;charset=UTF-8");
 	HttpSession session1 = request.getSession();
 	String userid = (String) session1.getAttribute("username");
 %>
@@ -185,8 +187,6 @@
 		</tr>
 	</table>
 
-
-	<hr class="last-hr" />
 	<h2>위와 같이 구매하시겠습니까?</h2>
 	<%
 		try {
@@ -230,11 +230,11 @@
 <%--		<input type="hidden" name="productPrice" value="<%=productPrices.get(i) %>"/>--%>
 <%--		<input type="hidden" name="productNumber" value="<%=productNumbers.get(i)%>"/>--%>
 <%--		<input type="hidden" name="cartNumber" value="<%=cartNumbers.get(i)%>"/>--%>
-		<input type="hidden" name="cartTotalprice" value="0"/>
+		<input type="hidden" name="productprice" value="" />
+		<input type="hidden" name="ctotalprice" value=""/>
 		<input type="hidden" name="otext" value="" />
 		<input type="hidden" name="opay" id="opay" value="" />
 			<%
-//        }
 			}
 			resultSet3.close();
 			preparedStatement3.close();
@@ -242,11 +242,14 @@
 			e.printStackTrace();
 		} %>
 		<button class="purchase-button" type="submit">구매하기</button>
+		<button class="goback-button" type="button"><a href="../User/basket.jsp">돌아가기</a></button>
+</div>
+
 </form>
 
-<br />
-<button class="goback-button" type="button">돌아가기</button>
-</div>
+
+	
+	
 
 
 </body>

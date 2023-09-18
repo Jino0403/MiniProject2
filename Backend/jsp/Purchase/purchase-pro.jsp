@@ -75,6 +75,7 @@
         preparedStatement.executeBatch();
         // PreparedStatement와 연결 닫기
         preparedStatement.close();
+        
 
         try {
             String updateQuery = "UPDATE `product` SET pquantity = pquantity - ? WHERE pno = ?";

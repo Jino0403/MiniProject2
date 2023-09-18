@@ -65,10 +65,17 @@
       }else if (Objects.equals(enteredProductCategory, "와인")) {
         preparedStatement.setString(10, "/Styles/images/alcohol_image/wine/"+ enteredProductImg);
       } else {
-        preparedStatement.setString(10, "/Styles/images/alcohol_image/snack_image/"+ enteredProductImg);
+        preparedStatement.setString(10, "/Styles/images/snack_image/"+ enteredProductImg);
       }
-      if (Objects.equals(enteredProductCategory, "안주류")) {
+      
+      
+      
+      if (Objects.equals(enteredProductCategory, "고기류")) {
         preparedStatement.setString(11, "/Styles/images/food-detail/" + enteredProductDetailImg);
+      } else if (Objects.equals(enteredProductCategory, "해산물류")) {
+    	preparedStatement.setString(11, "/Styles/images/food-detail/" + enteredProductDetailImg);  
+      } else if (Objects.equals(enteredProductCategory, "탕류")) {
+    	preparedStatement.setString(11, "/Styles/images/food-detail/" + enteredProductDetailImg);  
       } else {
         preparedStatement.setString(11, "/Styles/images/alcohol-detail/" + enteredProductDetailImg);
       }

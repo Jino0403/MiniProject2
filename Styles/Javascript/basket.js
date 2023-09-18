@@ -35,7 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
         selectedProduct = null;
         originalQuantity = null;
         returnquantity.value = "";
-        cquantityInput.setAttribute('readonly', true);
         quantityInput.setAttribute('readonly', true);
       }
 

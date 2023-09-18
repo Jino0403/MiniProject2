@@ -11,10 +11,10 @@
         PreparedStatement updatepreparedStatement = conn.prepareStatement(updateQuery);
             updatepreparedStatement.setInt(1, cartTotalPrice);
             updatepreparedStatement.setString(2, userid);
-            updatepreparedStatement.addBatch(); // 배치에 쿼리 추가
-        updatepreparedStatement.executeBatch(); // 모든 쿼리를 한 번에 실행
+        updatepreparedStatement.executeUpdate(); // 모든 쿼리를 한 번에 실행
 
         response.sendRedirect("../Purchase/purchase-detail.jsp");
+        updatepreparedStatement.close();
     } catch (Exception e) {
         out.println("오류: " + e.getMessage());
     }
