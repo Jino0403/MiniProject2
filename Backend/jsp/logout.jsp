@@ -4,5 +4,5 @@
   HttpSession session1 = request.getSession();
   session1.invalidate();
 
-  response.sendRedirect("sign.jsp");
+  response.sendRedirect("../Main/index.jsp");
 %>

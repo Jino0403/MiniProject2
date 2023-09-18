@@ -1,4 +1,4 @@
-/* @font-face {
+@font-face {
 	font-family: "Lobster-Regular";
 	src: url("/Frontend/fonts/Lobster-Regular.ttf");
 }
@@ -495,7 +495,7 @@ mypage에서 목록 중 한개 선택할 때 나오는 CSS
 	background-color: black;
 	border-radius: 4px;
 	color: white;
-} */
+}
 
 @font-face {
 	font-family: "Lobster-Regular";
@@ -929,6 +929,7 @@ footer {
 	margin-top: 30px;
 	border: 1px solid transparent;
 	display:flex;
+
 	justify-content:center;
 }
 

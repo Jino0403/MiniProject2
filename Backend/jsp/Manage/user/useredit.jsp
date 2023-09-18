@@ -38,19 +38,16 @@
             <a href="../manageMain.jsp">Alcohol</a>
           </div>
 
-            <h3>관리자페이지</h3>
+            <h3>관리자 페이지</h3>
             <ul id="nav_bar2">
               <li class="menu_bar2">
-                <a href="./userload.jsp">고객 관리</a>
+                <a href="./userload.jsp">고객관리 ▸</a>
               </li>
               <li class="menu_bar2">
-                <a href="../product/proload.jsp">상품 관리</a>
+                <a href="../product/proload.jsp">상품관리 ▸</a>
               </li>
               <li class="menu_bar2">
-                <a href="../order/orderload.jsp">주문 관리</a>
-              </li>
-              <li class="menu_bar2">
-                <a href="../inquery/receipt.jsp">1:1 문의</a>
+                <a href="../order/orderload.jsp">주문관리 ▸</a>
               </li>
             </ul>
           </div>

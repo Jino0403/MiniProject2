@@ -35,6 +35,8 @@
         deleteMemberStatement.setString(1, selectedMember);
         deleteMemberStatement.executeUpdate();
         deleteMemberStatement.close();
+        
+        session1.invalidate();
         response.sendRedirect("../Main/index.jsp");
       } else {
         response.sendRedirect("withdraw.jsp?error=invalid_credentials");
