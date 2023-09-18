@@ -22,7 +22,7 @@
     <div id="wrapper">
         <header><jsp:include page="../Main/header.jsp" /></header>
         <nav><jsp:include page="../Main/nav.jsp" /></nav>
-        <main>
+        <main id="search">
             <div id="search_title">
                 <h2>찾으시는 상품명을 입력해주세요 ! </h2>
                 <h2>(검색 버튼을 두번 클릭 시 전체 목록이 출력됩니다)</h2>

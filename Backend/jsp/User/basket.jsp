@@ -68,7 +68,7 @@
                 try {
                   String selectQuery = "SELECT * FROM cart where mid = ? ";
                   PreparedStatement preparedStatement = conn.prepareStatement(selectQuery);
-                  preparedStatement.setString(1, "sound19");
+                  preparedStatement.setString(1, userid);
                   ResultSet resultSet = preparedStatement.executeQuery();
 
                   while (resultSet.next()) {
@@ -142,8 +142,8 @@
             <button class="basket_btn" type="submit">상품삭제</button>
           </form>
           <form  action="basketupdate.jsp" method="post">
-          	<input id="productNumber" name="productNumber" value="" />
-            <input id="productQuantity-return" name="productQuantity" value="" />
+          	<input type="hidden" id="productNumber" name="productNumber" value="" />
+            <input type="hidden" id="productQuantity-return" name="productQuantity" value="" />
             <button id="product-complete" class="basket_edit_btn">수량변경하기</button>
           </form>
        
@@ -160,5 +160,23 @@
 <script>
   includeHTML()
   updateOverallTotal();
+  
+  document.addEventListener('DOMContentLoaded', function() {
+	    // 수량 변경 버튼 클릭 시
+	    document.querySelectorAll('.basket_edit_btn').forEach(function(btn) {
+	      btn.addEventListener('click', function() {
+	        // 현재 클릭한 버튼의 부모 요소에서 productNumber 가져오기
+	        var productNumber = this.closest('tr').querySelector('.cartCheckBox').value;
+	        var productQuantity = this.closest('tr').querySelector('.basket_quantity').value;
+
+	        // 폼에 productNumber와 productQuantity 설정
+	        document.querySelector('#productNumber').value = productNumber;
+	        document.querySelector('#productQuantity-return').value = productQuantity;
+
+	        // 폼 제출
+	        document.querySelector('form[action="basketupdate.jsp"]').submit();
+	      });
+	    });
+	  });
 </script>
 </html>

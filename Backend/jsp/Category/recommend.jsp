@@ -132,14 +132,14 @@ import="java.sql.*"%> <%@ include file="../conn.jsp"%>
                     src="../../../Styles/images/snack_image/kimchijjigae.png"
                   />
                 </div>
-                <span>항금보리 + 김치찌개</span>
+                <span>황금보리 + 김치찌개</span>
                 <p>14,130원</p>
               </div>
               <div class="recommend_item">
                 <div class="recommend_imgs">
                   <img
                     class="recommend_img"
-                    src="../../../Styles/images/alcohol_image/soju/seoul'snight.png"
+                    src="../../../Styles/images/alcohol_image/soju/seoulsnight.png"
                   />
                   <img
                     class="recommend_img"

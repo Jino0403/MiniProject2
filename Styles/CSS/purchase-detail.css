@@ -73,16 +73,16 @@ input {
 }
 /* 구매 확인 문장 */
 h2 {
+  margin-top:50px;
   text-align: center;
 }
 /* 구매버튼 되돌리기 버튼 div */
 .button {
+  margin: 30px auto 60px auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
-  margin-bottom: 80px;
 }
 /* 구매버튼 */
 .purchase-button {
